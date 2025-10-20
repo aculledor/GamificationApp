@@ -179,6 +179,48 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'{count, plural, =0{Unlocked} one{# star left} other{# stars left}}'**
   String starsLeft({required num count});
+
+  /// Title of the topic summary screen with topic index
+  ///
+  /// In en, this message translates to:
+  /// **'Summary Topic {number}'**
+  String summaryTopicTitle({required Object number});
+
+  /// Shown when the user has not answered this topic before
+  ///
+  /// In en, this message translates to:
+  /// **'No previous score'**
+  String get noPreviousScore;
+
+  /// Shows the previous best raw score
+  ///
+  /// In en, this message translates to:
+  /// **'Last best Score: {score}/{total}'**
+  String lastBestScore({required Object score, required Object total});
+
+  /// Date of the previous best score
+  ///
+  /// In en, this message translates to:
+  /// **'Date: {date}'**
+  String dateLabel({required Object date});
+
+  /// CTA when user has no previous score
+  ///
+  /// In en, this message translates to:
+  /// **'Start quiz'**
+  String get startQuiz;
+
+  /// CTA when user has a previous score
+  ///
+  /// In en, this message translates to:
+  /// **'Try again'**
+  String get tryAgain;
+
+  /// Tooltip for the back/close button
+  ///
+  /// In en, this message translates to:
+  /// **'Back'**
+  String get backTooltip;
 }
 
 class _AppLocalizationsDelegate

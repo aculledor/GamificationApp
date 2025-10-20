@@ -10,7 +10,14 @@
     "topicTitle",
     "earnMoreStars",
     "starsProgress",
-    "starsLeft"
+    "starsLeft",
+    "summaryTopicTitle",
+    "noPreviousScore",
+    "lastBestScore",
+    "dateLabel",
+    "startQuiz",
+    "tryAgain",
+    "backTooltip"
   ],
 
   "es": [
@@ -24,7 +31,14 @@
     "topicTitle",
     "earnMoreStars",
     "starsProgress",
-    "starsLeft"
+    "starsLeft",
+    "summaryTopicTitle",
+    "noPreviousScore",
+    "lastBestScore",
+    "dateLabel",
+    "startQuiz",
+    "tryAgain",
+    "backTooltip"
   ],
 
   "fr": [
@@ -38,7 +52,14 @@
     "topicTitle",
     "earnMoreStars",
     "starsProgress",
-    "starsLeft"
+    "starsLeft",
+    "summaryTopicTitle",
+    "noPreviousScore",
+    "lastBestScore",
+    "dateLabel",
+    "startQuiz",
+    "tryAgain",
+    "backTooltip"
   ],
 
   "it": [
@@ -52,7 +73,14 @@
     "topicTitle",
     "earnMoreStars",
     "starsProgress",
-    "starsLeft"
+    "starsLeft",
+    "summaryTopicTitle",
+    "noPreviousScore",
+    "lastBestScore",
+    "dateLabel",
+    "startQuiz",
+    "tryAgain",
+    "backTooltip"
   ],
 
   "pt": [
@@ -66,7 +94,14 @@
     "topicTitle",
     "earnMoreStars",
     "starsProgress",
-    "starsLeft"
+    "starsLeft",
+    "summaryTopicTitle",
+    "noPreviousScore",
+    "lastBestScore",
+    "dateLabel",
+    "startQuiz",
+    "tryAgain",
+    "backTooltip"
   ],
 
   "tr": [
@@ -80,6 +115,13 @@
     "topicTitle",
     "earnMoreStars",
     "starsProgress",
-    "starsLeft"
+    "starsLeft",
+    "summaryTopicTitle",
+    "noPreviousScore",
+    "lastBestScore",
+    "dateLabel",
+    "startQuiz",
+    "tryAgain",
+    "backTooltip"
   ]
 }

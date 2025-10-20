@@ -1,14 +1,14 @@
 {
-    "module.m1.title": "Module 2: Sustainability Management in Aquaculture",
-    "topic.m1.t1.title": "Environmental, social and economic issues linked to shellfish and finfish farming",
+    "module.m2.title": "Module 2: Sustainability Management in Aquaculture",
+    "topic.m2.t1.title": "Environmental, social and economic issues linked to shellfish and finfish farming",
 
-    "q.m1.t1.001": "Which is ...?",
-    "q.m1.t1.001.a": "Correct answer",
-    "q.m1.t1.001.b": "Distractor 1",
-    "q.m1.t1.001.c": "Distractor 2",
-    "q.m1.t1.001.d": "Distractor 3",
+    "q.m2.t1.001": "Which is ...?",
+    "q.m2.t1.001.a": "Correct answer",
+    "q.m2.t1.001.b": "Distractor 1",
+    "q.m2.t1.001.c": "Distractor 2",
+    "q.m2.t1.001.d": "Distractor 3",
 
-    "q.m1.t1.002": "Write the main dissolved gas for fish respiration:",
-    "q.m1.t1.002.a": "Oxygen",
-    "q.m1.t1.002.b": "O2"
+    "q.m2.t1.002": "Write the main dissolved gas for fish respiration:",
+    "q.m2.t1.002.a": "Oxygen",
+    "q.m2.t1.002.b": "O2"
 }

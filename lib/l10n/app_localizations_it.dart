@@ -58,4 +58,31 @@ class AppLocalizationsIt extends AppLocalizations {
     );
     return '$_temp0';
   }
+
+  @override
+  String summaryTopicTitle({required Object number}) {
+    return 'Summary Topic $number';
+  }
+
+  @override
+  String get noPreviousScore => 'No previous score';
+
+  @override
+  String lastBestScore({required Object score, required Object total}) {
+    return 'Last best Score: $score/$total';
+  }
+
+  @override
+  String dateLabel({required Object date}) {
+    return 'Date: $date';
+  }
+
+  @override
+  String get startQuiz => 'Start quiz';
+
+  @override
+  String get tryAgain => 'Try again';
+
+  @override
+  String get backTooltip => 'Back';
 }

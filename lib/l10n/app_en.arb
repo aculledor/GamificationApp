@@ -45,5 +45,43 @@
                 "type": "num"
             }
         }
+    },
+    "summaryTopicTitle": "Summary Topic {number}",
+    "@summaryTopicTitle": {
+        "description": "Title of the topic summary screen with topic index",
+        "placeholders": {
+            "number": {}
+        }
+    },
+    "noPreviousScore": "No previous score",
+    "@noPreviousScore": {
+        "description": "Shown when the user has not answered this topic before"
+    },
+    "lastBestScore": "Last best Score: {score}/{total}",
+    "@lastBestScore": {
+        "description": "Shows the previous best raw score",
+        "placeholders": {
+            "score": {},
+            "total": {}
+        }
+    },
+    "dateLabel": "Date: {date}",
+    "@dateLabel": {
+        "description": "Date of the previous best score",
+        "placeholders": {
+            "date": {}
+        }
+    },
+    "startQuiz": "Start quiz",
+    "@startQuiz": {
+        "description": "CTA when user has no previous score"
+    },
+    "tryAgain": "Try again",
+    "@tryAgain": {
+        "description": "CTA when user has a previous score"
+    },
+    "backTooltip": "Back",
+    "@backTooltip": {
+        "description": "Tooltip for the back/close button"
     }
 }
