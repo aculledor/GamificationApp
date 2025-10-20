@@ -1,0 +1,49 @@
+{
+    "@@locale": "en",
+    "appTitle": "Aquatechinn Quiz",
+    "tabQuestionnaire": "Questionnaire",
+    "tabPerformance": "Performance",
+    "tabOptions": "Options",
+    "counterFlame": "Flame",
+    "counterEnergy": "Energy",
+    "counterMedals": "Medals",
+    "moduleTitle": "Module {number}: {name}",
+    "@moduleTitle": {
+        "placeholders": {
+            "number": {
+                "type": "String"
+            },
+            "name": {
+                "type": "String"
+            }
+        }
+    },
+    "topicTitle": "{name}",
+    "@topicTitle": {
+        "placeholders": {
+            "name": {
+                "type": "String"
+            }
+        }
+    },
+    "earnMoreStars": "Earn more stars to unlock!",
+    "starsProgress": "{have}/{need}",
+    "@starsProgress": {
+        "placeholders": {
+            "have": {
+                "type": "String"
+            },
+            "need": {
+                "type": "String"
+            }
+        }
+    },
+    "starsLeft": "{count, plural, =0{Unlocked} one{# star left} other{# stars left}}",
+    "@starsLeft": {
+        "placeholders": {
+            "count": {
+                "type": "num"
+            }
+        }
+    }
+}

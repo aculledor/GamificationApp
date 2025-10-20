@@ -1,0 +1,36 @@
+{
+  "modules": [
+    {
+      "id": "m1",
+      "topicIds": ["m1_t1","m1_t2","m1_t3","m1_t4","m1_t5","m1_t6"]
+    }
+  ],
+  "topics": [
+    {
+      "id": "m1_t1",
+      "titleKey": "topic.m1.t1.title",
+      "questionIds": ["q_m1_t1_001", "q_m1_t1_002", "...", "q_m1_t1_050"]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q_m1_t1_001",
+      "type": "multi",                       
+      "textKey": "q.m1.t1.001",
+      "imageAsset": null,   
+      "videoUrl": null,                          
+      "answers": [
+        {"id":"a","textKey":"q.m1.t1.001.a","correct":true},
+        {"id":"b","textKey":"q.m1.t1.001.b","correct":false},
+        {"id":"c","textKey":"q.m1.t1.001.c","correct":false},
+        {"id":"d","textKey":"q.m1.t1.001.d","correct":false}
+      ]
+    },
+    {
+      "id": "q_m1_t1_002",
+      "type": "text",
+      "textKey": "q.m1.t1.002",
+      "correctFreeText": ["q.m1.t1.002.a", "q.m1.t1.002.b"]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "el": [
+    "tabQuestionnaire",
+    "tabPerformance",
+    "tabOptions",
+    "counterFlame",
+    "counterEnergy",
+    "counterMedals",
+    "moduleTitle",
+    "topicTitle",
+    "earnMoreStars",
+    "starsProgress",
+    "starsLeft"
+  ],
+
+  "es": [
+    "tabQuestionnaire",
+    "tabPerformance",
+    "tabOptions",
+    "counterFlame",
+    "counterEnergy",
+    "counterMedals",
+    "moduleTitle",
+    "topicTitle",
+    "earnMoreStars",
+    "starsProgress",
+    "starsLeft"
+  ],
+
+  "fr": [
+    "tabQuestionnaire",
+    "tabPerformance",
+    "tabOptions",
+    "counterFlame",
+    "counterEnergy",
+    "counterMedals",
+    "moduleTitle",
+    "topicTitle",
+    "earnMoreStars",
+    "starsProgress",
+    "starsLeft"
+  ],
+
+  "it": [
+    "tabQuestionnaire",
+    "tabPerformance",
+    "tabOptions",
+    "counterFlame",
+    "counterEnergy",
+    "counterMedals",
+    "moduleTitle",
+    "topicTitle",
+    "earnMoreStars",
+    "starsProgress",
+    "starsLeft"
+  ],
+
+  "pt": [
+    "tabQuestionnaire",
+    "tabPerformance",
+    "tabOptions",
+    "counterFlame",
+    "counterEnergy",
+    "counterMedals",
+    "moduleTitle",
+    "topicTitle",
+    "earnMoreStars",
+    "starsProgress",
+    "starsLeft"
+  ],
+
+  "tr": [
+    "tabQuestionnaire",
+    "tabPerformance",
+    "tabOptions",
+    "counterFlame",
+    "counterEnergy",
+    "counterMedals",
+    "moduleTitle",
+    "topicTitle",
+    "earnMoreStars",
+    "starsProgress",
+    "starsLeft"
+  ]
+}
