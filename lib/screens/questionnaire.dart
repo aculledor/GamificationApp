@@ -8,6 +8,8 @@ import 'package:gamificationapp/data/progress_service.dart';
 import 'package:gamificationapp/screens/topic_summary.dart';
 import 'package:flutter/foundation.dart';
 import 'package:gamificationapp/dev/dev_tools.dart';
+import 'package:gamificationapp/widgets/aqua_bottom_nav.dart';
+import 'package:gamificationapp/data/achievements_service.dart';
 
 class Questionnaire extends StatefulWidget {
   const Questionnaire({super.key});
@@ -20,41 +22,31 @@ class _QuestionnaireState extends State<Questionnaire> {
   final _progress = ProgressService();
   late final DevTools _dev = DevTools(_progress);
 
-  Future<(_VM, int)> _loadVM(BuildContext context) async {
+  Future<(_VM, int, int, int)> _loadVM(BuildContext context) async {
     final bundle = await _contentRepo.load();
 
-    // Locale -> strings
     final locale = Localizations.localeOf(context);
     final strings = await ContentStrings.loadForLocale(locale);
 
-    // Module
     final module = bundle.modules.firstWhere(
       (m) => m.id == 'm2',
-      orElse: () => throw StateError(
-        'Module "m2" not found. Available: ${bundle.modules.map((m) => m.id).join(", ")}',
-      ),
+      orElse: () => throw StateError('Module "m2" not found.'),
     );
 
-    // Topics: use real ones if present, otherwise create placeholders
     final topics = <Topic>[];
     for (final tid in module.topicIds) {
       final match = bundle.topics.where((t) => t.id == tid);
-      if (match.isNotEmpty) {
-        topics.add(match.first);
-      } else {
-        // placeholder with empty questions; titleKey resolves to itself if not in i18n
-        topics.add(
-          Topic(id: tid, titleKey: 'topic.$tid.title', questionIds: const []),
-        );
-        // Optional: print a warning in debug
-        // ignore: avoid_print
-        print(
-          'Content warning: topic "$tid" is referenced in module but not defined in topics[]',
-        );
-      }
+      topics.add(
+        match.isNotEmpty
+            ? match.first
+            : Topic(
+                id: tid,
+                titleKey: 'topic.$tid.title',
+                questionIds: const [],
+              ),
+      );
     }
 
-    // Best stars
     final bestStars = <String, int>{};
     for (final t in topics) {
       bestStars[t.id] = await _progress.getBestStars(module.id, t.id);
@@ -66,14 +58,24 @@ class _QuestionnaireState extends State<Questionnaire> {
     );
     final streak = await _progress.updateAndGetStreak(DateTime.now());
 
-    return (_VM(module, topics, strings, bestStars, totalStars), streak);
+    // 👇 Carga logros y badges reales
+    final achService = AchievementsService();
+    final badges = await achService.getBadgesCount();
+    final achievements = await achService.getAchievementsCount();
+
+    return (
+      _VM(module, topics, strings, bestStars, totalStars),
+      streak,
+      badges,
+      achievements,
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     final t = AppLocalizations.of(context)!;
 
-    return FutureBuilder<(_VM, int)>(
+    return FutureBuilder<(_VM, int, int, int)>(
       future: _loadVM(context),
       builder: (context, snap) {
         if (snap.hasError) {
@@ -96,7 +98,7 @@ class _QuestionnaireState extends State<Questionnaire> {
           );
         }
 
-        final (vm, streak) = snap.data!;
+        final (vm, streak, badges, achievements) = snap.data!;
 
         return Scaffold(
           appBar: AppBar(
@@ -108,8 +110,16 @@ class _QuestionnaireState extends State<Questionnaire> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 _TopCounter(iconPath: AppIcons.flame, value: streak, size: 26),
-                _TopCounter(iconPath: AppIcons.thunder, value: 3, size: 26),
-                _TopCounter(iconPath: AppIcons.medal, value: 5, size: 26),
+                _TopCounter(
+                  iconPath: AppIcons.thunder,
+                  value: badges,
+                  size: 26,
+                ),
+                _TopCounter(
+                  iconPath: AppIcons.medal,
+                  value: achievements,
+                  size: 26,
+                ),
                 if (kDebugMode) ...[
                   const SizedBox(width: 12),
                   IconButton(
@@ -126,35 +136,8 @@ class _QuestionnaireState extends State<Questionnaire> {
           ),
 
           // ==== Bottom Navigation (with label color fix) ====
-          bottomNavigationBar: NavigationBarTheme(
-            data: NavigationBarThemeData(
-              backgroundColor: AppColors.green.withValues(alpha: 0.45),
-              indicatorColor: AppColors.lightBlue,
-              labelTextStyle: MaterialStateProperty.all(
-                const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w700,
-                  color: AppColors.darkBlue,
-                ),
-              ),
-            ),
-            child: NavigationBar(
-              labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
-              destinations: const [
-                NavigationDestination(
-                  icon: AppIcon(AppIcons.checklist, size: 32),
-                  label: 'Questionnaire', // or t.tabQuestionnaire
-                ),
-                NavigationDestination(
-                  icon: AppIcon(AppIcons.trophy, size: 32),
-                  label: 'Performance', // or t.tabPerformance
-                ),
-                NavigationDestination(
-                  icon: AppIcon(AppIcons.cogwheel, size: 32),
-                  label: 'Options', // or t.tabOptions
-                ),
-              ],
-            ),
+          bottomNavigationBar: const AquaBottomNav(
+            current: AquaTab.questionnaire,
           ),
 
           body: RefreshIndicator(
@@ -402,7 +385,7 @@ class _TopicTile extends StatelessWidget {
                 3,
                 (i) => Padding(
                   padding: const EdgeInsets.only(left: 6),
-                  child: _AssetIcon(
+                  child: AppIcon(
                     i < bestStars ? AppIcons.filledStar : AppIcons.emptyStar,
                     size: 26,
                   ),
@@ -432,6 +415,7 @@ class _TopicTile extends StatelessWidget {
     // Locked banner
     final have = totalStarsInModule;
     final need = requiredStars;
+    final t = AppLocalizations.of(context)!;
     return _RoundedBorderCard(
       bgColor: Colors.blueGrey.shade500,
       borderColor: Colors.blueGrey.shade700,
@@ -439,12 +423,11 @@ class _TopicTile extends StatelessWidget {
       padding: const EdgeInsets.all(16),
       child: Row(
         children: [
-          _AssetIcon(AppIcons.lock, size: 36),
+          AppIcon(AppIcons.lock, size: 36),
           const SizedBox(width: 12),
           Expanded(
             child: Text(
-              // You can localize this with your AppLocalizations if preferred
-              'Earn more stars to unlock!',
+              t.earnMoreStars,
               style: const TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.w600,
@@ -459,7 +442,7 @@ class _TopicTile extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 8),
-          _AssetIcon(AppIcons.emptyStar, size: 26),
+          AppIcon(AppIcons.emptyStar, size: 26),
         ],
       ),
     );
@@ -490,33 +473,6 @@ class _TopCounter extends StatelessWidget {
           style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
         ),
       ],
-    );
-  }
-}
-
-class _NavIcon extends StatelessWidget {
-  final String path;
-  final double size;
-  const _NavIcon(this.path, {this.size = 24});
-
-  @override
-  Widget build(BuildContext context) {
-    return Image.asset(path, width: size, height: size);
-  }
-}
-
-class _AssetIcon extends StatelessWidget {
-  final String path;
-  final double size;
-  const _AssetIcon(this.path, {this.size = 24});
-  @override
-  Widget build(BuildContext context) {
-    return Image.asset(
-      path,
-      width: size,
-      height: size,
-      fit: BoxFit.contain,
-      filterQuality: FilterQuality.medium,
     );
   }
 }

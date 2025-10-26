@@ -21,6 +21,14 @@ abstract class AppIcons {
   static const emptyStar    = 'assets/icons/empty_star.png';
 
   static const lock         = 'assets/icons/lock.png';
+  static const add_image         = 'assets/icons/add_image.png';
+  static const es_flag         = 'assets/icons/es_flag.png';
+  static const en_flag         = 'assets/icons/en_flag.png';
+  static const it_flag         = 'assets/icons/it_flag.png';
+  static const el_flag         = 'assets/icons/el_flag.png';
+  static const tr_flag         = 'assets/icons/tr_flag.png';
+  static const fr_flag         = 'assets/icons/fr_flag.png';
+  static const pt_flag         = 'assets/icons/pt_flag.png';
 
   // === Optional pre-built providers (handy for precaching or ImageIcon) ===
   static const flameProvider        = AssetImage(flame);
@@ -33,6 +41,14 @@ abstract class AppIcons {
   static const emptyStarProvider    = AssetImage(emptyStar);
   static const lockProvider         = AssetImage(lock);
   static const closeProvider       = AssetImage(close);
+  static const addImageProvider    = AssetImage(add_image);
+  static const esFlagProvider      = AssetImage(es_flag);
+  static const enFlagProvider      = AssetImage(en_flag);
+  static const itFlagProvider      = AssetImage(it_flag);
+  static const elFlagProvider      = AssetImage(el_flag);
+  static const trFlagProvider      = AssetImage(tr_flag);
+  static const frFlagProvider      = AssetImage(fr_flag);
+  static const ptFlagProvider      = AssetImage(pt_flag);
 }
 
 /// Generic reusable icon widget for all raster icons in [AppIcons].

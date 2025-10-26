@@ -150,6 +150,156 @@ abstract class AppLocalizations {
   /// **'Medals'**
   String get counterMedals;
 
+  /// No description provided for @changeLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Change Language'**
+  String get changeLanguage;
+
+  /// No description provided for @exportResults.
+  ///
+  /// In en, this message translates to:
+  /// **'Export Results'**
+  String get exportResults;
+
+  /// No description provided for @resetProgress.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset Progress'**
+  String get resetProgress;
+
+  /// No description provided for @profileNameLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Name'**
+  String get profileNameLabel;
+
+  /// No description provided for @profileSurnameLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Surname'**
+  String get profileSurnameLabel;
+
+  /// No description provided for @profileEmailLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Email'**
+  String get profileEmailLabel;
+
+  /// Snackbar shown after user selects a new language
+  ///
+  /// In en, this message translates to:
+  /// **'Language set to {code}'**
+  String languageSetTo({required String code});
+
+  /// No description provided for @resetAllProgressTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset all progress?'**
+  String get resetAllProgressTitle;
+
+  /// No description provided for @resetAllProgressBody.
+  ///
+  /// In en, this message translates to:
+  /// **'This will delete all quiz results (stars, attempts, percentages) and streak data.\n\nYour personal profile and language settings will NOT be deleted.\nThis action cannot be undone.'**
+  String get resetAllProgressBody;
+
+  /// No description provided for @allProgressResetDone.
+  ///
+  /// In en, this message translates to:
+  /// **'All progress has been reset.'**
+  String get allProgressResetDone;
+
+  /// No description provided for @commonCancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get commonCancel;
+
+  /// No description provided for @commonSave.
+  ///
+  /// In en, this message translates to:
+  /// **'Save'**
+  String get commonSave;
+
+  /// No description provided for @commonReset.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset'**
+  String get commonReset;
+
+  /// Title of the edit field dialog
+  ///
+  /// In en, this message translates to:
+  /// **'Edit {field}'**
+  String editFieldTitle({required String field});
+
+  /// Tooltip for the edit field button
+  ///
+  /// In en, this message translates to:
+  /// **'Edit {field}'**
+  String editFieldTooltip({required String field});
+
+  /// Snackbar shown after user updates a profile field
+  ///
+  /// In en, this message translates to:
+  /// **'{field} updated'**
+  String fieldUpdated({required String field});
+
+  /// No description provided for @reportTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Quiz Performance Report'**
+  String get reportTitle;
+
+  /// No description provided for @reportNameLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Name'**
+  String get reportNameLabel;
+
+  /// No description provided for @reportEmailLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Email'**
+  String get reportEmailLabel;
+
+  /// No description provided for @reportGeneratedLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Generated'**
+  String get reportGeneratedLabel;
+
+  /// No description provided for @reportColTopic.
+  ///
+  /// In en, this message translates to:
+  /// **'Topic'**
+  String get reportColTopic;
+
+  /// No description provided for @reportColBestPct.
+  ///
+  /// In en, this message translates to:
+  /// **'Best %'**
+  String get reportColBestPct;
+
+  /// No description provided for @reportColStars.
+  ///
+  /// In en, this message translates to:
+  /// **'Stars'**
+  String get reportColStars;
+
+  /// No description provided for @reportColBestCt.
+  ///
+  /// In en, this message translates to:
+  /// **'Best (c/t)'**
+  String get reportColBestCt;
+
+  /// No description provided for @reportColDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Date'**
+  String get reportColDate;
+
   /// No description provided for @moduleTitle.
   ///
   /// In en, this message translates to:
@@ -221,6 +371,120 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Back'**
   String get backTooltip;
+
+  /// No description provided for @performanceOverview.
+  ///
+  /// In en, this message translates to:
+  /// **'Overview'**
+  String get performanceOverview;
+
+  /// No description provided for @badgesTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Badges'**
+  String get badgesTitle;
+
+  /// No description provided for @achievementsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Achievements'**
+  String get achievementsTitle;
+
+  /// No description provided for @reviewAll.
+  ///
+  /// In en, this message translates to:
+  /// **'review all'**
+  String get reviewAll;
+
+  /// No description provided for @comingSoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Coming soon'**
+  String get comingSoon;
+
+  /// No description provided for @streakDays.
+  ///
+  /// In en, this message translates to:
+  /// **'{days} Day Streak'**
+  String streakDays({required String days});
+
+  /// No description provided for @badgesCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} Badges'**
+  String badgesCount({required String count});
+
+  /// No description provided for @achievementsCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} Achievement(s)'**
+  String achievementsCount({required String count});
+
+  /// Generic title for achievements or badges
+  ///
+  /// In en, this message translates to:
+  /// **'Achievement {number}'**
+  String badgeGenericTitle({required String number});
+
+  /// No description provided for @badgeDateLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Date'**
+  String get badgeDateLabel;
+
+  /// No description provided for @achStreak2days.
+  ///
+  /// In en, this message translates to:
+  /// **'2-day streak'**
+  String get achStreak2days;
+
+  /// No description provided for @achStreak5days.
+  ///
+  /// In en, this message translates to:
+  /// **'5-day streak'**
+  String get achStreak5days;
+
+  /// No description provided for @achStreak7days.
+  ///
+  /// In en, this message translates to:
+  /// **'7-day streak'**
+  String get achStreak7days;
+
+  /// No description provided for @achProfileUpdated.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile updated'**
+  String get achProfileUpdated;
+
+  /// No description provided for @achExportedOnce.
+  ///
+  /// In en, this message translates to:
+  /// **'Exported results once'**
+  String get achExportedOnce;
+
+  /// No description provided for @badgeAllTopicsAnyScore.
+  ///
+  /// In en, this message translates to:
+  /// **'All topics attempted'**
+  String get badgeAllTopicsAnyScore;
+
+  /// No description provided for @badgeAllTopicsAtLeast2Stars.
+  ///
+  /// In en, this message translates to:
+  /// **'At least 2★ in all topics'**
+  String get badgeAllTopicsAtLeast2Stars;
+
+  /// No description provided for @badgeAllTopics3Stars.
+  ///
+  /// In en, this message translates to:
+  /// **'3★ in all topics'**
+  String get badgeAllTopics3Stars;
+
+  /// Badge for getting 3 stars in a specific topic
+  ///
+  /// In en, this message translates to:
+  /// **'{topic} – 3★'**
+  String badgeTopicThreeStars({required String topic});
 }
 
 class _AppLocalizationsDelegate

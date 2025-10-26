@@ -3,6 +3,10 @@ import 'package:gamificationapp/design/app_assets.dart';
 import 'package:gamificationapp/design/app_colors.dart';
 import 'package:gamificationapp/data/progress_service.dart';
 import 'package:gamificationapp/l10n/app_localizations.dart';
+import 'package:gamificationapp/widgets/aqua_page_header.dart';
+import 'package:flutter/foundation.dart';
+import 'package:gamificationapp/widgets/aqua_rounded_card.dart';
+import 'package:gamificationapp/widgets/aqua_pill_button.dart';
 
 class TopicSummary extends StatefulWidget {
   final String moduleId;
@@ -58,32 +62,19 @@ class _TopicSummaryState extends State<TopicSummary> {
     final showFirstTime = _bestCorrect == null || _bestTotal == null;
 
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        automaticallyImplyLeading: false,
-        title: Text(
-          title,
-          style: const TextStyle(
-            color: AppColors.darkBlue,
-            fontWeight: FontWeight.w700,
-          ),
-        ),
-        centerTitle: true,
-        leading: IconButton(
-          onPressed: () => Navigator.of(context).pop(),
-          icon: const AppIcon(
-            AppIcons.close,
-            size: 28,
-            allowTint: true,
-            color: AppColors.darkBlue,
-          ),
-          tooltip: t.backTooltip,
-        ),
-        bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(1),
-          child: Container(height: 2, color: AppColors.darkBlue),
-        ),
+      appBar: AquaPageHeader(
+        title: t.summaryTopicTitle(number: '${widget.topicIndexOneBased}'),
+        leading: AquaLeading.close, // <- flecha a la izquierda
+        onPressed: () => Navigator.of(context).pop(),
+        actions: kDebugMode
+            ? [
+                IconButton(
+                  icon: const Icon(Icons.bug_report, color: AppColors.darkBlue),
+                  onPressed: () => debugPrint('DEV'),
+                  tooltip: 'DEV',
+                ),
+              ]
+            : null,
       ),
       backgroundColor: Colors.white,
       body: _loading
@@ -98,7 +89,7 @@ class _TopicSummaryState extends State<TopicSummary> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        _RoundedBorderCard(
+                        AquaRoundedCard(
                           bgColor: AppColors.green.withValues(alpha: 0.85),
                           borderColor: AppColors.green,
                           radius: 18,
@@ -206,14 +197,12 @@ class _TopicSummaryState extends State<TopicSummary> {
                         horizontal: 40,
                       ), // margen lateral
                       child: SizedBox(
-                        width: double.infinity, // se expande, pero respeta el padding
+                        width: double
+                            .infinity, // se expande, pero respeta el padding
                         height: 56,
-                        child: _OutlineFillButton(
+                        child: AquaPillButton.primary(
                           label: showFirstTime ? t.startQuiz : t.tryAgain,
-                          onPressed: () {
-                            // TODO: Navegar al quiz pasando moduleId y topicId
-                            // Navigator.push(context, MaterialPageRoute(builder: (_) => QuizScreen(...)));
-                          },
+                          onPressed: () {},
                         ),
                       ),
                     ),
@@ -230,85 +219,5 @@ class _TopicSummaryState extends State<TopicSummary> {
     final mon = d.month.toString().padLeft(2, '0');
     final year = d.year.toString();
     return '$day/$mon/$year';
-  }
-}
-
-// --- Reutilizables (card + botón) ---
-
-class _RoundedBorderCard extends StatelessWidget {
-  final Widget child;
-  final Color bgColor;
-  final Color borderColor;
-  final double radius;
-  final EdgeInsetsGeometry padding;
-
-  const _RoundedBorderCard({
-    required this.child,
-    required this.bgColor,
-    required this.borderColor,
-    this.radius = 18,
-    this.padding = const EdgeInsets.all(16),
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: bgColor,
-        borderRadius: BorderRadius.circular(radius),
-        border: Border.all(color: borderColor, width: 2),
-        boxShadow: [
-          BoxShadow(
-            color: AppColors.lightBlue.withValues(alpha: 0.18),
-            blurRadius: 10,
-            offset: const Offset(0, 4),
-          ),
-        ],
-      ),
-      padding: padding,
-      child: child,
-    );
-  }
-}
-
-class _OutlineFillButton extends StatelessWidget {
-  final String label;
-  final VoidCallback onPressed;
-  const _OutlineFillButton({required this.label, required this.onPressed});
-
-  @override
-  Widget build(BuildContext context) {
-    return Material(
-      color: Colors.transparent,
-      borderRadius: BorderRadius.circular(28),
-      child: InkWell(
-        borderRadius: BorderRadius.circular(28),
-        onTap: onPressed,
-        child: Container(
-          decoration: BoxDecoration(
-            color: AppColors.green.withValues(alpha: 0.85),
-            border: Border.all(color: AppColors.darkBlue, width: 2),
-            borderRadius: BorderRadius.circular(28),
-            boxShadow: [
-              BoxShadow(
-                color: AppColors.lightBlue.withValues(alpha: 0.25),
-                blurRadius: 12,
-                offset: const Offset(0, 4),
-              ),
-            ],
-          ),
-          alignment: Alignment.center,
-          child: Text(
-            label.toUpperCase(),
-            style: const TextStyle(
-              color: AppColors.darkBlue,
-              fontWeight: FontWeight.w700,
-              fontSize: 16,
-              letterSpacing: 1.0,
-            ),
-          ),
-        ),
-      ),
-    );
   }
 }

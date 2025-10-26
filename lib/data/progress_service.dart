@@ -151,4 +151,35 @@ class ProgressService {
     final d = DateTime(date.year, date.month, date.day);
     await sp.setString(_kLastLogin, d.toIso8601String());
   }
+
+  /// sin tocar perfil ni idioma ni otros datos de la app.
+  Future<void> clearAllProgressData() async {
+    final sp = await SharedPreferences.getInstance();
+    final keys = sp.getKeys();
+
+    // Campos que guarda _topicKey(...)
+    const fields = [
+      _kBestPct,
+      _kBestStars,
+      _kBestCorrect,
+      _kBestTotal,
+      _kBestDateIso,
+    ];
+
+    // Regex que machaca EXACTAMENTE el patrón que usas:
+    // mod:<moduleId>|topic:<topicId>|<field>
+    final fieldAlt = fields.map(RegExp.escape).join('|');
+    final re = RegExp(r'^mod:.*\|topic:.*\|(' + fieldAlt + r')$');
+
+    // 1) Borra todas las claves de progreso por-topic
+    for (final k in keys) {
+      if (re.hasMatch(k)) {
+        await sp.remove(k);
+      }
+    }
+
+    // 2) Borra también racha y último login
+    await sp.remove(_kLastLogin);
+    await sp.remove(_kStreak);
+  }
 }

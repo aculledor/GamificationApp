@@ -7,6 +7,67 @@
     "counterFlame": "Flame",
     "counterEnergy": "Energy",
     "counterMedals": "Medals",
+    "changeLanguage": "Change Language",
+    "exportResults": "Export Results",
+    "resetProgress": "Reset Progress",
+    "profileNameLabel": "Name",
+    "profileSurnameLabel": "Surname",
+    "profileEmailLabel": "Email",
+    "changeLanguage": "Change Language",
+    "exportResults": "Export Results",
+    "resetProgress": "Reset Progress",
+    "languageSetTo": "Language set to {code}",
+    "@languageSetTo": {
+        "description": "Snackbar shown after user selects a new language",
+        "placeholders": {
+            "code": {
+                "type": "String",
+                "example": "EN"
+            }
+        }
+    },
+    "resetAllProgressTitle": "Reset all progress?",
+    "resetAllProgressBody": "This will delete all quiz results (stars, attempts, percentages) and streak data.\n\nYour personal profile and language settings will NOT be deleted.\nThis action cannot be undone.",
+    "allProgressResetDone": "All progress has been reset.",
+    "commonCancel": "Cancel",
+    "commonSave": "Save",
+    "commonReset": "Reset",
+    "editFieldTitle": "Edit {field}",
+    "@editFieldTitle": {
+        "description": "Title of the edit field dialog",
+        "placeholders": {
+            "field": {
+                "type": "String"
+            }
+        }
+    },
+    "editFieldTooltip": "Edit {field}",
+    "@editFieldTooltip": {
+        "description": "Tooltip for the edit field button",
+        "placeholders": {
+            "field": {
+                "type": "String"
+            }
+        }
+    },
+    "fieldUpdated": "{field} updated",
+    "@fieldUpdated": {
+        "description": "Snackbar shown after user updates a profile field",
+        "placeholders": {
+            "field": {
+                "type": "String"
+            }
+        }
+    },
+    "reportTitle": "Quiz Performance Report",
+    "reportNameLabel": "Name",
+    "reportEmailLabel": "Email",
+    "reportGeneratedLabel": "Generated",
+    "reportColTopic": "Topic",
+    "reportColBestPct": "Best %",
+    "reportColStars": "Stars",
+    "reportColBestCt": "Best (c/t)",
+    "reportColDate": "Date",
     "moduleTitle": "Module {number}: {name}",
     "@moduleTitle": {
         "placeholders": {
@@ -83,5 +144,63 @@
     "backTooltip": "Back",
     "@backTooltip": {
         "description": "Tooltip for the back/close button"
+    },
+    "performanceOverview": "Overview",
+    "badgesTitle": "Badges",
+    "achievementsTitle": "Achievements",
+    "reviewAll": "review all",
+    "comingSoon": "Coming soon",
+    "streakDays": "{days} Day Streak",
+    "@streakDays": {
+        "placeholders": {
+            "days": {
+                "type": "String"
+            }
+        }
+    },
+    "badgesCount": "{count} Badges",
+    "@badgesCount": {
+        "placeholders": {
+            "count": {
+                "type": "String"
+            }
+        }
+    },
+    "achievementsCount": "{count} Achievement(s)",
+    "@achievementsCount": {
+        "placeholders": {
+            "count": {
+                "type": "String"
+            }
+        }
+    },
+    "badgeGenericTitle": "Achievement {number}",
+    "@badgeGenericTitle": {
+        "description": "Generic title for achievements or badges",
+        "placeholders": {
+            "number": {
+                "type": "String",
+                "example": "1"
+            }
+        }
+    },
+    "badgeDateLabel": "Date",
+    "achStreak2days": "2-day streak",
+    "achStreak5days": "5-day streak",
+    "achStreak7days": "7-day streak",
+    "achProfileUpdated": "Profile updated",
+    "achExportedOnce": "Exported results once",
+    "badgeAllTopicsAnyScore": "All topics attempted",
+    "badgeAllTopicsAtLeast2Stars": "At least 2★ in all topics",
+    "badgeAllTopics3Stars": "3★ in all topics",
+    "badgeTopicThreeStars": "{topic} – 3★",
+    "@badgeTopicThreeStars": {
+        "description": "Badge for getting 3 stars in a specific topic",
+        "placeholders": {
+            "topic": {
+                "type": "String",
+                "example": "Water Sustainability Basics"
+            }
+        }
     }
 }

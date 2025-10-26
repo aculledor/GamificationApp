@@ -30,6 +30,90 @@ class AppLocalizationsEn extends AppLocalizations {
   String get counterMedals => 'Medals';
 
   @override
+  String get changeLanguage => 'Change Language';
+
+  @override
+  String get exportResults => 'Export Results';
+
+  @override
+  String get resetProgress => 'Reset Progress';
+
+  @override
+  String get profileNameLabel => 'Name';
+
+  @override
+  String get profileSurnameLabel => 'Surname';
+
+  @override
+  String get profileEmailLabel => 'Email';
+
+  @override
+  String languageSetTo({required String code}) {
+    return 'Language set to $code';
+  }
+
+  @override
+  String get resetAllProgressTitle => 'Reset all progress?';
+
+  @override
+  String get resetAllProgressBody =>
+      'This will delete all quiz results (stars, attempts, percentages) and streak data.\n\nYour personal profile and language settings will NOT be deleted.\nThis action cannot be undone.';
+
+  @override
+  String get allProgressResetDone => 'All progress has been reset.';
+
+  @override
+  String get commonCancel => 'Cancel';
+
+  @override
+  String get commonSave => 'Save';
+
+  @override
+  String get commonReset => 'Reset';
+
+  @override
+  String editFieldTitle({required String field}) {
+    return 'Edit $field';
+  }
+
+  @override
+  String editFieldTooltip({required String field}) {
+    return 'Edit $field';
+  }
+
+  @override
+  String fieldUpdated({required String field}) {
+    return '$field updated';
+  }
+
+  @override
+  String get reportTitle => 'Quiz Performance Report';
+
+  @override
+  String get reportNameLabel => 'Name';
+
+  @override
+  String get reportEmailLabel => 'Email';
+
+  @override
+  String get reportGeneratedLabel => 'Generated';
+
+  @override
+  String get reportColTopic => 'Topic';
+
+  @override
+  String get reportColBestPct => 'Best %';
+
+  @override
+  String get reportColStars => 'Stars';
+
+  @override
+  String get reportColBestCt => 'Best (c/t)';
+
+  @override
+  String get reportColDate => 'Date';
+
+  @override
   String moduleTitle({required String number, required String name}) {
     return 'Module $number: $name';
   }
@@ -85,4 +169,71 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get backTooltip => 'Back';
+
+  @override
+  String get performanceOverview => 'Overview';
+
+  @override
+  String get badgesTitle => 'Badges';
+
+  @override
+  String get achievementsTitle => 'Achievements';
+
+  @override
+  String get reviewAll => 'review all';
+
+  @override
+  String get comingSoon => 'Coming soon';
+
+  @override
+  String streakDays({required String days}) {
+    return '$days Day Streak';
+  }
+
+  @override
+  String badgesCount({required String count}) {
+    return '$count Badges';
+  }
+
+  @override
+  String achievementsCount({required String count}) {
+    return '$count Achievement(s)';
+  }
+
+  @override
+  String badgeGenericTitle({required String number}) {
+    return 'Achievement $number';
+  }
+
+  @override
+  String get badgeDateLabel => 'Date';
+
+  @override
+  String get achStreak2days => '2-day streak';
+
+  @override
+  String get achStreak5days => '5-day streak';
+
+  @override
+  String get achStreak7days => '7-day streak';
+
+  @override
+  String get achProfileUpdated => 'Profile updated';
+
+  @override
+  String get achExportedOnce => 'Exported results once';
+
+  @override
+  String get badgeAllTopicsAnyScore => 'All topics attempted';
+
+  @override
+  String get badgeAllTopicsAtLeast2Stars => 'At least 2★ in all topics';
+
+  @override
+  String get badgeAllTopics3Stars => '3★ in all topics';
+
+  @override
+  String badgeTopicThreeStars({required String topic}) {
+    return '$topic – 3★';
+  }
 }
