@@ -1,4 +1,5 @@
 {
+  "module.m2.title": "Sustainability Management in Aquaculture",
   "topic.m2.t1.title": "Fundamentos de la sostenibilidad marina",
   "q.m2.t1.001": "¿Cuál es el objetivo principal de la economía azul?",
   "q.m2.t1.001.a": "Equilibrar la preservación del ecosistema marino y el crecimiento económico",
@@ -6,8 +7,8 @@
   "q.m2.t1.001.c": "Eliminar las regulaciones costeras",
   "q.m2.t1.001.d": "",
   "q.m2.t1.002": "",
-  "q.m2.t1.002.a": "",
-  "q.m2.t1.002.b": "",
+  "q.m2.t1.002.a": "1234",
+  "q.m2.t1.002.b": "hola",
   "q.m2.t1.003": "",
   "q.m2.t1.003.a": "",
   "q.m2.t1.003.b": "",

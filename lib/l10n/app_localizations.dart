@@ -330,6 +330,12 @@ abstract class AppLocalizations {
   /// **'{count, plural, =0{Unlocked} one{# star left} other{# stars left}}'**
   String starsLeft({required num count});
 
+  /// No description provided for @summaryModuleTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Module Summary'**
+  String get summaryModuleTitle;
+
   /// Title of the topic summary screen with topic index
   ///
   /// In en, this message translates to:
@@ -581,6 +587,60 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'{done}/{total} Topics'**
   String topicsProgressLabel({required String done, required String total});
+
+  /// No description provided for @warningTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Warning'**
+  String get warningTitle;
+
+  /// No description provided for @quizExitWarning.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to exit the quiz? Your current progress will be lost.'**
+  String get quizExitWarning;
+
+  /// No description provided for @yesExit.
+  ///
+  /// In en, this message translates to:
+  /// **'Yes, exit'**
+  String get yesExit;
+
+  /// No description provided for @continueQuiz.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue quiz'**
+  String get continueQuiz;
+
+  /// No description provided for @question.
+  ///
+  /// In en, this message translates to:
+  /// **'Question'**
+  String get question;
+
+  /// No description provided for @check.
+  ///
+  /// In en, this message translates to:
+  /// **'Check'**
+  String get check;
+
+  /// No description provided for @successes.
+  ///
+  /// In en, this message translates to:
+  /// **'Successes'**
+  String get successes;
+
+  /// No description provided for @continueLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue'**
+  String get continueLabel;
+
+  /// No description provided for @freeTextHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Type your answer here'**
+  String get freeTextHint;
 }
 
 class _AppLocalizationsDelegate

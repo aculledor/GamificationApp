@@ -107,6 +107,7 @@
             }
         }
     },
+    "summaryModuleTitle": "Module Summary",
     "summaryTopicTitle": "Summary Topic {number}",
     "@summaryTopicTitle": {
         "description": "Title of the topic summary screen with topic index",
@@ -256,5 +257,14 @@
                 "example": "6"
             }
         }
-    }
+    },
+    "warningTitle": "Warning",
+    "quizExitWarning": "Are you sure you want to exit the quiz? Your current progress will be lost.",
+    "yesExit": "Yes, exit",
+    "continueQuiz": "Continue quiz",
+    "question": "Question",
+    "check": "Check",
+    "successes": "Successes",
+    "continueLabel": "Continue",
+    "freeTextHint": "Type your answer here"
 }

@@ -3,6 +3,7 @@ import 'package:gamificationapp/design/app_assets.dart';
 import 'package:gamificationapp/design/app_colors.dart';
 import 'package:gamificationapp/data/progress_service.dart';
 import 'package:gamificationapp/l10n/app_localizations.dart';
+import 'package:gamificationapp/screens/topic_quiz.dart';
 import 'package:gamificationapp/widgets/aqua_page_header.dart';
 import 'package:flutter/foundation.dart';
 import 'package:gamificationapp/widgets/aqua_rounded_card.dart';
@@ -193,16 +194,34 @@ class _TopicSummaryState extends State<TopicSummary> {
                   Align(
                     alignment: Alignment.center,
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 40,
-                      ), // margen lateral
+                      padding: const EdgeInsets.symmetric(horizontal: 40),
                       child: SizedBox(
-                        width: double
-                            .infinity, // se expande, pero respeta el padding
+                        width: double.infinity,
                         height: 56,
                         child: AquaPillButton.primary(
                           label: showFirstTime ? t.startQuiz : t.tryAgain,
-                          onPressed: () {},
+                          onPressed: () async {
+                            final changed = await Navigator.push<bool>(
+                              context,
+                              MaterialPageRoute(
+                                builder: (_) => TopicQuizScreen(
+                                  moduleId: widget.moduleId,
+                                  topicId: widget.topicId,
+                                  topicTitle:
+                                      widget.topicTitleKey, // ya localizado
+                                ),
+                              ),
+                            );
+
+                            if (!mounted) return;
+                            if (changed == true) {
+                              await _load(); // tu método que re-lee ProgressService
+                              if (!mounted) return;
+                              setState(
+                                () {},
+                              ); // refresca la tarjeta con nuevas estrellas/score
+                            }
+                          },
                         ),
                       ),
                     ),

@@ -144,6 +144,9 @@ class AppLocalizationsFr extends AppLocalizations {
   }
 
   @override
+  String get summaryModuleTitle => 'Module Summary';
+
+  @override
   String summaryTopicTitle({required Object number}) {
     return 'Summary Topic $number';
   }
@@ -304,4 +307,32 @@ class AppLocalizationsFr extends AppLocalizations {
   String topicsProgressLabel({required String done, required String total}) {
     return '$done/$total Topics';
   }
+
+  @override
+  String get warningTitle => 'Warning';
+
+  @override
+  String get quizExitWarning =>
+      'Are you sure you want to exit the quiz? Your current progress will be lost.';
+
+  @override
+  String get yesExit => 'Yes, exit';
+
+  @override
+  String get continueQuiz => 'Continue quiz';
+
+  @override
+  String get question => 'Question';
+
+  @override
+  String get check => 'Check';
+
+  @override
+  String get successes => 'Successes';
+
+  @override
+  String get continueLabel => 'Continue';
+
+  @override
+  String get freeTextHint => 'Type your answer here';
 }

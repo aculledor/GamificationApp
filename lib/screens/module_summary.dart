@@ -92,16 +92,10 @@ class _ModuleSummaryState extends State<ModuleSummary> {
   Widget build(BuildContext context) {
     final t = AppLocalizations.of(context)!;
 
-    final moduleTitleText = t.moduleTitle(
-      number: '${widget.moduleIndexOneBased}',
-      // MÓDULO: usa la convención "module.<id>.title"
-      name: _strings.t('module.${_module.id}.title'),
-    );
-
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AquaPageHeader(
-        title: '$moduleTitleText – ${t.summaryLabel}',
+        title: t.summaryModuleTitle,
         leading: AquaLeading.back,
         onPressed: () => Navigator.pop(context),
       ),
@@ -114,7 +108,7 @@ class _ModuleSummaryState extends State<ModuleSummary> {
                 padding: const EdgeInsets.fromLTRB(14, 12, 14, 24),
                 children: [
                   _ModuleOverviewCard(
-                    moduleTitle: moduleTitleText,
+                    moduleTitle: _strings.t('module.${_module.id}.title'),
                     totalStars: _totalStars,
                     maxStars: _topics.length * 3,
                     attempted: _attempted,
