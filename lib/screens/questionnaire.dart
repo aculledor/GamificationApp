@@ -10,6 +10,9 @@ import 'package:flutter/foundation.dart';
 import 'package:gamificationapp/dev/dev_tools.dart';
 import 'package:gamificationapp/widgets/aqua_bottom_nav.dart';
 import 'package:gamificationapp/data/achievements_service.dart';
+import 'package:gamificationapp/screens/module_summary.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:gamificationapp/data/user_profile_service.dart';
 
 class Questionnaire extends StatefulWidget {
   const Questionnaire({super.key});
@@ -21,6 +24,35 @@ class _QuestionnaireState extends State<Questionnaire> {
   final _contentRepo = ContentRepository();
   final _progress = ProgressService();
   late final DevTools _dev = DevTools(_progress);
+  final _profileSvc = UserProfileService();
+  bool _welcomeScheduled = false;
+
+  Future<void> _maybeShowWelcome(int streak) async {
+    final sp = await SharedPreferences.getInstance();
+    final today = DateTime.now();
+    final todayKey =
+        '${today.year}-${today.month.toString().padLeft(2, '0')}-${today.day.toString().padLeft(2, '0')}';
+
+    // Solo una vez por día
+    final last = sp.getString('welcomeLastShown');
+    if (last == todayKey) return;
+
+    final profile = await _profileSvc.load();
+    if (!mounted) return;
+
+    await showDialog<void>(
+      context: context,
+      barrierDismissible: false,
+      builder: (_) => _WelcomeDialog(
+        name: (profile.name.trim().isEmpty && profile.surname.trim().isEmpty)
+            ? null
+            : '${profile.name} ${profile.surname}'.trim(),
+        streak: streak,
+      ),
+    );
+
+    await sp.setString('welcomeLastShown', todayKey);
+  }
 
   Future<(_VM, int, int, int)> _loadVM(BuildContext context) async {
     final bundle = await _contentRepo.load();
@@ -30,8 +62,13 @@ class _QuestionnaireState extends State<Questionnaire> {
 
     final module = bundle.modules.firstWhere(
       (m) => m.id == 'm2',
-      orElse: () => throw StateError('Module "m2" not found.'),
+      orElse: () => throw StateError(
+        'Module "m2" not found. Available: ${bundle.modules.map((m) => m.id).join(", ")}',
+      ),
     );
+
+    final moduleIdx = bundle.modules.indexWhere((m) => m.id == module.id);
+    final moduleIndexOneBased = moduleIdx >= 0 ? moduleIdx + 1 : 1;
 
     final topics = <Topic>[];
     for (final tid in module.topicIds) {
@@ -64,7 +101,7 @@ class _QuestionnaireState extends State<Questionnaire> {
     final achievements = await achService.getAchievementsCount();
 
     return (
-      _VM(module, topics, strings, bestStars, totalStars),
+      _VM(module, topics, strings, bestStars, totalStars, moduleIndexOneBased),
       streak,
       badges,
       achievements,
@@ -99,6 +136,13 @@ class _QuestionnaireState extends State<Questionnaire> {
         }
 
         final (vm, streak, badges, achievements) = snap.data!;
+
+        if (!_welcomeScheduled) {
+          _welcomeScheduled = true;
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            _maybeShowWelcome(streak);
+          });
+        }
 
         return Scaffold(
           appBar: AppBar(
@@ -167,7 +211,18 @@ class _QuestionnaireState extends State<Questionnaire> {
                       ),
                     ],
                   ),
-                  onTap: () {}, // open module / topics
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => ModuleSummary(
+                          moduleId: vm.module.id,
+                          moduleIndexOneBased:
+                              vm.moduleIndexOneBased, // 👈 ahora existe
+                        ),
+                      ),
+                    );
+                  },
                 ),
 
                 const SizedBox(height: 14),
@@ -331,7 +386,16 @@ class _VM {
   final ContentStrings strings;
   final Map<String, int> bestStars;
   final int totalStars;
-  _VM(this.module, this.topics, this.strings, this.bestStars, this.totalStars);
+  final int moduleIndexOneBased; // 👈 NUEVO
+
+  _VM(
+    this.module,
+    this.topics,
+    this.strings,
+    this.bestStars,
+    this.totalStars,
+    this.moduleIndexOneBased, // 👈 NUEVO
+  );
 }
 
 /// A tile that shows either unlocked topic with stars or a locked banner.
@@ -524,5 +588,105 @@ class _RoundedBorderCard extends StatelessWidget {
             onTap: onTap,
             child: card,
           );
+  }
+}
+
+class _WelcomeDialog extends StatelessWidget {
+  final String? name; // si null, mostramos “WELCOME BACK”
+  final int streak;
+
+  const _WelcomeDialog({required this.name, required this.streak});
+
+  @override
+  Widget build(BuildContext context) {
+    final titleTop = (name == null || name!.isEmpty)
+        ? 'WELCOME BACK'
+        : 'WELCOME BACK\n${name!.toUpperCase()}';
+    final streakText = 'Daily streak: $streak';
+
+    return Dialog(
+      insetPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
+      backgroundColor: Colors.transparent,
+      child: Container(
+        decoration: BoxDecoration(
+          color: const Color(0xFF8DB7F0), // azul del mock
+          borderRadius: BorderRadius.circular(22),
+          border: Border.all(color: AppColors.darkBlue, width: 4),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.15),
+              blurRadius: 16,
+              offset: const Offset(0, 8),
+            ),
+          ],
+        ),
+        padding: const EdgeInsets.fromLTRB(18, 18, 18, 12),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            // Título grande
+            Text(
+              titleTop,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                color: AppColors.darkBlue,
+                fontWeight: FontWeight.w900,
+                fontSize: 26,
+                height: 1.2,
+              ),
+            ),
+            const SizedBox(height: 14),
+
+            // Línea divisoria del mock
+            Container(height: 3, color: AppColors.darkBlue),
+            const SizedBox(height: 14),
+
+            // Streak + icono
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  streakText,
+                  style: const TextStyle(
+                    color: AppColors.darkBlue,
+                    fontWeight: FontWeight.w800,
+                    fontSize: 20,
+                  ),
+                ),
+                const SizedBox(width: 8),
+                const AppIcon(AppIcons.flame, size: 26),
+              ],
+            ),
+
+            const SizedBox(height: 18),
+
+            // Botón CONTINUE
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: () => Navigator.of(context).pop(),
+                style: ElevatedButton.styleFrom(
+                  elevation: 0,
+                  backgroundColor: AppColors.darkBlue,
+                  foregroundColor: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(14),
+                  ),
+                  padding: const EdgeInsets.symmetric(vertical: 12),
+                ),
+                child: const Text(
+                  'CONTINUE',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w900,
+                    fontSize: 16,
+                    letterSpacing: 1.0,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

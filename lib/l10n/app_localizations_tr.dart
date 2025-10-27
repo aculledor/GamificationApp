@@ -191,13 +191,27 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
-  String badgesCount({required String count}) {
-    return '$count Badges';
+  String badgesCount({required int count}) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count Badges',
+      one: '1 Badge',
+      zero: 'No badges',
+    );
+    return '$_temp0';
   }
 
   @override
-  String achievementsCount({required String count}) {
-    return '$count Achievement(s)';
+  String achievementsCount({required int count}) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count Achievements',
+      one: '1 Achievement',
+      zero: 'No achievements',
+    );
+    return '$_temp0';
   }
 
   @override
@@ -235,5 +249,59 @@ class AppLocalizationsTr extends AppLocalizations {
   @override
   String badgeTopicThreeStars({required String topic}) {
     return '$topic – 3★';
+  }
+
+  @override
+  String get achStreak2daysDesc => 'Log in on two consecutive days.';
+
+  @override
+  String get achStreak5daysDesc => 'Log in on five consecutive days.';
+
+  @override
+  String get achStreak7daysDesc => 'Log in on seven consecutive days.';
+
+  @override
+  String get achProfileUpdatedDesc => 'Update your profile information.';
+
+  @override
+  String get achExportedOnceDesc => 'Export your results at least once.';
+
+  @override
+  String get newAwardsTitle => 'New awards unlocked!';
+
+  @override
+  String get newAchievementsTitle => 'Achievements';
+
+  @override
+  String get newBadgesTitle => 'Badges';
+
+  @override
+  String get okGotIt => 'OK, got it';
+
+  @override
+  String badgeTopicThreeStarsDesc({required String topic}) {
+    return 'Earn 3 stars in the topic $topic.';
+  }
+
+  @override
+  String get badgeAllTopicsAnyScoreDesc =>
+      'Attempt all topics in the quiz at least once.';
+
+  @override
+  String get badgeAllTopicsAtLeast2StarsDesc =>
+      'Earn at least 2 stars in all topics.';
+
+  @override
+  String get badgeAllTopics3StarsDesc => 'Earn 3 stars in all topics.';
+
+  @override
+  String get keepPlayingToUnlock => 'Keep playing to unlock more rewards!';
+
+  @override
+  String get summaryLabel => 'Summary';
+
+  @override
+  String topicsProgressLabel({required String done, required String total}) {
+    return '$done/$total Topics';
   }
 }

@@ -182,4 +182,32 @@ class ProgressService {
     await sp.remove(_kLastLogin);
     await sp.remove(_kStreak);
   }
+
+  // === NUEVO: obtener racha actual sin modificarla ===
+  Future<int> getStreakDays() async {
+    final sp = await SharedPreferences.getInstance();
+    return sp.getInt(_kStreak) ?? 0;
+  }
+
+  // === NUEVO: obtener estrellas por topic de un módulo ===
+  // topics: lista de topicIds del módulo
+  Future<List<int>> bestStarsForTopics(
+    String moduleId,
+    List<String> topics,
+  ) async {
+    final list = <int>[];
+    for (final tid in topics) {
+      list.add(await getBestStars(moduleId, tid));
+    }
+    return list;
+  }
+
+  // === NUEVO: saber si un topic fue intentado (cualquier progreso) ===
+  Future<bool> wasTopicAttempted(String moduleId, String topicId) async {
+    final sp = await SharedPreferences.getInstance();
+    final pct = sp.getDouble(_topicKey(moduleId, topicId, _kBestPct));
+    final correct = sp.getInt(_topicKey(moduleId, topicId, _kBestCorrect));
+    final total = sp.getInt(_topicKey(moduleId, topicId, _kBestTotal));
+    return (pct != null) || (correct != null && total != null);
+  }
 }

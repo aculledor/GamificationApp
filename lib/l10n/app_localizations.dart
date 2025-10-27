@@ -408,17 +408,17 @@ abstract class AppLocalizations {
   /// **'{days} Day Streak'**
   String streakDays({required String days});
 
-  /// No description provided for @badgesCount.
+  /// Displays the number of badges with plural logic.
   ///
   /// In en, this message translates to:
-  /// **'{count} Badges'**
-  String badgesCount({required String count});
+  /// **'{count, plural, =0 {No badges} =1 {1 Badge} other {{count} Badges}}'**
+  String badgesCount({required int count});
 
-  /// No description provided for @achievementsCount.
+  /// Displays the number of achievements with plural logic.
   ///
   /// In en, this message translates to:
-  /// **'{count} Achievement(s)'**
-  String achievementsCount({required String count});
+  /// **'{count, plural, =0 {No achievements} =1 {1 Achievement} other {{count} Achievements}}'**
+  String achievementsCount({required int count});
 
   /// Generic title for achievements or badges
   ///
@@ -485,6 +485,102 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'{topic} – 3★'**
   String badgeTopicThreeStars({required String topic});
+
+  /// No description provided for @achStreak2daysDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Log in on two consecutive days.'**
+  String get achStreak2daysDesc;
+
+  /// No description provided for @achStreak5daysDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Log in on five consecutive days.'**
+  String get achStreak5daysDesc;
+
+  /// No description provided for @achStreak7daysDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Log in on seven consecutive days.'**
+  String get achStreak7daysDesc;
+
+  /// No description provided for @achProfileUpdatedDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Update your profile information.'**
+  String get achProfileUpdatedDesc;
+
+  /// No description provided for @achExportedOnceDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Export your results at least once.'**
+  String get achExportedOnceDesc;
+
+  /// No description provided for @newAwardsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'New awards unlocked!'**
+  String get newAwardsTitle;
+
+  /// No description provided for @newAchievementsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Achievements'**
+  String get newAchievementsTitle;
+
+  /// No description provided for @newBadgesTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Badges'**
+  String get newBadgesTitle;
+
+  /// No description provided for @okGotIt.
+  ///
+  /// In en, this message translates to:
+  /// **'OK, got it'**
+  String get okGotIt;
+
+  /// Description for the badge for getting 3 stars in a specific topic
+  ///
+  /// In en, this message translates to:
+  /// **'Earn 3 stars in the topic {topic}.'**
+  String badgeTopicThreeStarsDesc({required String topic});
+
+  /// No description provided for @badgeAllTopicsAnyScoreDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Attempt all topics in the quiz at least once.'**
+  String get badgeAllTopicsAnyScoreDesc;
+
+  /// No description provided for @badgeAllTopicsAtLeast2StarsDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Earn at least 2 stars in all topics.'**
+  String get badgeAllTopicsAtLeast2StarsDesc;
+
+  /// No description provided for @badgeAllTopics3StarsDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Earn 3 stars in all topics.'**
+  String get badgeAllTopics3StarsDesc;
+
+  /// No description provided for @keepPlayingToUnlock.
+  ///
+  /// In en, this message translates to:
+  /// **'Keep playing to unlock more rewards!'**
+  String get keepPlayingToUnlock;
+
+  /// No description provided for @summaryLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Summary'**
+  String get summaryLabel;
+
+  /// No description provided for @topicsProgressLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'{done}/{total} Topics'**
+  String topicsProgressLabel({required String done, required String total});
 }
 
 class _AppLocalizationsDelegate

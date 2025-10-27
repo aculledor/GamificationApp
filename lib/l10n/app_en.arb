@@ -158,19 +158,23 @@
             }
         }
     },
-    "badgesCount": "{count} Badges",
+    "badgesCount": "{count, plural, =0 {No badges} =1 {1 Badge} other {{count} Badges}}",
     "@badgesCount": {
+        "description": "Displays the number of badges with plural logic.",
         "placeholders": {
             "count": {
-                "type": "String"
+                "type": "int",
+                "example": "3"
             }
         }
     },
-    "achievementsCount": "{count} Achievement(s)",
+    "achievementsCount": "{count, plural, =0 {No achievements} =1 {1 Achievement} other {{count} Achievements}}",
     "@achievementsCount": {
+        "description": "Displays the number of achievements with plural logic.",
         "placeholders": {
             "count": {
-                "type": "String"
+                "type": "int",
+                "example": "3"
             }
         }
     },
@@ -200,6 +204,56 @@
             "topic": {
                 "type": "String",
                 "example": "Water Sustainability Basics"
+            }
+        }
+    },
+    "achStreak2daysDesc": "Log in on two consecutive days.",
+    "achStreak5daysDesc": "Log in on five consecutive days.",
+    "achStreak7daysDesc": "Log in on seven consecutive days.",
+    "achProfileUpdatedDesc": "Update your profile information.",
+    "achExportedOnceDesc": "Export your results at least once.",
+    "newAwardsTitle": "New awards unlocked!",
+    "newAchievementsTitle": "Achievements",
+    "newBadgesTitle": "Badges",
+    "okGotIt": "OK, got it",
+    "badgeTopicThreeStarsDesc": "Earn 3 stars in the topic {topic}.",
+    "@badgeTopicThreeStarsDesc": {
+        "description": "Description for the badge for getting 3 stars in a specific topic",
+        "placeholders": {
+            "topic": {
+                "type": "String",
+                "example": "Water Sustainability Basics"
+            }
+        }
+    },
+    "badgeAllTopicsAnyScoreDesc": "Attempt all topics in the quiz at least once.",
+    "badgeAllTopicsAtLeast2StarsDesc": "Earn at least 2 stars in all topics.",
+    "badgeAllTopics3StarsDesc": "Earn 3 stars in all topics.",
+    "keepPlayingToUnlock": "Keep playing to unlock more rewards!",
+    "summaryLabel": "Summary",
+    "moduleTitle": "Module {number}: {name}",
+    "@moduleTitle": {
+        "placeholders": {
+            "number": {
+                "type": "String",
+                "example": "1"
+            },
+            "name": {
+                "type": "String",
+                "example": "Basics"
+            }
+        }
+    },
+    "topicsProgressLabel": "{done}/{total} Topics",
+    "@topicsProgressLabel": {
+        "placeholders": {
+            "done": {
+                "type": "String",
+                "example": "2"
+            },
+            "total": {
+                "type": "String",
+                "example": "6"
             }
         }
     }

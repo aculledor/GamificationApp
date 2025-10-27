@@ -16,6 +16,7 @@ import 'package:gamificationapp/data/user_profile_service.dart';
 import 'package:gamificationapp/data/content_repository.dart';
 import 'package:gamificationapp/data/models.dart';
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:gamificationapp/data/achievements_service.dart';
 
 class OptionsScreen extends StatefulWidget {
   const OptionsScreen({super.key});
@@ -227,6 +228,26 @@ class _OptionsScreenState extends State<OptionsScreen> {
         avatarBytes: _avatar,
       ),
     );
+    final ach = AchievementsService();
+    final bundle = await _contentRepo.load();
+    final module = bundle.modules.firstWhere(
+      (m) => m.id == 'm2',
+      orElse: () => bundle.modules.first,
+    );
+    final topics = module.topicIds
+        .map((tid) => bundle.topics.firstWhere((t) => t.id == tid))
+        .toList();
+    final strings = await ContentStrings.loadForLocale(
+      Localizations.localeOf(context),
+    );
+
+    // 👇 marca logro de “perfil actualizado”
+    await AchievementsService().markProfileUpdatedAndCheck(
+      context: context,
+      module: module,
+      topics: topics,
+      strings: strings,
+    );
   }
 
   Future<void> _openLanguageSheet() async {
@@ -379,11 +400,11 @@ class _OptionsScreenState extends State<OptionsScreen> {
       pw.TableRow(
         decoration: const pw.BoxDecoration(color: PdfColor.fromInt(0xFFE0E0E0)),
         children: [
-          _cell(t.reportColTopic,    bold: true, font: fontBold),
-          _cell(t.reportColBestPct,  bold: true, font: fontBold),
-          _cell(t.reportColStars,    bold: true, font: fontBold),
-          _cell(t.reportColBestCt,   bold: true, font: fontBold),
-          _cell(t.reportColDate,     bold: true, font: fontBold),
+          _cell(t.reportColTopic, bold: true, font: fontBold),
+          _cell(t.reportColBestPct, bold: true, font: fontBold),
+          _cell(t.reportColStars, bold: true, font: fontBold),
+          _cell(t.reportColBestCt, bold: true, font: fontBold),
+          _cell(t.reportColDate, bold: true, font: fontBold),
         ],
       ),
     ];
@@ -440,8 +461,20 @@ class _OptionsScreenState extends State<OptionsScreen> {
 
     // 3) Compartir/guardar (share sheet nativo)
     final bytes = await pdf.save();
-    final fileName = 'AquaResults_${DateTime.now().millisecondsSinceEpoch}.pdf';
+    final fileName =
+        'AQUATECHinn4.0_Results_${DateTime.now().millisecondsSinceEpoch}.pdf';
     await Printing.sharePdf(bytes: bytes, filename: fileName);
+
+    // marca logro de “exportado una vez”
+    await AchievementsService().markExportedOnce();
+
+    // recomputa badges/achievements por si cambia algo más
+    await AchievementsService().checkForUpdates(
+      context: context,
+      module: module,
+      topics: topics,
+      strings: strings,
+    );
   }
 
   pw.Widget _cell(String text, {bool bold = false, required pw.Font font}) {
@@ -504,7 +537,7 @@ class _OptionsScreenState extends State<OptionsScreen> {
   }
 
   Future<void> _editField({
-    required String titleLabel,                           // ✅ ahora recibimos etiqueta localizada
+    required String titleLabel, // ✅ ahora recibimos etiqueta localizada
     required String initial,
     TextInputType? keyboardType,
     required Future<void> Function(String value) onSaved,
@@ -519,7 +552,7 @@ class _OptionsScreenState extends State<OptionsScreen> {
           controller: controller,
           keyboardType: keyboardType,
           decoration: InputDecoration(
-            hintText: titleLabel,                          // ✅
+            hintText: titleLabel, // ✅
             border: const OutlineInputBorder(),
           ),
           autofocus: true,
@@ -527,11 +560,11 @@ class _OptionsScreenState extends State<OptionsScreen> {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(ctx, false),
-            child: Text(t.commonCancel),                   // ✅
+            child: Text(t.commonCancel), // ✅
           ),
           FilledButton(
             onPressed: () => Navigator.pop(ctx, true),
-            child: Text(t.commonSave),                     // ✅
+            child: Text(t.commonSave), // ✅
           ),
         ],
       ),
@@ -544,7 +577,6 @@ class _OptionsScreenState extends State<OptionsScreen> {
       );
     }
   }
-
 }
 
 // ===== Widgets auxiliares =====
@@ -563,29 +595,54 @@ class _EditableLine extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const color = Color(0xFF4C2DBB);
-    final t = AppLocalizations.of(context)!;
-    final styleLabel = const TextStyle(
-      color: color,
-      fontWeight: FontWeight.w700,
-      fontSize: 18,
-    );
-    final styleValue = const TextStyle(
-      color: color,
-      fontWeight: FontWeight.w700,
-      fontSize: 18,
-    );
 
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Text('$label: ', style: styleLabel),
-        Expanded(child: Text(value, style: styleValue)),
-        IconButton(
-          icon: const Icon(Icons.edit, color: color),
-          onPressed: onEdit,
-          tooltip: t.editFieldTooltip(field: label),
-        ),
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 4),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          // Etiqueta fija con separación
+          Flexible(
+            flex: 3,
+            child: Text(
+              '$label:',
+              style: const TextStyle(
+                color: color,
+                fontWeight: FontWeight.w700,
+                fontSize: 18,
+              ),
+              overflow: TextOverflow.ellipsis,
+              maxLines: 1,
+            ),
+          ),
+
+          const SizedBox(width: 6),
+
+          // Valor: elipsis si no cabe
+          Expanded(
+            flex: 7,
+            child: Text(
+              value,
+              style: const TextStyle(
+                color: color,
+                fontWeight: FontWeight.w700,
+                fontSize: 18,
+              ),
+              overflow: TextOverflow.ellipsis,
+              softWrap: false,
+            ),
+          ),
+
+          // Botón de edición
+          IconButton(
+            icon: const Icon(Icons.edit, color: color, size: 20),
+            tooltip: 'Edit',
+            onPressed: onEdit,
+            constraints: const BoxConstraints(minWidth: 36, minHeight: 36),
+            padding: EdgeInsets.zero,
+          ),
+        ],
+      ),
     );
   }
 }

@@ -61,7 +61,23 @@
     "badgeAllTopicsAnyScore",
     "badgeAllTopicsAtLeast2Stars",
     "badgeAllTopics3Stars",
-    "badgeTopicThreeStars"
+    "badgeTopicThreeStars",
+    "achStreak2daysDesc",
+    "achStreak5daysDesc",
+    "achStreak7daysDesc",
+    "achProfileUpdatedDesc",
+    "achExportedOnceDesc",
+    "newAwardsTitle",
+    "newAchievementsTitle",
+    "newBadgesTitle",
+    "okGotIt",
+    "badgeTopicThreeStarsDesc",
+    "badgeAllTopicsAnyScoreDesc",
+    "badgeAllTopicsAtLeast2StarsDesc",
+    "badgeAllTopics3StarsDesc",
+    "keepPlayingToUnlock",
+    "summaryLabel",
+    "topicsProgressLabel"
   ],
 
   "es": [
@@ -126,7 +142,23 @@
     "badgeAllTopicsAnyScore",
     "badgeAllTopicsAtLeast2Stars",
     "badgeAllTopics3Stars",
-    "badgeTopicThreeStars"
+    "badgeTopicThreeStars",
+    "achStreak2daysDesc",
+    "achStreak5daysDesc",
+    "achStreak7daysDesc",
+    "achProfileUpdatedDesc",
+    "achExportedOnceDesc",
+    "newAwardsTitle",
+    "newAchievementsTitle",
+    "newBadgesTitle",
+    "okGotIt",
+    "badgeTopicThreeStarsDesc",
+    "badgeAllTopicsAnyScoreDesc",
+    "badgeAllTopicsAtLeast2StarsDesc",
+    "badgeAllTopics3StarsDesc",
+    "keepPlayingToUnlock",
+    "summaryLabel",
+    "topicsProgressLabel"
   ],
 
   "fr": [
@@ -191,7 +223,23 @@
     "badgeAllTopicsAnyScore",
     "badgeAllTopicsAtLeast2Stars",
     "badgeAllTopics3Stars",
-    "badgeTopicThreeStars"
+    "badgeTopicThreeStars",
+    "achStreak2daysDesc",
+    "achStreak5daysDesc",
+    "achStreak7daysDesc",
+    "achProfileUpdatedDesc",
+    "achExportedOnceDesc",
+    "newAwardsTitle",
+    "newAchievementsTitle",
+    "newBadgesTitle",
+    "okGotIt",
+    "badgeTopicThreeStarsDesc",
+    "badgeAllTopicsAnyScoreDesc",
+    "badgeAllTopicsAtLeast2StarsDesc",
+    "badgeAllTopics3StarsDesc",
+    "keepPlayingToUnlock",
+    "summaryLabel",
+    "topicsProgressLabel"
   ],
 
   "it": [
@@ -256,7 +304,23 @@
     "badgeAllTopicsAnyScore",
     "badgeAllTopicsAtLeast2Stars",
     "badgeAllTopics3Stars",
-    "badgeTopicThreeStars"
+    "badgeTopicThreeStars",
+    "achStreak2daysDesc",
+    "achStreak5daysDesc",
+    "achStreak7daysDesc",
+    "achProfileUpdatedDesc",
+    "achExportedOnceDesc",
+    "newAwardsTitle",
+    "newAchievementsTitle",
+    "newBadgesTitle",
+    "okGotIt",
+    "badgeTopicThreeStarsDesc",
+    "badgeAllTopicsAnyScoreDesc",
+    "badgeAllTopicsAtLeast2StarsDesc",
+    "badgeAllTopics3StarsDesc",
+    "keepPlayingToUnlock",
+    "summaryLabel",
+    "topicsProgressLabel"
   ],
 
   "pt": [
@@ -321,7 +385,23 @@
     "badgeAllTopicsAnyScore",
     "badgeAllTopicsAtLeast2Stars",
     "badgeAllTopics3Stars",
-    "badgeTopicThreeStars"
+    "badgeTopicThreeStars",
+    "achStreak2daysDesc",
+    "achStreak5daysDesc",
+    "achStreak7daysDesc",
+    "achProfileUpdatedDesc",
+    "achExportedOnceDesc",
+    "newAwardsTitle",
+    "newAchievementsTitle",
+    "newBadgesTitle",
+    "okGotIt",
+    "badgeTopicThreeStarsDesc",
+    "badgeAllTopicsAnyScoreDesc",
+    "badgeAllTopicsAtLeast2StarsDesc",
+    "badgeAllTopics3StarsDesc",
+    "keepPlayingToUnlock",
+    "summaryLabel",
+    "topicsProgressLabel"
   ],
 
   "tr": [
@@ -386,6 +466,22 @@
     "badgeAllTopicsAnyScore",
     "badgeAllTopicsAtLeast2Stars",
     "badgeAllTopics3Stars",
-    "badgeTopicThreeStars"
+    "badgeTopicThreeStars",
+    "achStreak2daysDesc",
+    "achStreak5daysDesc",
+    "achStreak7daysDesc",
+    "achProfileUpdatedDesc",
+    "achExportedOnceDesc",
+    "newAwardsTitle",
+    "newAchievementsTitle",
+    "newBadgesTitle",
+    "okGotIt",
+    "badgeTopicThreeStarsDesc",
+    "badgeAllTopicsAnyScoreDesc",
+    "badgeAllTopicsAtLeast2StarsDesc",
+    "badgeAllTopics3StarsDesc",
+    "keepPlayingToUnlock",
+    "summaryLabel",
+    "topicsProgressLabel"
   ]
 }
