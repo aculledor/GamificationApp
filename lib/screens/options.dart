@@ -17,6 +17,7 @@ import 'package:gamificationapp/data/content_repository.dart';
 import 'package:gamificationapp/data/models.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:gamificationapp/data/achievements_service.dart';
+import 'package:gamificationapp/core/app_locale.dart';
 
 class OptionsScreen extends StatefulWidget {
   const OptionsScreen({super.key});
@@ -316,12 +317,33 @@ class _OptionsScreenState extends State<OptionsScreen> {
   }
 
   void _pickLang(String code) {
+    // cierra el bottom sheet
     Navigator.pop(context);
+
+    // intenta con el contexto actual…
+    AppLocaleController? ctrl = AppLocaleScope.maybeOf(context);
+    // …o con el rootNavigator (por si el bottom sheet está en otro árbol)
+    ctrl ??= AppLocaleScope.maybeOf(
+      Navigator.of(context, rootNavigator: true).context,
+    );
+
+    if (ctrl == null) {
+      // Si ves este SnackBar, es que RootApp NO está montado (o no reiniciaste la app).
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Language controller not found. Is RootApp mounted?'),
+        ),
+      );
+      return;
+    }
+
+    ctrl.setLocale(Locale(code)); // ✅ cambia idioma
+
     final t = AppLocalizations.of(context)!;
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text(t.languageSetTo(code: code.toUpperCase()))), // ✅
+      SnackBar(content: Text(t.languageSetTo(code: code.toUpperCase()))),
     );
-    setState(() {});
+    // No necesitas setState(); el cambio de locale rehace el árbol
   }
 
   Future<void> _exportResults() async {
