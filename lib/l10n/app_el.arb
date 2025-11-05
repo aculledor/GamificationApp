@@ -1,4 +1,207 @@
 {
-  "@@locale": "el",
-  "appTitle": "Aquatechinn Quiz"
+    "@@locale": "el",
+    "appTitle": "Κουίζ Aquatechinn",
+    "tabQuestionnaire": "Ερωτηματολόγιο",
+    "tabPerformance": "Απόδοση",
+    "tabOptions": "Επιλογές",
+    "counterFlame": "Φλόγα",
+    "counterEnergy": "Ενέργεια",
+    "counterMedals": "Μετάλλια",
+    "changeLanguage": "Αλλαγή γλώσσας",
+    "exportResults": "Εξαγωγή αποτελεσμάτων",
+    "resetProgress": "Επαναφορά προόδου",
+    "profileNameLabel": "Όνομα",
+    "profileSurnameLabel": "Επώνυμο",
+    "profileEmailLabel": "Email",
+    "languageSetTo": "Η γλώσσα ορίστηκε σε {code}",
+    "@languageSetTo": {
+        "description": "Μήνυμα snackbar μετά την επιλογή νέας γλώσσας",
+        "placeholders": {
+            "code": {
+                "type": "String",
+                "example": "EL"
+            }
+        }
+    },
+    "resetAllProgressTitle": "Επαναφορά όλης της προόδου;",
+    "resetAllProgressBody": "Αυτό θα διαγράψει όλα τα αποτελέσματα κουίζ (αστέρια, προσπάθειες, ποσοστά) και τα δεδομένα συνεχόμενων ημερών.\n\nΤο προσωπικό σας προφίλ και οι ρυθμίσεις γλώσσας ΔΕΝ θα διαγραφούν.\nΑυτή η ενέργεια δεν μπορεί να αναιρεθεί.",
+    "allProgressResetDone": "Όλη η πρόοδος διαγράφηκε.",
+    "commonCancel": "Άκυρο",
+    "commonSave": "Αποθήκευση",
+    "commonReset": "Επαναφορά",
+    "editFieldTitle": "Επεξεργασία {field}",
+    "@editFieldTitle": {
+        "description": "Τίτλος του παραθύρου επεξεργασίας πεδίου",
+        "placeholders": {
+            "field": {
+                "type": "String"
+            }
+        }
+    },
+    "editFieldTooltip": "Επεξεργασία {field}",
+    "@editFieldTooltip": {
+        "description": "Υπόδειξη για το κουμπί επεξεργασίας πεδίου",
+        "placeholders": {
+            "field": {
+                "type": "String"
+            }
+        }
+    },
+    "fieldUpdated": "Το {field} ενημερώθηκε",
+    "@fieldUpdated": {
+        "description": "Snackbar μετά την ενημέρωση πεδίου προφίλ",
+        "placeholders": {
+            "field": {
+                "type": "String"
+            }
+        }
+    },
+    "reportTitle": "Αναφορά απόδοσης κουίζ",
+    "reportNameLabel": "Όνομα",
+    "reportEmailLabel": "Email",
+    "reportGeneratedLabel": "Ημερομηνία δημιουργίας",
+    "reportColTopic": "Θέμα",
+    "reportColBestPct": "Καλύτερο %",
+    "reportColStars": "Αστέρια",
+    "reportColBestCt": "Καλύτερο (σ/π)",
+    "reportColDate": "Ημερομηνία",
+    "moduleTitle": "Ενότητα {number}: {name}",
+    "@moduleTitle": {
+        "placeholders": {
+            "number": { "type": "String" },
+            "name": { "type": "String" }
+        }
+    },
+    "topicTitle": "{name}",
+    "@topicTitle": {
+        "placeholders": {
+            "name": { "type": "String" }
+        }
+    },
+    "earnMoreStars": "Κερδίστε περισσότερα αστέρια για να ξεκλειδώσετε!",
+    "starsProgress": "{have}/{need}",
+    "@starsProgress": {
+        "placeholders": {
+            "have": { "type": "String" },
+            "need": { "type": "String" }
+        }
+    },
+    "starsLeft": "{count, plural, =0{Ξεκλειδώθηκε} one{Απομένει # αστέρι} other{Απομένουν # αστέρια}}",
+    "@starsLeft": {
+        "placeholders": {
+            "count": { "type": "num" }
+        }
+    },
+    "summaryModuleTitle": "Περίληψη ενότητας",
+    "summaryTopicTitle": "Περίληψη θέματος {number}",
+    "@summaryTopicTitle": {
+        "description": "Τίτλος οθόνης περίληψης θέματος",
+        "placeholders": { "number": {} }
+    },
+    "noPreviousScore": "Χωρίς προηγούμενη βαθμολογία",
+    "@noPreviousScore": {
+        "description": "Εμφανίζεται όταν ο χρήστης δεν έχει απαντήσει ποτέ στο θέμα"
+    },
+    "lastBestScore": "Τελευταία καλύτερη βαθμολογία: {score}/{total}",
+    "@lastBestScore": {
+        "description": "Εμφανίζει την προηγούμενη καλύτερη βαθμολογία",
+        "placeholders": { "score": {}, "total": {} }
+    },
+    "dateLabel": "Ημερομηνία: {date}",
+    "@dateLabel": {
+        "description": "Ημερομηνία της προηγούμενης καλύτερης βαθμολογίας",
+        "placeholders": { "date": {} }
+    },
+    "startQuiz": "Έναρξη κουίζ",
+    "tryAgain": "Προσπαθήστε ξανά",
+    "backTooltip": "Πίσω",
+    "performanceOverview": "Επισκόπηση",
+    "badgesTitle": "Διακριτικά",
+    "achievementsTitle": "Επιτεύγματα",
+    "reviewAll": "προβολή όλων",
+    "comingSoon": "Έρχεται σύντομα",
+    "streakDays": "Σειρά {days} ημερών",
+    "@streakDays": {
+        "placeholders": { "days": { "type": "String" } }
+    },
+    "badgesCount": "{count, plural, =0 {Χωρίς διακριτικά} =1 {1 διακριτικό} other {{count} διακριτικά}}",
+    "@badgesCount": {
+        "description": "Εμφανίζει τον αριθμό διακριτικών με πληθυντικό.",
+        "placeholders": {
+            "count": { "type": "int", "example": "3" }
+        }
+    },
+    "achievementsCount": "{count, plural, =0 {Χωρίς επιτεύγματα} =1 {1 επίτευγμα} other {{count} επιτεύγματα}}",
+    "@achievementsCount": {
+        "description": "Εμφανίζει τον αριθμό επιτευγμάτων με πληθυντικό.",
+        "placeholders": {
+            "count": { "type": "int", "example": "3" }
+        }
+    },
+    "badgeGenericTitle": "Επίτευγμα {number}",
+    "@badgeGenericTitle": {
+        "description": "Γενικός τίτλος για επιτεύγματα ή διακριτικά",
+        "placeholders": {
+            "number": { "type": "String", "example": "1" }
+        }
+    },
+    "badgeDateLabel": "Ημερομηνία",
+    "achStreak2days": "Σειρά 2 ημερών",
+    "achStreak5days": "Σειρά 5 ημερών",
+    "achStreak7days": "Σειρά 7 ημερών",
+    "achProfileUpdated": "Το προφίλ ενημερώθηκε",
+    "achExportedOnce": "Εξαγωγή αποτελεσμάτων μία φορά",
+    "badgeAllTopicsAnyScore": "Όλα τα θέματα δοκιμάστηκαν",
+    "badgeAllTopicsAtLeast2Stars": "Τουλάχιστον 2★ σε όλα τα θέματα",
+    "badgeAllTopics3Stars": "3★ σε όλα τα θέματα",
+    "badgeTopicThreeStars": "{topic} – 3★",
+    "@badgeTopicThreeStars": {
+        "description": "Διακριτικό για 3 αστέρια σε συγκεκριμένο θέμα",
+        "placeholders": {
+            "topic": {
+                "type": "String",
+                "example": "Βασικές αρχές βιωσιμότητας νερού"
+            }
+        }
+    },
+    "achStreak2daysDesc": "Συνδεθείτε δύο συνεχόμενες ημέρες.",
+    "achStreak5daysDesc": "Συνδεθείτε πέντε συνεχόμενες ημέρες.",
+    "achStreak7daysDesc": "Συνδεθείτε επτά συνεχόμενες ημέρες.",
+    "achProfileUpdatedDesc": "Ενημερώστε τις πληροφορίες του προφίλ σας.",
+    "achExportedOnceDesc": "Εξαγάγετε τα αποτελέσματά σας τουλάχιστον μία φορά.",
+    "newAwardsTitle": "Ξεκλειδώθηκαν νέα βραβεία!",
+    "newAchievementsTitle": "Επιτεύγματα",
+    "newBadgesTitle": "Διακριτικά",
+    "okGotIt": "Εντάξει, κατάλαβα",
+    "badgeTopicThreeStarsDesc": "Κερδίστε 3 αστέρια στο θέμα {topic}.",
+    "@badgeTopicThreeStarsDesc": {
+        "description": "Περιγραφή για το διακριτικό 3 αστέρων σε θέμα",
+        "placeholders": {
+            "topic": {
+                "type": "String",
+                "example": "Βασικές αρχές βιωσιμότητας νερού"
+            }
+        }
+    },
+    "badgeAllTopicsAnyScoreDesc": "Προσπαθήστε όλα τα θέματα του κουίζ τουλάχιστον μία φορά.",
+    "badgeAllTopicsAtLeast2StarsDesc": "Κερδίστε τουλάχιστον 2 αστέρια σε όλα τα θέματα.",
+    "badgeAllTopics3StarsDesc": "Κερδίστε 3 αστέρια σε όλα τα θέματα.",
+    "keepPlayingToUnlock": "Συνεχίστε να παίζετε για να ξεκλειδώσετε περισσότερες ανταμοιβές!",
+    "summaryLabel": "Περίληψη",
+    "topicsProgressLabel": "{done}/{total} θέματα",
+    "@topicsProgressLabel": {
+        "placeholders": {
+            "done": { "type": "String", "example": "2" },
+            "total": { "type": "String", "example": "6" }
+        }
+    },
+    "warningTitle": "Προειδοποίηση",
+    "quizExitWarning": "Είστε βέβαιοι ότι θέλετε να αποχωρήσετε από το κουίζ; Η τρέχουσα πρόοδος θα χαθεί.",
+    "yesExit": "Ναι, έξοδος",
+    "continueQuiz": "Συνέχεια κουίζ",
+    "question": "Ερώτηση",
+    "check": "Έλεγχος",
+    "successes": "Επιτυχίες",
+    "continueLabel": "Συνέχεια",
+    "freeTextHint": "Πληκτρολογήστε την απάντησή σας εδώ"
 }

@@ -1,4 +1,254 @@
 {
-  "@@locale": "pt",
-  "appTitle": "Aquatechinn Quiz"
+    "@@locale": "pt",
+    "appTitle": "Quiz Aquatechinn",
+    "tabQuestionnaire": "Questionário",
+    "tabPerformance": "Desempenho",
+    "tabOptions": "Opções",
+    "counterFlame": "Chama",
+    "counterEnergy": "Energia",
+    "counterMedals": "Medalhas",
+    "changeLanguage": "Mudar idioma",
+    "exportResults": "Exportar resultados",
+    "resetProgress": "Repor progresso",
+    "profileNameLabel": "Nome",
+    "profileSurnameLabel": "Apelido",
+    "profileEmailLabel": "Email",
+    "languageSetTo": "Idioma definido para {code}",
+    "@languageSetTo": {
+        "description": "Mensagem mostrada após o utilizador selecionar um novo idioma",
+        "placeholders": {
+            "code": {
+                "type": "String",
+                "example": "PT"
+            }
+        }
+    },
+    "resetAllProgressTitle": "Repor todo o progresso?",
+    "resetAllProgressBody": "Isto irá eliminar todos os resultados do quiz (estrelas, tentativas, percentagens) e os dados da sequência diária.\n\nO teu perfil pessoal e as definições de idioma NÃO serão eliminados.\nEsta ação não pode ser anulada.",
+    "allProgressResetDone": "Todo o progresso foi reposto.",
+    "commonCancel": "Cancelar",
+    "commonSave": "Guardar",
+    "commonReset": "Repor",
+    "editFieldTitle": "Editar {field}",
+    "@editFieldTitle": {
+        "description": "Título da janela de edição de campo",
+        "placeholders": {
+            "field": {
+                "type": "String"
+            }
+        }
+    },
+    "editFieldTooltip": "Editar {field}",
+    "@editFieldTooltip": {
+        "description": "Dica para o botão de edição de campo",
+        "placeholders": {
+            "field": {
+                "type": "String"
+            }
+        }
+    },
+    "fieldUpdated": "{field} atualizado",
+    "@fieldUpdated": {
+        "description": "Mensagem mostrada após o utilizador atualizar um campo do perfil",
+        "placeholders": {
+            "field": {
+                "type": "String"
+            }
+        }
+    },
+    "reportTitle": "Relatório de Desempenho do Quiz",
+    "reportNameLabel": "Nome",
+    "reportEmailLabel": "Email",
+    "reportGeneratedLabel": "Gerado em",
+    "reportColTopic": "Tópico",
+    "reportColBestPct": "Melhor %",
+    "reportColStars": "Estrelas",
+    "reportColBestCt": "Melhor (c/t)",
+    "reportColDate": "Data",
+    "moduleTitle": "Módulo {number}: {name}",
+    "@moduleTitle": {
+        "placeholders": {
+            "number": {
+                "type": "String"
+            },
+            "name": {
+                "type": "String"
+            }
+        }
+    },
+    "topicTitle": "{name}",
+    "@topicTitle": {
+        "placeholders": {
+            "name": {
+                "type": "String"
+            }
+        }
+    },
+    "earnMoreStars": "Ganha mais estrelas para desbloquear!",
+    "starsProgress": "{have}/{need}",
+    "@starsProgress": {
+        "placeholders": {
+            "have": {
+                "type": "String"
+            },
+            "need": {
+                "type": "String"
+            }
+        }
+    },
+    "starsLeft": "{count, plural, =0{Desbloqueado} one{Falta # estrela} other{Faltam # estrelas}}",
+    "@starsLeft": {
+        "placeholders": {
+            "count": {
+                "type": "num"
+            }
+        }
+    },
+    "summaryModuleTitle": "Resumo do Módulo",
+    "summaryTopicTitle": "Resumo do Tópico {number}",
+    "@summaryTopicTitle": {
+        "description": "Título do ecrã de resumo do tópico com índice",
+        "placeholders": {
+            "number": {}
+        }
+    },
+    "noPreviousScore": "Sem pontuação anterior",
+    "@noPreviousScore": {
+        "description": "Mostrado quando o utilizador ainda não respondeu a este tópico"
+    },
+    "lastBestScore": "Melhor pontuação anterior: {score}/{total}",
+    "@lastBestScore": {
+        "description": "Mostra a melhor pontuação anterior bruta",
+        "placeholders": {
+            "score": {},
+            "total": {}
+        }
+    },
+    "dateLabel": "Data: {date}",
+    "@dateLabel": {
+        "description": "Data da melhor pontuação anterior",
+        "placeholders": {
+            "date": {}
+        }
+    },
+    "startQuiz": "Iniciar quiz",
+    "@startQuiz": {
+        "description": "Botão quando o utilizador não tem pontuação anterior"
+    },
+    "tryAgain": "Tentar novamente",
+    "@tryAgain": {
+        "description": "Botão quando o utilizador já tem uma pontuação anterior"
+    },
+    "backTooltip": "Voltar",
+    "@backTooltip": {
+        "description": "Dica para o botão de voltar/fechar"
+    },
+    "performanceOverview": "Visão geral",
+    "badgesTitle": "Insígnias",
+    "achievementsTitle": "Conquistas",
+    "reviewAll": "ver todas",
+    "comingSoon": "Brevemente disponível",
+    "streakDays": "Sequência de {days} dia(s)",
+    "@streakDays": {
+        "placeholders": {
+            "days": {
+                "type": "String"
+            }
+        }
+    },
+    "badgesCount": "{count, plural, =0 {Sem insígnias} =1 {1 Insígnia} other {{count} Insígnias}}",
+    "@badgesCount": {
+        "description": "Mostra o número de insígnias com lógica de plural.",
+        "placeholders": {
+            "count": {
+                "type": "int",
+                "example": "3"
+            }
+        }
+    },
+    "achievementsCount": "{count, plural, =0 {Sem conquistas} =1 {1 Conquista} other {{count} Conquistas}}",
+    "@achievementsCount": {
+        "description": "Mostra o número de conquistas com lógica de plural.",
+        "placeholders": {
+            "count": {
+                "type": "int",
+                "example": "3"
+            }
+        }
+    },
+    "badgeGenericTitle": "Conquista {number}",
+    "@badgeGenericTitle": {
+        "description": "Título genérico para conquistas ou insígnias",
+        "placeholders": {
+            "number": {
+                "type": "String",
+                "example": "1"
+            }
+        }
+    },
+    "badgeDateLabel": "Data",
+    "achStreak2days": "Sequência de 2 dias",
+    "achStreak5days": "Sequência de 5 dias",
+    "achStreak7days": "Sequência de 7 dias",
+    "achProfileUpdated": "Perfil atualizado",
+    "achExportedOnce": "Resultados exportados uma vez",
+    "badgeAllTopicsAnyScore": "Todos os tópicos tentados",
+    "badgeAllTopicsAtLeast2Stars": "Pelo menos 2★ em todos os tópicos",
+    "badgeAllTopics3Stars": "3★ em todos os tópicos",
+    "badgeTopicThreeStars": "{topic} – 3★",
+    "@badgeTopicThreeStars": {
+        "description": "Insígnia por obter 3 estrelas num tópico específico",
+        "placeholders": {
+            "topic": {
+                "type": "String",
+                "example": "Fundamentos da Sustentabilidade da Água"
+            }
+        }
+    },
+    "achStreak2daysDesc": "Inicia sessão em dois dias consecutivos.",
+    "achStreak5daysDesc": "Inicia sessão em cinco dias consecutivos.",
+    "achStreak7daysDesc": "Inicia sessão em sete dias consecutivos.",
+    "achProfileUpdatedDesc": "Atualiza as informações do teu perfil.",
+    "achExportedOnceDesc": "Exporta os teus resultados pelo menos uma vez.",
+    "newAwardsTitle": "Novas recompensas desbloqueadas!",
+    "newAchievementsTitle": "Conquistas",
+    "newBadgesTitle": "Insígnias",
+    "okGotIt": "OK, entendi",
+    "badgeTopicThreeStarsDesc": "Ganha 3 estrelas no tópico {topic}.",
+    "@badgeTopicThreeStarsDesc": {
+        "description": "Descrição da insígnia por obter 3 estrelas num tópico específico",
+        "placeholders": {
+            "topic": {
+                "type": "String",
+                "example": "Fundamentos da Sustentabilidade da Água"
+            }
+        }
+    },
+    "badgeAllTopicsAnyScoreDesc": "Tenta todos os tópicos do quiz pelo menos uma vez.",
+    "badgeAllTopicsAtLeast2StarsDesc": "Ganha pelo menos 2 estrelas em todos os tópicos.",
+    "badgeAllTopics3StarsDesc": "Ganha 3 estrelas em todos os tópicos.",
+    "keepPlayingToUnlock": "Continua a jogar para desbloquear mais recompensas!",
+    "summaryLabel": "Resumo",
+    "topicsProgressLabel": "{done}/{total} Tópicos",
+    "@topicsProgressLabel": {
+        "placeholders": {
+            "done": {
+                "type": "String",
+                "example": "2"
+            },
+            "total": {
+                "type": "String",
+                "example": "6"
+            }
+        }
+    },
+    "warningTitle": "Aviso",
+    "quizExitWarning": "Tens a certeza de que queres sair do quiz? O teu progresso atual será perdido.",
+    "yesExit": "Sim, sair",
+    "continueQuiz": "Continuar quiz",
+    "question": "Pergunta",
+    "check": "Verificar",
+    "successes": "Acertos",
+    "continueLabel": "Continuar",
+    "freeTextHint": "Escreve aqui a tua resposta"
 }

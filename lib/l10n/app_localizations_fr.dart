@@ -9,7 +9,7 @@ class AppLocalizationsFr extends AppLocalizations {
   AppLocalizationsFr([String locale = 'fr']) : super(locale);
 
   @override
-  String get appTitle => 'Aquatechinn Quiz';
+  String get appTitle => 'Quiz Aquatechinn';
 
   @override
   String get tabQuestionnaire => 'Questionnaire';
@@ -21,101 +21,102 @@ class AppLocalizationsFr extends AppLocalizations {
   String get tabOptions => 'Options';
 
   @override
-  String get counterFlame => 'Flame';
+  String get counterFlame => 'Flamme';
 
   @override
-  String get counterEnergy => 'Energy';
+  String get counterEnergy => 'Énergie';
 
   @override
-  String get counterMedals => 'Medals';
+  String get counterMedals => 'Médailles';
 
   @override
-  String get changeLanguage => 'Change Language';
+  String get changeLanguage => 'Changer de langue';
 
   @override
-  String get exportResults => 'Export Results';
+  String get exportResults => 'Exporter les résultats';
 
   @override
-  String get resetProgress => 'Reset Progress';
+  String get resetProgress => 'Réinitialiser la progression';
 
   @override
-  String get profileNameLabel => 'Name';
+  String get profileNameLabel => 'Prénom';
 
   @override
-  String get profileSurnameLabel => 'Surname';
+  String get profileSurnameLabel => 'Nom';
 
   @override
   String get profileEmailLabel => 'Email';
 
   @override
   String languageSetTo({required String code}) {
-    return 'Language set to $code';
+    return 'Langue définie sur $code';
   }
 
   @override
-  String get resetAllProgressTitle => 'Reset all progress?';
+  String get resetAllProgressTitle => 'Réinitialiser toute la progression ?';
 
   @override
   String get resetAllProgressBody =>
-      'This will delete all quiz results (stars, attempts, percentages) and streak data.\n\nYour personal profile and language settings will NOT be deleted.\nThis action cannot be undone.';
+      'Cela supprimera tous les résultats du quiz (étoiles, tentatives, pourcentages) et les données de série.\n\nVotre profil personnel et vos paramètres de langue ne seront PAS supprimés.\nCette action est irréversible.';
 
   @override
-  String get allProgressResetDone => 'All progress has been reset.';
+  String get allProgressResetDone =>
+      'Toute la progression a été réinitialisée.';
 
   @override
-  String get commonCancel => 'Cancel';
+  String get commonCancel => 'Annuler';
 
   @override
-  String get commonSave => 'Save';
+  String get commonSave => 'Enregistrer';
 
   @override
-  String get commonReset => 'Reset';
+  String get commonReset => 'Réinitialiser';
 
   @override
   String editFieldTitle({required String field}) {
-    return 'Edit $field';
+    return 'Modifier $field';
   }
 
   @override
   String editFieldTooltip({required String field}) {
-    return 'Edit $field';
+    return 'Modifier $field';
   }
 
   @override
   String fieldUpdated({required String field}) {
-    return '$field updated';
+    return '$field mis à jour';
   }
 
   @override
-  String get reportTitle => 'Quiz Performance Report';
+  String get reportTitle => 'Rapport de performance du quiz';
 
   @override
-  String get reportNameLabel => 'Name';
+  String get reportNameLabel => 'Nom';
 
   @override
   String get reportEmailLabel => 'Email';
 
   @override
-  String get reportGeneratedLabel => 'Generated';
+  String get reportGeneratedLabel => 'Généré';
 
   @override
-  String get reportColTopic => 'Topic';
+  String get reportColTopic => 'Sujet';
 
   @override
-  String get reportColBestPct => 'Best %';
+  String get reportColBestPct => 'Meilleur %';
 
   @override
-  String get reportColStars => 'Stars';
+  String get reportColStars => 'Étoiles';
 
   @override
-  String get reportColBestCt => 'Best (c/t)';
+  String get reportColBestCt => 'Meilleur (c/t)';
 
   @override
   String get reportColDate => 'Date';
 
   @override
   String moduleTitle({required String number, required String name}) {
-    return 'Module $number: $name';
+    return 'Module $number : $name';
   }
 
   @override
@@ -124,7 +125,7 @@ class AppLocalizationsFr extends AppLocalizations {
   }
 
   @override
-  String get earnMoreStars => 'Earn more stars to unlock!';
+  String get earnMoreStars => 'Gagnez plus d’étoiles pour débloquer !';
 
   @override
   String starsProgress({required String have, required String need}) {
@@ -136,61 +137,61 @@ class AppLocalizationsFr extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '# stars left',
-      one: '# star left',
-      zero: 'Unlocked',
+      other: '# étoiles restantes',
+      one: '# étoile restante',
+      zero: 'Débloqué',
     );
     return '$_temp0';
   }
 
   @override
-  String get summaryModuleTitle => 'Module Summary';
+  String get summaryModuleTitle => 'Résumé du module';
 
   @override
   String summaryTopicTitle({required Object number}) {
-    return 'Summary Topic $number';
+    return 'Résumé du sujet $number';
   }
 
   @override
-  String get noPreviousScore => 'No previous score';
+  String get noPreviousScore => 'Aucun score précédent';
 
   @override
   String lastBestScore({required Object score, required Object total}) {
-    return 'Last best Score: $score/$total';
+    return 'Meilleur score précédent : $score/$total';
   }
 
   @override
   String dateLabel({required Object date}) {
-    return 'Date: $date';
+    return 'Date : $date';
   }
 
   @override
-  String get startQuiz => 'Start quiz';
+  String get startQuiz => 'Commencer le quiz';
 
   @override
-  String get tryAgain => 'Try again';
+  String get tryAgain => 'Réessayer';
 
   @override
-  String get backTooltip => 'Back';
+  String get backTooltip => 'Retour';
 
   @override
-  String get performanceOverview => 'Overview';
+  String get performanceOverview => 'Aperçu';
 
   @override
   String get badgesTitle => 'Badges';
 
   @override
-  String get achievementsTitle => 'Achievements';
+  String get achievementsTitle => 'Réussites';
 
   @override
-  String get reviewAll => 'review all';
+  String get reviewAll => 'tout examiner';
 
   @override
-  String get comingSoon => 'Coming soon';
+  String get comingSoon => 'Bientôt disponible';
 
   @override
   String streakDays({required String days}) {
-    return '$days Day Streak';
+    return '$days jour(s) consécutif(s)';
   }
 
   @override
@@ -198,9 +199,9 @@ class AppLocalizationsFr extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count Badges',
-      one: '1 Badge',
-      zero: 'No badges',
+      other: '$count badges',
+      one: '1 badge',
+      zero: 'Aucun badge',
     );
     return '$_temp0';
   }
@@ -210,44 +211,44 @@ class AppLocalizationsFr extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count Achievements',
-      one: '1 Achievement',
-      zero: 'No achievements',
+      other: '$count réussites',
+      one: '1 réussite',
+      zero: 'Aucune réussite',
     );
     return '$_temp0';
   }
 
   @override
   String badgeGenericTitle({required String number}) {
-    return 'Achievement $number';
+    return 'Réussite $number';
   }
 
   @override
   String get badgeDateLabel => 'Date';
 
   @override
-  String get achStreak2days => '2-day streak';
+  String get achStreak2days => 'Série de 2 jours';
 
   @override
-  String get achStreak5days => '5-day streak';
+  String get achStreak5days => 'Série de 5 jours';
 
   @override
-  String get achStreak7days => '7-day streak';
+  String get achStreak7days => 'Série de 7 jours';
 
   @override
-  String get achProfileUpdated => 'Profile updated';
+  String get achProfileUpdated => 'Profil mis à jour';
 
   @override
-  String get achExportedOnce => 'Exported results once';
+  String get achExportedOnce => 'Résultats exportés une fois';
 
   @override
-  String get badgeAllTopicsAnyScore => 'All topics attempted';
+  String get badgeAllTopicsAnyScore => 'Tous les sujets tentés';
 
   @override
-  String get badgeAllTopicsAtLeast2Stars => 'At least 2★ in all topics';
+  String get badgeAllTopicsAtLeast2Stars => 'Au moins 2★ dans tous les sujets';
 
   @override
-  String get badgeAllTopics3Stars => '3★ in all topics';
+  String get badgeAllTopics3Stars => '3★ dans tous les sujets';
 
   @override
   String badgeTopicThreeStars({required String topic}) {
@@ -255,84 +256,87 @@ class AppLocalizationsFr extends AppLocalizations {
   }
 
   @override
-  String get achStreak2daysDesc => 'Log in on two consecutive days.';
+  String get achStreak2daysDesc => 'Connectez-vous deux jours consécutifs.';
 
   @override
-  String get achStreak5daysDesc => 'Log in on five consecutive days.';
+  String get achStreak5daysDesc => 'Connectez-vous cinq jours consécutifs.';
 
   @override
-  String get achStreak7daysDesc => 'Log in on seven consecutive days.';
+  String get achStreak7daysDesc => 'Connectez-vous sept jours consécutifs.';
 
   @override
-  String get achProfileUpdatedDesc => 'Update your profile information.';
+  String get achProfileUpdatedDesc =>
+      'Mettez à jour les informations de votre profil.';
 
   @override
-  String get achExportedOnceDesc => 'Export your results at least once.';
+  String get achExportedOnceDesc => 'Exportez vos résultats au moins une fois.';
 
   @override
-  String get newAwardsTitle => 'New awards unlocked!';
+  String get newAwardsTitle => 'Nouvelles récompenses débloquées !';
 
   @override
-  String get newAchievementsTitle => 'Achievements';
+  String get newAchievementsTitle => 'Réussites';
 
   @override
   String get newBadgesTitle => 'Badges';
 
   @override
-  String get okGotIt => 'OK, got it';
+  String get okGotIt => 'OK, compris';
 
   @override
   String badgeTopicThreeStarsDesc({required String topic}) {
-    return 'Earn 3 stars in the topic $topic.';
+    return 'Obtenez 3 étoiles dans le sujet $topic.';
   }
 
   @override
   String get badgeAllTopicsAnyScoreDesc =>
-      'Attempt all topics in the quiz at least once.';
+      'Essayez tous les sujets du quiz au moins une fois.';
 
   @override
   String get badgeAllTopicsAtLeast2StarsDesc =>
-      'Earn at least 2 stars in all topics.';
+      'Obtenez au moins 2 étoiles dans tous les sujets.';
 
   @override
-  String get badgeAllTopics3StarsDesc => 'Earn 3 stars in all topics.';
+  String get badgeAllTopics3StarsDesc =>
+      'Obtenez 3 étoiles dans tous les sujets.';
 
   @override
-  String get keepPlayingToUnlock => 'Keep playing to unlock more rewards!';
+  String get keepPlayingToUnlock =>
+      'Continuez à jouer pour débloquer plus de récompenses !';
 
   @override
-  String get summaryLabel => 'Summary';
+  String get summaryLabel => 'Résumé';
 
   @override
   String topicsProgressLabel({required String done, required String total}) {
-    return '$done/$total Topics';
+    return '$done/$total sujets';
   }
 
   @override
-  String get warningTitle => 'Warning';
+  String get warningTitle => 'Avertissement';
 
   @override
   String get quizExitWarning =>
-      'Are you sure you want to exit the quiz? Your current progress will be lost.';
+      'Êtes-vous sûr de vouloir quitter le quiz ? Votre progression actuelle sera perdue.';
 
   @override
-  String get yesExit => 'Yes, exit';
+  String get yesExit => 'Oui, quitter';
 
   @override
-  String get continueQuiz => 'Continue quiz';
+  String get continueQuiz => 'Continuer le quiz';
 
   @override
   String get question => 'Question';
 
   @override
-  String get check => 'Check';
+  String get check => 'Vérifier';
 
   @override
-  String get successes => 'Successes';
+  String get successes => 'Réussites';
 
   @override
-  String get continueLabel => 'Continue';
+  String get continueLabel => 'Continuer';
 
   @override
-  String get freeTextHint => 'Type your answer here';
+  String get freeTextHint => 'Écrivez votre réponse ici';
 }

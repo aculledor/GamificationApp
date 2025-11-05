@@ -9,113 +9,113 @@ class AppLocalizationsEl extends AppLocalizations {
   AppLocalizationsEl([String locale = 'el']) : super(locale);
 
   @override
-  String get appTitle => 'Aquatechinn Quiz';
+  String get appTitle => 'Κουίζ Aquatechinn';
 
   @override
-  String get tabQuestionnaire => 'Questionnaire';
+  String get tabQuestionnaire => 'Ερωτηματολόγιο';
 
   @override
-  String get tabPerformance => 'Performance';
+  String get tabPerformance => 'Απόδοση';
 
   @override
-  String get tabOptions => 'Options';
+  String get tabOptions => 'Επιλογές';
 
   @override
-  String get counterFlame => 'Flame';
+  String get counterFlame => 'Φλόγα';
 
   @override
-  String get counterEnergy => 'Energy';
+  String get counterEnergy => 'Ενέργεια';
 
   @override
-  String get counterMedals => 'Medals';
+  String get counterMedals => 'Μετάλλια';
 
   @override
-  String get changeLanguage => 'Change Language';
+  String get changeLanguage => 'Αλλαγή γλώσσας';
 
   @override
-  String get exportResults => 'Export Results';
+  String get exportResults => 'Εξαγωγή αποτελεσμάτων';
 
   @override
-  String get resetProgress => 'Reset Progress';
+  String get resetProgress => 'Επαναφορά προόδου';
 
   @override
-  String get profileNameLabel => 'Name';
+  String get profileNameLabel => 'Όνομα';
 
   @override
-  String get profileSurnameLabel => 'Surname';
+  String get profileSurnameLabel => 'Επώνυμο';
 
   @override
   String get profileEmailLabel => 'Email';
 
   @override
   String languageSetTo({required String code}) {
-    return 'Language set to $code';
+    return 'Η γλώσσα ορίστηκε σε $code';
   }
 
   @override
-  String get resetAllProgressTitle => 'Reset all progress?';
+  String get resetAllProgressTitle => 'Επαναφορά όλης της προόδου;';
 
   @override
   String get resetAllProgressBody =>
-      'This will delete all quiz results (stars, attempts, percentages) and streak data.\n\nYour personal profile and language settings will NOT be deleted.\nThis action cannot be undone.';
+      'Αυτό θα διαγράψει όλα τα αποτελέσματα κουίζ (αστέρια, προσπάθειες, ποσοστά) και τα δεδομένα συνεχόμενων ημερών.\n\nΤο προσωπικό σας προφίλ και οι ρυθμίσεις γλώσσας ΔΕΝ θα διαγραφούν.\nΑυτή η ενέργεια δεν μπορεί να αναιρεθεί.';
 
   @override
-  String get allProgressResetDone => 'All progress has been reset.';
+  String get allProgressResetDone => 'Όλη η πρόοδος διαγράφηκε.';
 
   @override
-  String get commonCancel => 'Cancel';
+  String get commonCancel => 'Άκυρο';
 
   @override
-  String get commonSave => 'Save';
+  String get commonSave => 'Αποθήκευση';
 
   @override
-  String get commonReset => 'Reset';
+  String get commonReset => 'Επαναφορά';
 
   @override
   String editFieldTitle({required String field}) {
-    return 'Edit $field';
+    return 'Επεξεργασία $field';
   }
 
   @override
   String editFieldTooltip({required String field}) {
-    return 'Edit $field';
+    return 'Επεξεργασία $field';
   }
 
   @override
   String fieldUpdated({required String field}) {
-    return '$field updated';
+    return 'Το $field ενημερώθηκε';
   }
 
   @override
-  String get reportTitle => 'Quiz Performance Report';
+  String get reportTitle => 'Αναφορά απόδοσης κουίζ';
 
   @override
-  String get reportNameLabel => 'Name';
+  String get reportNameLabel => 'Όνομα';
 
   @override
   String get reportEmailLabel => 'Email';
 
   @override
-  String get reportGeneratedLabel => 'Generated';
+  String get reportGeneratedLabel => 'Ημερομηνία δημιουργίας';
 
   @override
-  String get reportColTopic => 'Topic';
+  String get reportColTopic => 'Θέμα';
 
   @override
-  String get reportColBestPct => 'Best %';
+  String get reportColBestPct => 'Καλύτερο %';
 
   @override
-  String get reportColStars => 'Stars';
+  String get reportColStars => 'Αστέρια';
 
   @override
-  String get reportColBestCt => 'Best (c/t)';
+  String get reportColBestCt => 'Καλύτερο (σ/π)';
 
   @override
-  String get reportColDate => 'Date';
+  String get reportColDate => 'Ημερομηνία';
 
   @override
   String moduleTitle({required String number, required String name}) {
-    return 'Module $number: $name';
+    return 'Ενότητα $number: $name';
   }
 
   @override
@@ -124,7 +124,8 @@ class AppLocalizationsEl extends AppLocalizations {
   }
 
   @override
-  String get earnMoreStars => 'Earn more stars to unlock!';
+  String get earnMoreStars =>
+      'Κερδίστε περισσότερα αστέρια για να ξεκλειδώσετε!';
 
   @override
   String starsProgress({required String have, required String need}) {
@@ -136,61 +137,61 @@ class AppLocalizationsEl extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '# stars left',
-      one: '# star left',
-      zero: 'Unlocked',
+      other: 'Απομένουν # αστέρια',
+      one: 'Απομένει # αστέρι',
+      zero: 'Ξεκλειδώθηκε',
     );
     return '$_temp0';
   }
 
   @override
-  String get summaryModuleTitle => 'Module Summary';
+  String get summaryModuleTitle => 'Περίληψη ενότητας';
 
   @override
   String summaryTopicTitle({required Object number}) {
-    return 'Summary Topic $number';
+    return 'Περίληψη θέματος $number';
   }
 
   @override
-  String get noPreviousScore => 'No previous score';
+  String get noPreviousScore => 'Χωρίς προηγούμενη βαθμολογία';
 
   @override
   String lastBestScore({required Object score, required Object total}) {
-    return 'Last best Score: $score/$total';
+    return 'Τελευταία καλύτερη βαθμολογία: $score/$total';
   }
 
   @override
   String dateLabel({required Object date}) {
-    return 'Date: $date';
+    return 'Ημερομηνία: $date';
   }
 
   @override
-  String get startQuiz => 'Start quiz';
+  String get startQuiz => 'Έναρξη κουίζ';
 
   @override
-  String get tryAgain => 'Try again';
+  String get tryAgain => 'Προσπαθήστε ξανά';
 
   @override
-  String get backTooltip => 'Back';
+  String get backTooltip => 'Πίσω';
 
   @override
-  String get performanceOverview => 'Overview';
+  String get performanceOverview => 'Επισκόπηση';
 
   @override
-  String get badgesTitle => 'Badges';
+  String get badgesTitle => 'Διακριτικά';
 
   @override
-  String get achievementsTitle => 'Achievements';
+  String get achievementsTitle => 'Επιτεύγματα';
 
   @override
-  String get reviewAll => 'review all';
+  String get reviewAll => 'προβολή όλων';
 
   @override
-  String get comingSoon => 'Coming soon';
+  String get comingSoon => 'Έρχεται σύντομα';
 
   @override
   String streakDays({required String days}) {
-    return '$days Day Streak';
+    return 'Σειρά $days ημερών';
   }
 
   @override
@@ -198,9 +199,9 @@ class AppLocalizationsEl extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count Badges',
-      one: '1 Badge',
-      zero: 'No badges',
+      other: '$count διακριτικά',
+      one: '1 διακριτικό',
+      zero: 'Χωρίς διακριτικά',
     );
     return '$_temp0';
   }
@@ -210,44 +211,44 @@ class AppLocalizationsEl extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count Achievements',
-      one: '1 Achievement',
-      zero: 'No achievements',
+      other: '$count επιτεύγματα',
+      one: '1 επίτευγμα',
+      zero: 'Χωρίς επιτεύγματα',
     );
     return '$_temp0';
   }
 
   @override
   String badgeGenericTitle({required String number}) {
-    return 'Achievement $number';
+    return 'Επίτευγμα $number';
   }
 
   @override
-  String get badgeDateLabel => 'Date';
+  String get badgeDateLabel => 'Ημερομηνία';
 
   @override
-  String get achStreak2days => '2-day streak';
+  String get achStreak2days => 'Σειρά 2 ημερών';
 
   @override
-  String get achStreak5days => '5-day streak';
+  String get achStreak5days => 'Σειρά 5 ημερών';
 
   @override
-  String get achStreak7days => '7-day streak';
+  String get achStreak7days => 'Σειρά 7 ημερών';
 
   @override
-  String get achProfileUpdated => 'Profile updated';
+  String get achProfileUpdated => 'Το προφίλ ενημερώθηκε';
 
   @override
-  String get achExportedOnce => 'Exported results once';
+  String get achExportedOnce => 'Εξαγωγή αποτελεσμάτων μία φορά';
 
   @override
-  String get badgeAllTopicsAnyScore => 'All topics attempted';
+  String get badgeAllTopicsAnyScore => 'Όλα τα θέματα δοκιμάστηκαν';
 
   @override
-  String get badgeAllTopicsAtLeast2Stars => 'At least 2★ in all topics';
+  String get badgeAllTopicsAtLeast2Stars => 'Τουλάχιστον 2★ σε όλα τα θέματα';
 
   @override
-  String get badgeAllTopics3Stars => '3★ in all topics';
+  String get badgeAllTopics3Stars => '3★ σε όλα τα θέματα';
 
   @override
   String badgeTopicThreeStars({required String topic}) {
@@ -255,84 +256,87 @@ class AppLocalizationsEl extends AppLocalizations {
   }
 
   @override
-  String get achStreak2daysDesc => 'Log in on two consecutive days.';
+  String get achStreak2daysDesc => 'Συνδεθείτε δύο συνεχόμενες ημέρες.';
 
   @override
-  String get achStreak5daysDesc => 'Log in on five consecutive days.';
+  String get achStreak5daysDesc => 'Συνδεθείτε πέντε συνεχόμενες ημέρες.';
 
   @override
-  String get achStreak7daysDesc => 'Log in on seven consecutive days.';
+  String get achStreak7daysDesc => 'Συνδεθείτε επτά συνεχόμενες ημέρες.';
 
   @override
-  String get achProfileUpdatedDesc => 'Update your profile information.';
+  String get achProfileUpdatedDesc =>
+      'Ενημερώστε τις πληροφορίες του προφίλ σας.';
 
   @override
-  String get achExportedOnceDesc => 'Export your results at least once.';
+  String get achExportedOnceDesc =>
+      'Εξαγάγετε τα αποτελέσματά σας τουλάχιστον μία φορά.';
 
   @override
-  String get newAwardsTitle => 'New awards unlocked!';
+  String get newAwardsTitle => 'Ξεκλειδώθηκαν νέα βραβεία!';
 
   @override
-  String get newAchievementsTitle => 'Achievements';
+  String get newAchievementsTitle => 'Επιτεύγματα';
 
   @override
-  String get newBadgesTitle => 'Badges';
+  String get newBadgesTitle => 'Διακριτικά';
 
   @override
-  String get okGotIt => 'OK, got it';
+  String get okGotIt => 'Εντάξει, κατάλαβα';
 
   @override
   String badgeTopicThreeStarsDesc({required String topic}) {
-    return 'Earn 3 stars in the topic $topic.';
+    return 'Κερδίστε 3 αστέρια στο θέμα $topic.';
   }
 
   @override
   String get badgeAllTopicsAnyScoreDesc =>
-      'Attempt all topics in the quiz at least once.';
+      'Προσπαθήστε όλα τα θέματα του κουίζ τουλάχιστον μία φορά.';
 
   @override
   String get badgeAllTopicsAtLeast2StarsDesc =>
-      'Earn at least 2 stars in all topics.';
+      'Κερδίστε τουλάχιστον 2 αστέρια σε όλα τα θέματα.';
 
   @override
-  String get badgeAllTopics3StarsDesc => 'Earn 3 stars in all topics.';
+  String get badgeAllTopics3StarsDesc => 'Κερδίστε 3 αστέρια σε όλα τα θέματα.';
 
   @override
-  String get keepPlayingToUnlock => 'Keep playing to unlock more rewards!';
+  String get keepPlayingToUnlock =>
+      'Συνεχίστε να παίζετε για να ξεκλειδώσετε περισσότερες ανταμοιβές!';
 
   @override
-  String get summaryLabel => 'Summary';
+  String get summaryLabel => 'Περίληψη';
 
   @override
   String topicsProgressLabel({required String done, required String total}) {
-    return '$done/$total Topics';
+    return '$done/$total θέματα';
   }
 
   @override
-  String get warningTitle => 'Warning';
+  String get warningTitle => 'Προειδοποίηση';
 
   @override
   String get quizExitWarning =>
-      'Are you sure you want to exit the quiz? Your current progress will be lost.';
+      'Είστε βέβαιοι ότι θέλετε να αποχωρήσετε από το κουίζ; Η τρέχουσα πρόοδος θα χαθεί.';
 
   @override
-  String get yesExit => 'Yes, exit';
+  String get yesExit => 'Ναι, έξοδος';
 
   @override
-  String get continueQuiz => 'Continue quiz';
+  String get continueQuiz => 'Συνέχεια κουίζ';
 
   @override
-  String get question => 'Question';
+  String get question => 'Ερώτηση';
 
   @override
-  String get check => 'Check';
+  String get check => 'Έλεγχος';
 
   @override
-  String get successes => 'Successes';
+  String get successes => 'Επιτυχίες';
 
   @override
-  String get continueLabel => 'Continue';
+  String get continueLabel => 'Συνέχεια';
 
   @override
-  String get freeTextHint => 'Type your answer here';
+  String get freeTextHint => 'Πληκτρολογήστε την απάντησή σας εδώ';
 }

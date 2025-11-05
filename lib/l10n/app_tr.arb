@@ -1,4 +1,254 @@
 {
-  "@@locale": "tr",
-  "appTitle": "Aquatechinn Quiz"
+    "@@locale": "tr",
+    "appTitle": "Aquatechinn Testi",
+    "tabQuestionnaire": "Anket",
+    "tabPerformance": "Performans",
+    "tabOptions": "Ayarlar",
+    "counterFlame": "Alev",
+    "counterEnergy": "Enerji",
+    "counterMedals": "Madalya",
+    "changeLanguage": "Dili Değiştir",
+    "exportResults": "Sonuçları Dışa Aktar",
+    "resetProgress": "İlerlemeyi Sıfırla",
+    "profileNameLabel": "Ad",
+    "profileSurnameLabel": "Soyad",
+    "profileEmailLabel": "E-posta",
+    "languageSetTo": "Dil {code} olarak ayarlandı",
+    "@languageSetTo": {
+        "description": "Kullanıcı yeni bir dil seçtiğinde gösterilen snackbar",
+        "placeholders": {
+            "code": {
+                "type": "String",
+                "example": "TR"
+            }
+        }
+    },
+    "resetAllProgressTitle": "Tüm ilerlemeyi sıfırlamak istiyor musunuz?",
+    "resetAllProgressBody": "Bu işlem tüm test sonuçlarını (yıldızlar, denemeler, yüzdeler) ve seri verilerini silecektir.\n\nKişisel profiliniz ve dil ayarlarınız SİLİNMEYECEKTİR.\nBu işlem geri alınamaz.",
+    "allProgressResetDone": "Tüm ilerleme sıfırlandı.",
+    "commonCancel": "İptal",
+    "commonSave": "Kaydet",
+    "commonReset": "Sıfırla",
+    "editFieldTitle": "{field} düzenle",
+    "@editFieldTitle": {
+        "description": "Düzenleme alanı penceresinin başlığı",
+        "placeholders": {
+            "field": {
+                "type": "String"
+            }
+        }
+    },
+    "editFieldTooltip": "{field} düzenle",
+    "@editFieldTooltip": {
+        "description": "Düzenleme alanı düğmesi için ipucu",
+        "placeholders": {
+            "field": {
+                "type": "String"
+            }
+        }
+    },
+    "fieldUpdated": "{field} güncellendi",
+    "@fieldUpdated": {
+        "description": "Kullanıcı bir profil alanını güncellediğinde gösterilen snackbar",
+        "placeholders": {
+            "field": {
+                "type": "String"
+            }
+        }
+    },
+    "reportTitle": "Test Performans Raporu",
+    "reportNameLabel": "Ad",
+    "reportEmailLabel": "E-posta",
+    "reportGeneratedLabel": "Oluşturulma Tarihi",
+    "reportColTopic": "Konu",
+    "reportColBestPct": "En İyi %",
+    "reportColStars": "Yıldızlar",
+    "reportColBestCt": "En İyi (d/s)",
+    "reportColDate": "Tarih",
+    "moduleTitle": "Modül {number}: {name}",
+    "@moduleTitle": {
+        "placeholders": {
+            "number": {
+                "type": "String"
+            },
+            "name": {
+                "type": "String"
+            }
+        }
+    },
+    "topicTitle": "{name}",
+    "@topicTitle": {
+        "placeholders": {
+            "name": {
+                "type": "String"
+            }
+        }
+    },
+    "earnMoreStars": "Kilidi açmak için daha fazla yıldız kazanın!",
+    "starsProgress": "{have}/{need}",
+    "@starsProgress": {
+        "placeholders": {
+            "have": {
+                "type": "String"
+            },
+            "need": {
+                "type": "String"
+            }
+        }
+    },
+    "starsLeft": "{count, plural, =0{Kilidi Açıldı} one{# yıldız kaldı} other{# yıldız kaldı}}",
+    "@starsLeft": {
+        "placeholders": {
+            "count": {
+                "type": "num"
+            }
+        }
+    },
+    "summaryModuleTitle": "Modül Özeti",
+    "summaryTopicTitle": "Konu Özeti {number}",
+    "@summaryTopicTitle": {
+        "description": "Konu özet ekranının başlığı (konu indeksiyle)",
+        "placeholders": {
+            "number": {}
+        }
+    },
+    "noPreviousScore": "Önceki puan yok",
+    "@noPreviousScore": {
+        "description": "Kullanıcı bu konuyu daha önce yanıtlamadıysa gösterilir"
+    },
+    "lastBestScore": "Son en iyi skor: {score}/{total}",
+    "@lastBestScore": {
+        "description": "Önceki en iyi ham puanı gösterir",
+        "placeholders": {
+            "score": {},
+            "total": {}
+        }
+    },
+    "dateLabel": "Tarih: {date}",
+    "@dateLabel": {
+        "description": "Önceki en iyi skorun tarihi",
+        "placeholders": {
+            "date": {}
+        }
+    },
+    "startQuiz": "Testi başlat",
+    "@startQuiz": {
+        "description": "Kullanıcının önceki puanı yoksa görünen CTA"
+    },
+    "tryAgain": "Tekrar dene",
+    "@tryAgain": {
+        "description": "Kullanıcının önceki puanı varsa görünen CTA"
+    },
+    "backTooltip": "Geri",
+    "@backTooltip": {
+        "description": "Geri/kapat düğmesi için ipucu"
+    },
+    "performanceOverview": "Genel Bakış",
+    "badgesTitle": "Rozetler",
+    "achievementsTitle": "Başarılar",
+    "reviewAll": "tümünü incele",
+    "comingSoon": "Yakında geliyor",
+    "streakDays": "{days} Günlük Seri",
+    "@streakDays": {
+        "placeholders": {
+            "days": {
+                "type": "String"
+            }
+        }
+    },
+    "badgesCount": "{count, plural, =0 {Rozet yok} =1 {1 Rozet} other {{count} Rozet}}",
+    "@badgesCount": {
+        "description": "Rozet sayısını çoğul kurallarıyla gösterir",
+        "placeholders": {
+            "count": {
+                "type": "int",
+                "example": "3"
+            }
+        }
+    },
+    "achievementsCount": "{count, plural, =0 {Başarı yok} =1 {1 Başarı} other {{count} Başarı}}",
+    "@achievementsCount": {
+        "description": "Başarı sayısını çoğul kurallarıyla gösterir",
+        "placeholders": {
+            "count": {
+                "type": "int",
+                "example": "3"
+            }
+        }
+    },
+    "badgeGenericTitle": "Başarı {number}",
+    "@badgeGenericTitle": {
+        "description": "Genel rozet veya başarı başlığı",
+        "placeholders": {
+            "number": {
+                "type": "String",
+                "example": "1"
+            }
+        }
+    },
+    "badgeDateLabel": "Tarih",
+    "achStreak2days": "2 günlük seri",
+    "achStreak5days": "5 günlük seri",
+    "achStreak7days": "7 günlük seri",
+    "achProfileUpdated": "Profil güncellendi",
+    "achExportedOnce": "Sonuçlar bir kez dışa aktarıldı",
+    "badgeAllTopicsAnyScore": "Tüm konular denendi",
+    "badgeAllTopicsAtLeast2Stars": "Tüm konularda en az 2★",
+    "badgeAllTopics3Stars": "Tüm konularda 3★",
+    "badgeTopicThreeStars": "{topic} – 3★",
+    "@badgeTopicThreeStars": {
+        "description": "Belirli bir konuda 3 yıldız kazandığınızda verilen rozet",
+        "placeholders": {
+            "topic": {
+                "type": "String",
+                "example": "Su Sürdürülebilirliği Temelleri"
+            }
+        }
+    },
+    "achStreak2daysDesc": "Ardışık iki gün giriş yapın.",
+    "achStreak5daysDesc": "Ardışık beş gün giriş yapın.",
+    "achStreak7daysDesc": "Ardışık yedi gün giriş yapın.",
+    "achProfileUpdatedDesc": "Profil bilgilerinizi güncelleyin.",
+    "achExportedOnceDesc": "Sonuçlarınızı en az bir kez dışa aktarın.",
+    "newAwardsTitle": "Yeni ödüller açıldı!",
+    "newAchievementsTitle": "Başarılar",
+    "newBadgesTitle": "Rozetler",
+    "okGotIt": "Tamam, anladım",
+    "badgeTopicThreeStarsDesc": "{topic} konusunda 3 yıldız kazanın.",
+    "@badgeTopicThreeStarsDesc": {
+        "description": "Belirli bir konuda 3 yıldız kazandığınızda verilen rozet açıklaması",
+        "placeholders": {
+            "topic": {
+                "type": "String",
+                "example": "Su Sürdürülebilirliği Temelleri"
+            }
+        }
+    },
+    "badgeAllTopicsAnyScoreDesc": "Tüm test konularını en az bir kez deneyin.",
+    "badgeAllTopicsAtLeast2StarsDesc": "Tüm konularda en az 2 yıldız kazanın.",
+    "badgeAllTopics3StarsDesc": "Tüm konularda 3 yıldız kazanın.",
+    "keepPlayingToUnlock": "Daha fazla ödül açmak için oynamaya devam edin!",
+    "summaryLabel": "Özet",
+    "topicsProgressLabel": "{done}/{total} Konu",
+    "@topicsProgressLabel": {
+        "placeholders": {
+            "done": {
+                "type": "String",
+                "example": "2"
+            },
+            "total": {
+                "type": "String",
+                "example": "6"
+            }
+        }
+    },
+    "warningTitle": "Uyarı",
+    "quizExitWarning": "Testten çıkmak istediğinizden emin misiniz? Mevcut ilerlemeniz kaybolacak.",
+    "yesExit": "Evet, çık",
+    "continueQuiz": "Teste devam et",
+    "question": "Soru",
+    "check": "Kontrol et",
+    "successes": "Başarılar",
+    "continueLabel": "Devam et",
+    "freeTextHint": "Cevabınızı buraya yazın"
 }
