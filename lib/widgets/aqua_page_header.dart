@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gamificationapp/design/app_assets.dart';
-import 'package:gamificationapp/design/app_colors.dart';
+import 'package:quiz/design/app_assets.dart';
+import 'package:quiz/design/app_colors.dart';
 
 /// Tipo de leading a mostrar.
 enum AquaLeading { back, close, none, custom }

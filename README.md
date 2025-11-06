@@ -1,4 +1,4 @@
-# gamificationapp
+# quiz
 
 Gamification app for AQUATECHinn
 

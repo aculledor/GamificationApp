@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gamificationapp/design/app_colors.dart';
+import 'package:quiz/design/app_colors.dart';
 
 /// Reutilizable para todas las pantallas con estilo AquaTechInn.
 ///

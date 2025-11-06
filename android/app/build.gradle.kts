@@ -1,3 +1,8 @@
+// android/app/build.gradle.kts
+
+import java.util.Properties
+import java.io.FileInputStream
+
 plugins {
     id("com.android.application")
     id("kotlin-android")
@@ -6,7 +11,7 @@ plugins {
 }
 
 android {
-    namespace = "com.aquatechinn.gamificationapp"
+    namespace = "com.aquatechinn.quiz"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -20,21 +25,37 @@ android {
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.aquatechinn.gamificationapp"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://flutter.dev/to/review-gradle-config.
+        applicationId = "com.aquatechinn.quiz"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
 
+    signingConfigs {
+        // 🔐 Configuración de firma de RELEASE
+        create("release") {
+            // 👇 Como el keystore está en android/app, la ruta es solo el nombre
+            storeFile = file("aquatechinn-release.keystore")
+            storePassword = "Desarrollovrar2023"
+            keyAlias = "aquatechinn"
+            keyPassword = "Desarrollovrar2023"
+        }
+    }
+
     buildTypes {
-        release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig = signingConfigs.getByName("debug")
+        getByName("release") {
+            signingConfig = signingConfigs.getByName("release")
+            isMinifyEnabled = true
+            isShrinkResources = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro",
+            )
+        }
+
+        getByName("debug") {
+            // Debug usa su keystore por defecto, no hace falta tocar nada
         }
     }
 }

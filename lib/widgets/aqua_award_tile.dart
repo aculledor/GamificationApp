@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:gamificationapp/design/app_assets.dart';
-import 'package:gamificationapp/design/app_colors.dart';
-import 'package:gamificationapp/l10n/app_localizations.dart';
+import 'package:quiz/design/app_assets.dart';
+import 'package:quiz/design/app_colors.dart';
+import 'package:quiz/l10n/app_localizations.dart';
 
 class AquaAwardTile extends StatelessWidget {
   final String title;

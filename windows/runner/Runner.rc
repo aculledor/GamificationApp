@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.aquatechinn" "\0"
-            VALUE "FileDescription", "gamificationapp" "\0"
+            VALUE "FileDescription", "quiz" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "gamificationapp" "\0"
+            VALUE "InternalName", "quiz" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2025 com.aquatechinn. All rights reserved." "\0"
-            VALUE "OriginalFilename", "gamificationapp.exe" "\0"
-            VALUE "ProductName", "gamificationapp" "\0"
+            VALUE "OriginalFilename", "quiz.exe" "\0"
+            VALUE "ProductName", "quiz" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

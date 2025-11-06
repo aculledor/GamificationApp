@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:gamificationapp/design/app_assets.dart';
-import 'package:gamificationapp/design/app_colors.dart';
-import 'package:gamificationapp/data/progress_service.dart';
-import 'package:gamificationapp/l10n/app_localizations.dart';
-import 'package:gamificationapp/screens/topic_quiz.dart';
-import 'package:gamificationapp/widgets/aqua_page_header.dart';
+import 'package:quiz/design/app_assets.dart';
+import 'package:quiz/design/app_colors.dart';
+import 'package:quiz/data/progress_service.dart';
+import 'package:quiz/l10n/app_localizations.dart';
+import 'package:quiz/screens/topic_quiz.dart';
+import 'package:quiz/widgets/aqua_page_header.dart';
 import 'package:flutter/foundation.dart';
-import 'package:gamificationapp/widgets/aqua_rounded_card.dart';
-import 'package:gamificationapp/widgets/aqua_pill_button.dart';
+import 'package:quiz/widgets/aqua_rounded_card.dart';
+import 'package:quiz/widgets/aqua_pill_button.dart';
 
 class TopicSummary extends StatefulWidget {
   final String moduleId;

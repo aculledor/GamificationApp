@@ -1,6 +1,6 @@
 {
-    "name": "gamificationapp",
-    "short_name": "gamificationapp",
+    "name": "quiz",
+    "short_name": "quiz",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

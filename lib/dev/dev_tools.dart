@@ -1,6 +1,6 @@
 // lib/dev/dev_tools.dart
 import 'package:flutter/foundation.dart';
-import 'package:gamificationapp/data/progress_service.dart';
+import 'package:quiz/data/progress_service.dart';
 
 class DevTools {
   final ProgressService _progress;

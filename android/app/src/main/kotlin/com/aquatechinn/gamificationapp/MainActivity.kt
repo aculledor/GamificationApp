@@ -1,4 +1,4 @@
-package com.aquatechinn.gamificationapp
+package com.aquatechinn.quiz
 
 import io.flutter.embedding.android.FlutterActivity
 

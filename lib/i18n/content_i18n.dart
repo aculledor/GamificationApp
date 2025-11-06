@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:gamificationapp/data/content_repository.dart';
+import 'package:quiz/data/content_repository.dart';
 
 class ContentI18nController extends ChangeNotifier {
   ContentStrings? _strings;
