@@ -2,15 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:quiz/design/app_assets.dart';
 import 'package:quiz/design/app_colors.dart';
 
-/// Tipo de leading a mostrar.
 enum AquaLeading { back, close, none, custom }
 
-/// Header reutilizable con icono de vuelta/close, título centrado y barra inferior.
 class AquaPageHeader extends StatelessWidget implements PreferredSizeWidget {
   final String title;
-  final VoidCallback? onPressed; // acción del leading
+  final VoidCallback? onPressed;
   final AquaLeading leading;
-  final String? customIconPath;  // si leading == custom
+  final String? customIconPath;
   final List<Widget>? actions;
 
   final Color backgroundColor;
@@ -19,7 +17,11 @@ class AquaPageHeader extends StatelessWidget implements PreferredSizeWidget {
   final double dividerHeight;
   final bool centerTitle;
 
-  const AquaPageHeader({
+  /// Altura calculada a partir del título
+  @override
+  final Size preferredSize;
+
+  AquaPageHeader({
     super.key,
     required this.title,
     this.onPressed,
@@ -31,10 +33,19 @@ class AquaPageHeader extends StatelessWidget implements PreferredSizeWidget {
     this.dividerColor = AppColors.darkBlue,
     this.dividerHeight = 2,
     this.centerTitle = true,
-  });
+  }) : preferredSize = Size.fromHeight(_computeHeight(title));
 
-  @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight + 2);
+  /// Estima cuántas líneas necesita el título según su longitud
+  static double _computeHeight(String title) {
+    const base = kToolbarHeight;           // altura normal (~56)
+    const extraPerLine = 20.0;             // píxeles extra por línea adicional
+    const charsPerLine = 25;               // aprox. caracteres por línea
+
+    int estimatedLines =
+        (title.length / charsPerLine).ceil().clamp(1, 5); // entre 1 y 5 líneas
+
+    return base + (estimatedLines - 1) * extraPerLine;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -44,11 +55,20 @@ class AquaPageHeader extends StatelessWidget implements PreferredSizeWidget {
       automaticallyImplyLeading: false,
       centerTitle: centerTitle,
       titleSpacing: 0,
-      title: Text(
-        title,
-        style: TextStyle(
-          color: titleColor,
-          fontWeight: FontWeight.w700,
+      toolbarHeight: preferredSize.height, // 🔹 usa la altura calculada
+      title: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+        child: Text(
+          title,
+          textAlign: centerTitle ? TextAlign.center : TextAlign.start,
+          maxLines: 5,
+          softWrap: true,
+          overflow: TextOverflow.visible,
+          style: TextStyle(
+            color: titleColor,
+            fontWeight: FontWeight.w700,
+            fontSize: 18,
+          ),
         ),
       ),
       leading: _buildLeading(),
@@ -66,9 +86,8 @@ class AquaPageHeader extends StatelessWidget implements PreferredSizeWidget {
     Widget icon;
     switch (leading) {
       case AquaLeading.back:
-        // Usamos el PNG de flecha derecha y lo espejamos para que apunte a la izquierda
         icon = Transform.scale(
-          scaleX: -1, // espejo horizontal -> izquierda
+          scaleX: -1,
           child: const AppIcon(
             AppIcons.rightArrow,
             size: 28,

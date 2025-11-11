@@ -1,4 +1,270 @@
 {
-  "@@locale": "it",
-  "appTitle": "Aquatechinn Quiz"
+    "@@locale": "it",
+    "appTitle": "Quiz Aquatechinn",
+    "tabQuestionnaire": "Questionario",
+    "tabPerformance": "Prestazioni",
+    "tabOptions": "Opzioni",
+    "counterFlame": "Fiamma",
+    "counterEnergy": "Energia",
+    "counterMedals": "Medaglie",
+    "changeLanguage": "Cambia lingua",
+    "exportResults": "Esporta risultati",
+    "resetProgress": "Reimposta progressi",
+    "profileNameLabel": "Nome",
+    "profileSurnameLabel": "Cognome",
+    "profileEmailLabel": "Email",
+    "changeLanguage": "Cambia lingua",
+    "exportResults": "Esporta risultati",
+    "resetProgress": "Reimposta progressi",
+    "languageSetTo": "Lingua impostata su {code}",
+    "@languageSetTo": {
+        "description": "Snackbar mostrato dopo che l'utente ha selezionato una nuova lingua",
+        "placeholders": {
+            "code": {
+                "type": "String",
+                "example": "IT"
+            }
+        }
+    },
+    "resetAllProgressTitle": "Reimpostare tutti i progressi?",
+    "resetAllProgressBody": "Questo eliminerà tutti i risultati del quiz (stelle, tentativi, percentuali) e i dati delle serie.\n\nIl tuo profilo personale e le impostazioni della lingua NON saranno eliminati.\nQuesta azione non può essere annullata.",
+    "allProgressResetDone": "Tutti i progressi sono stati reimpostati.",
+    "commonCancel": "Annulla",
+    "commonSave": "Salva",
+    "commonReset": "Reimposta",
+    "editFieldTitle": "Modifica {field}",
+    "@editFieldTitle": {
+        "description": "Titolo della finestra di dialogo per la modifica del campo",
+        "placeholders": {
+            "field": {
+                "type": "String"
+            }
+        }
+    },
+    "editFieldTooltip": "Modifica {field}",
+    "@editFieldTooltip": {
+        "description": "Suggerimento per il pulsante di modifica del campo",
+        "placeholders": {
+            "field": {
+                "type": "String"
+            }
+        }
+    },
+    "fieldUpdated": "{field} aggiornato",
+    "@fieldUpdated": {
+        "description": "Snackbar mostrato dopo che l'utente aggiorna un campo del profilo",
+        "placeholders": {
+            "field": {
+                "type": "String"
+            }
+        }
+    },
+    "reportTitle": "Rapporto sulle prestazioni del quiz",
+    "reportNameLabel": "Nome",
+    "reportEmailLabel": "Email",
+    "reportGeneratedLabel": "Generato",
+    "reportColTopic": "Argomento",
+    "reportColBestPct": "Miglior %",
+    "reportColStars": "Stelle",
+    "reportColBestCt": "Miglior (c/t)",
+    "reportColDate": "Data",
+    "moduleTitle": "Modulo {number}: {name}",
+    "@moduleTitle": {
+        "placeholders": {
+            "number": {
+                "type": "String"
+            },
+            "name": {
+                "type": "String"
+            }
+        }
+    },
+    "topicTitle": "{name}",
+    "@topicTitle": {
+        "placeholders": {
+            "name": {
+                "type": "String"
+            }
+        }
+    },
+    "earnMoreStars": "Guadagna più stelle per sbloccare!",
+    "starsProgress": "{have}/{need}",
+    "@starsProgress": {
+        "placeholders": {
+            "have": {
+                "type": "String"
+            },
+            "need": {
+                "type": "String"
+            }
+        }
+    },
+    "starsLeft": "{count, plural, =0{Sbloccato} one{# stella rimanente} other{# stelle rimanenti}}",
+    "@starsLeft": {
+        "placeholders": {
+            "count": {
+                "type": "num"
+            }
+        }
+    },
+    "summaryModuleTitle": "Riepilogo modulo",
+    "summaryTopicTitle": "Riepilogo argomento {number}",
+    "@summaryTopicTitle": {
+        "description": "Titolo della schermata di riepilogo dell'argomento con indice",
+        "placeholders": {
+            "number": {}
+        }
+    },
+    "noPreviousScore": "Nessun punteggio precedente",
+    "@noPreviousScore": {
+        "description": "Mostrato quando l'utente non ha ancora risposto a questo argomento"
+    },
+    "lastBestScore": "Ultimo miglior punteggio: {score}/{total}",
+    "@lastBestScore": {
+        "description": "Mostra il miglior punteggio grezzo precedente",
+        "placeholders": {
+            "score": {},
+            "total": {}
+        }
+    },
+    "dateLabel": "Data: {date}",
+    "@dateLabel": {
+        "description": "Data del miglior punteggio precedente",
+        "placeholders": {
+            "date": {}
+        }
+    },
+    "startQuiz": "Inizia il quiz",
+    "@startQuiz": {
+        "description": "CTA quando l'utente non ha un punteggio precedente"
+    },
+    "tryAgain": "Riprova",
+    "@tryAgain": {
+        "description": "CTA quando l'utente ha un punteggio precedente"
+    },
+    "backTooltip": "Indietro",
+    "@backTooltip": {
+        "description": "Suggerimento per il pulsante indietro/chiudi"
+    },
+    "performanceOverview": "Panoramica",
+    "badgesTitle": "Distintivi",
+    "achievementsTitle": "Obiettivi",
+    "reviewAll": "rivedi tutto",
+    "comingSoon": "Prossimamente",
+    "streakDays": "{days} giorni consecutivi",
+    "@streakDays": {
+        "placeholders": {
+            "days": {
+                "type": "String"
+            }
+        }
+    },
+    "badgesCount": "{count, plural, =0 {Nessun distintivo} =1 {1 distintivo} other {{count} distintivi}}",
+    "@badgesCount": {
+        "description": "Mostra il numero di distintivi con logica plurale.",
+        "placeholders": {
+            "count": {
+                "type": "int",
+                "example": "3"
+            }
+        }
+    },
+    "achievementsCount": "{count, plural, =0 {Nessun obiettivo} =1 {1 obiettivo} other {{count} obiettivi}}",
+    "@achievementsCount": {
+        "description": "Mostra il numero di obiettivi con logica plurale.",
+        "placeholders": {
+            "count": {
+                "type": "int",
+                "example": "3"
+            }
+        }
+    },
+    "badgeGenericTitle": "Obiettivo {number}",
+    "@badgeGenericTitle": {
+        "description": "Titolo generico per obiettivi o distintivi",
+        "placeholders": {
+            "number": {
+                "type": "String",
+                "example": "1"
+            }
+        }
+    },
+    "badgeDateLabel": "Data",
+    "achStreak2days": "Serie di 2 giorni",
+    "achStreak5days": "Serie di 5 giorni",
+    "achStreak7days": "Serie di 7 giorni",
+    "achProfileUpdated": "Profilo aggiornato",
+    "achExportedOnce": "Risultati esportati una volta",
+    "badgeAllTopicsAnyScore": "Tutti gli argomenti tentati",
+    "badgeAllTopicsAtLeast2Stars": "Almeno 2★ in tutti gli argomenti",
+    "badgeAllTopics3Stars": "3★ in tutti gli argomenti",
+    "badgeTopicThreeStars": "{topic} – 3★",
+    "@badgeTopicThreeStars": {
+        "description": "Distintivo per aver ottenuto 3 stelle in un argomento specifico",
+        "placeholders": {
+            "topic": {
+                "type": "String",
+                "example": "Basi di sostenibilità dell'acqua"
+            }
+        }
+    },
+    "achStreak2daysDesc": "Accedi per due giorni consecutivi.",
+    "achStreak5daysDesc": "Accedi per cinque giorni consecutivi.",
+    "achStreak7daysDesc": "Accedi per sette giorni consecutivi.",
+    "achProfileUpdatedDesc": "Aggiorna le informazioni del tuo profilo.",
+    "achExportedOnceDesc": "Esporta i tuoi risultati almeno una volta.",
+    "newAwardsTitle": "Nuovi premi sbloccati!",
+    "newAchievementsTitle": "Obiettivi",
+    "newBadgesTitle": "Distintivi",
+    "okGotIt": "OK, capito",
+    "badgeTopicThreeStarsDesc": "Ottieni 3 stelle nell'argomento {topic}.",
+    "@badgeTopicThreeStarsDesc": {
+        "description": "Descrizione per il distintivo di 3 stelle in un argomento specifico",
+        "placeholders": {
+            "topic": {
+                "type": "String",
+                "example": "Basi di sostenibilità dell'acqua"
+            }
+        }
+    },
+    "badgeAllTopicsAnyScoreDesc": "Prova tutti gli argomenti del quiz almeno una volta.",
+    "badgeAllTopicsAtLeast2StarsDesc": "Ottieni almeno 2 stelle in tutti gli argomenti.",
+    "badgeAllTopics3StarsDesc": "Ottieni 3 stelle in tutti gli argomenti.",
+    "keepPlayingToUnlock": "Continua a giocare per sbloccare più ricompense!",
+    "summaryLabel": "Riepilogo",
+    "moduleTitle": "Modulo {number}: {name}",
+    "@moduleTitle": {
+        "placeholders": {
+            "number": {
+                "type": "String",
+                "example": "1"
+            },
+            "name": {
+                "type": "String",
+                "example": "Nozioni di base"
+            }
+        }
+    },
+    "topicsProgressLabel": "{done}/{total} Argomenti",
+    "@topicsProgressLabel": {
+        "placeholders": {
+            "done": {
+                "type": "String",
+                "example": "2"
+            },
+            "total": {
+                "type": "String",
+                "example": "6"
+            }
+        }
+    },
+    "warningTitle": "Avviso",
+    "quizExitWarning": "Sei sicuro di voler uscire dal quiz? I progressi attuali andranno persi.",
+    "yesExit": "Sì, esci",
+    "continueQuiz": "Continua quiz",
+    "question": "Domanda",
+    "check": "Verifica",
+    "successes": "Successi",
+    "continueLabel": "Continua",
+    "freeTextHint": "Scrivi qui la tua risposta"
 }

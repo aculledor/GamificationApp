@@ -133,53 +133,91 @@ class _TopicSummaryState extends State<TopicSummary> {
                               const SizedBox(height: 16),
 
                               // Fila 3: Píldora morada con best score + fecha (centrada)
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      color: AppColors.darkBlue,
-                                      borderRadius: BorderRadius.circular(24),
-                                    ),
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 16,
-                                      vertical: 10,
-                                    ),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.min,
-                                      children: [
-                                        Text(
-                                          showFirstTime
-                                              ? t.noPreviousScore
-                                              : t.lastBestScore(
-                                                  score: '${_bestCorrect ?? 0}',
-                                                  total: '${_bestTotal ?? 0}',
-                                                ),
-                                          style: const TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.w700,
-                                          ),
-                                        ),
-                                        if (!showFirstTime) ...[
-                                          const SizedBox(width: 16),
-                                          Text(
-                                            t.dateLabel(
-                                              date: _formatDate(
-                                                _bestDate ?? DateTime.now(),
-                                                t,
-                                              ),
-                                            ),
-                                            style: const TextStyle(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.w600,
-                                            ),
-                                          ),
-                                        ],
-                                      ],
-                                    ),
-                                  ),
-                                ],
-                              ),
+// Fila 3: Píldora morada con best score + fecha (centrada)
+// Fila 3: Píldora morada con best score + fecha (centrada)
+// Fila 3: Píldora morada con best score + fecha (centrada)
+Row(
+  mainAxisAlignment: MainAxisAlignment.center,
+  children: [
+    ConstrainedBox(
+      constraints: BoxConstraints(
+        // la píldora no será más ancha que la pantalla menos márgenes laterales
+        maxWidth: MediaQuery.of(context).size.width - 32,
+      ),
+      child: Container(
+        decoration: BoxDecoration(
+          color: AppColors.darkBlue,
+          borderRadius: BorderRadius.circular(24),
+        ),
+        padding: const EdgeInsets.symmetric(
+          horizontal: 16,
+          vertical: 10,
+        ),
+        child: showFirstTime
+            // 👉 Caso sin puntuación previa: un solo texto centrado
+            ? Text(
+                t.noPreviousScore,
+                textAlign: TextAlign.center,
+                softWrap: true,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w700,
+                ),
+              )
+            // 👉 Caso normal: puntuación en la primera línea, fecha en la segunda
+            : Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  // Línea 1: mejor puntuación anterior
+                  Text(
+                    t.lastBestScore(
+                      score: '${_bestCorrect ?? 0}',
+                      total: '${_bestTotal ?? 0}',
+                    ),
+                    textAlign: TextAlign.center,
+                    softWrap: true,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  const SizedBox(height: 4),
+
+                  // Línea 2: fecha
+                  Text(
+                    t.dateLabel(
+                      date: _formatDate(
+                        _bestDate ?? DateTime.now(),
+                        t,
+                      ),
+                    ),
+                    textAlign: TextAlign.center,
+                    softWrap: true,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
+              ),
+      ),
+    ),
+  ],
+),
+
+
+
+                            
+                            
+                            
+                            
                             ],
                           ),
                         ),

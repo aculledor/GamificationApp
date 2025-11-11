@@ -110,48 +110,43 @@ class AquaPillButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final bool disabled = onPressed == null;
 
-    final bg = disabled
-        ? backgroundColor.withOpacity(0.5)
-        : backgroundColor;
-
-    final txtCol = disabled
-        ? textColor.withOpacity(0.6)
-        : textColor;
-
-    final bdCol = disabled
-        ? borderColor.withOpacity(0.4)
-        : borderColor;
+    final bg = disabled ? backgroundColor.withOpacity(0.5) : backgroundColor;
+    final txtCol = disabled ? textColor.withOpacity(0.6) : textColor;
+    final bdCol = disabled ? borderColor.withOpacity(0.4) : borderColor;
 
     final childText = Text(
       uppercase ? label.toUpperCase() : label,
-      overflow: TextOverflow.ellipsis,
-      maxLines: 1,
-      style: (textStyle ??
-          const TextStyle(
-            fontWeight: FontWeight.w700,
-            fontSize: 16,
-            letterSpacing: 0.8,
-          )).copyWith(color: txtCol),
+      softWrap: true, // 🔹 permite saltos de línea
+      maxLines: 3, // 🔹 o null si quieres ilimitado
+      overflow: TextOverflow.visible, // 🔹 sin puntos suspensivos
+      textAlign: TextAlign.center, // 🔹 mejor para respuestas largas
+      style:
+          (textStyle ??
+                  const TextStyle(
+                    fontWeight: FontWeight.w700,
+                    fontSize: 16,
+                    letterSpacing: 0.8,
+                  ))
+              .copyWith(color: txtCol),
     );
 
     final row = Row(
-      mainAxisSize: MainAxisSize.min,
+      mainAxisSize: MainAxisSize.max, // 🔹 ocupa todo el ancho del botón
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        if (leading != null) ...[
-          leading!,
-          const SizedBox(width: 8),
-        ],
-        Flexible(child: childText),
-        if (trailing != null) ...[
-          const SizedBox(width: 8),
-          trailing!,
-        ],
+        if (leading != null) ...[leading!, const SizedBox(width: 8)],
+        Expanded(
+          child: childText,
+        ), // 🔹 deja que el texto se ajuste y rompa línea
+        if (trailing != null) ...[const SizedBox(width: 8), trailing!],
       ],
     );
 
     final content = Container(
-      height: height, // si es null, se ajusta al padding
+      width: double.infinity, // 🔹 botón a ancho completo
+      constraints: const BoxConstraints(
+        minHeight: 48, // altura mínima razonable
+      ),
       padding: padding,
       alignment: Alignment.center,
       decoration: BoxDecoration(
