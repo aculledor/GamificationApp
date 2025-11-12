@@ -1,38 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
+    <!-- SEO y descripción -->
+    <meta name="description" content="Gamification app for AQUATECHinn 4.0 – Learn sustainability through interactive quizzes." />
 
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+    <!-- Color del tema (barra superior móvil) -->
+    <meta name="theme-color" content="#77B4EB" />
 
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="$FLUTTER_BASE_HREF">
+    <!-- Íconos -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" href="icons/Icon-192.png" />
+    <link rel="manifest" href="manifest.json" />
 
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="Gamification app for AQUATECHinn">
+    <!-- Base path: en servidores reales usa la raíz -->
+    <base href="/" />
 
-  <!-- iOS meta tags & icons -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="quiz">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+    <title>AQUATECHinn Quiz</title>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+    <!-- Flutter Web bootstrap (carga todo el motor) -->
+    <script src="flutter_bootstrap.js" defer></script>
 
-  <title>quiz</title>
-  <link rel="manifest" href="manifest.json">
-</head>
-<body>
-  <script src="flutter_bootstrap.js" async></script>
-</body>
+    <!-- Para despliegue HTTPS: mejora caché y recursos -->
+    <meta http-equiv="Cache-Control" content="max-age=31536000, must-revalidate" />
+  </head>
+
+  <body>
+    <!-- Opcional: spinner de carga hasta que arranque Flutter -->
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        background: white;
+        font-family: system-ui, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #loading {
+        color: #77B4EB;
+        font-size: 1.2rem;
+      }
+    </style>
+    <div id="loading">Loading AQUATECHinn...</div>
+
+    <script>
+      window.addEventListener('flutter-first-frame', function () {
+        document.getElementById('loading')?.remove();
+      });
+    </script>
+  </body>
 </html>
