@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quiz/design/app_assets.dart';
-import 'package:quiz/design/app_colors.dart';
+import 'package:aquatechinn_quiz/design/app_assets.dart';
+import 'package:aquatechinn_quiz/design/app_colors.dart';
 
 enum AquaLeading { back, close, none, custom }
 

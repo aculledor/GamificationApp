@@ -1,11 +1,11 @@
 // lib/widgets/bottom_nav.dart
 import 'package:flutter/material.dart';
-import 'package:quiz/design/app_assets.dart';
-import 'package:quiz/design/app_colors.dart';
-import 'package:quiz/l10n/app_localizations.dart';
-import 'package:quiz/screens/questionnaire.dart';
-import 'package:quiz/screens/performance.dart';
-import 'package:quiz/screens/options.dart';
+import 'package:aquatechinn_quiz/design/app_assets.dart';
+import 'package:aquatechinn_quiz/design/app_colors.dart';
+import 'package:aquatechinn_quiz/l10n/app_localizations.dart';
+import 'package:aquatechinn_quiz/screens/questionnaire.dart';
+import 'package:aquatechinn_quiz/screens/performance.dart';
+import 'package:aquatechinn_quiz/screens/options.dart';
 
 enum AquaTab { questionnaire, performance, options }
 

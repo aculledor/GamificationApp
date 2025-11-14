@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:quiz/design/app_assets.dart';
-import 'package:quiz/design/app_colors.dart';
-import 'package:quiz/widgets/aqua_page_header.dart';
-import 'package:quiz/l10n/app_localizations.dart';
+import 'package:aquatechinn_quiz/design/app_assets.dart';
+import 'package:aquatechinn_quiz/design/app_colors.dart';
+import 'package:aquatechinn_quiz/widgets/aqua_page_header.dart';
+import 'package:aquatechinn_quiz/l10n/app_localizations.dart';
 
 class AwardDetailScreen extends StatelessWidget {
   final String title;          // Texto ya localizado

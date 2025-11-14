@@ -1,12 +1,12 @@
 // lib/data/achievements_service.dart
 import 'package:flutter/material.dart';
-import 'package:quiz/design/app_assets.dart';
+import 'package:aquatechinn_quiz/design/app_assets.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
-import 'package:quiz/l10n/app_localizations.dart';
-import 'package:quiz/data/progress_service.dart';
-import 'package:quiz/data/models.dart';
-import 'package:quiz/data/content_repository.dart';
+import 'package:aquatechinn_quiz/l10n/app_localizations.dart';
+import 'package:aquatechinn_quiz/data/progress_service.dart';
+import 'package:aquatechinn_quiz/data/models.dart';
+import 'package:aquatechinn_quiz/data/content_repository.dart';
 
 class AchievementsService {
   // === Almacenamiento de estados desbloqueados ===

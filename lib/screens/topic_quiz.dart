@@ -1,15 +1,15 @@
 // lib/screens/topic_quiz_screen.dart
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:quiz/design/app_assets.dart';
-import 'package:quiz/design/app_colors.dart';
-import 'package:quiz/data/content_repository.dart';
-import 'package:quiz/data/models.dart';
-import 'package:quiz/data/progress_service.dart';
-import 'package:quiz/l10n/app_localizations.dart';
-import 'package:quiz/widgets/aqua_page_header.dart';
-import 'package:quiz/widgets/aqua_rounded_card.dart';
-import 'package:quiz/widgets/aqua_pill_button.dart';
+import 'package:aquatechinn_quiz/design/app_assets.dart';
+import 'package:aquatechinn_quiz/design/app_colors.dart';
+import 'package:aquatechinn_quiz/data/content_repository.dart';
+import 'package:aquatechinn_quiz/data/models.dart';
+import 'package:aquatechinn_quiz/data/progress_service.dart';
+import 'package:aquatechinn_quiz/l10n/app_localizations.dart';
+import 'package:aquatechinn_quiz/widgets/aqua_page_header.dart';
+import 'package:aquatechinn_quiz/widgets/aqua_rounded_card.dart';
+import 'package:aquatechinn_quiz/widgets/aqua_pill_button.dart';
 
 // ===== Config =====
 const int kQuestionTimeSeconds = 60; // ⏱️ cambia aquí el tiempo por pregunta

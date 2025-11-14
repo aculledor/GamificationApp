@@ -1,23 +1,23 @@
 // lib/screens/options.dart
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
-import 'package:quiz/data/achievements_service.dart';
+import 'package:aquatechinn_quiz/data/achievements_service.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:printing/printing.dart';
-import 'package:quiz/widgets/aqua_pill_button.dart';
-import 'package:quiz/design/app_colors.dart';
-import 'package:quiz/design/app_assets.dart';
-import 'package:quiz/l10n/app_localizations.dart';
-import 'package:quiz/widgets/aqua_bottom_nav.dart';
-import 'package:quiz/data/progress_service.dart';
-import 'package:quiz/data/user_profile_service.dart';
-import 'package:quiz/data/content_repository.dart';
-import 'package:quiz/data/models.dart';
+import 'package:aquatechinn_quiz/widgets/aqua_pill_button.dart';
+import 'package:aquatechinn_quiz/design/app_colors.dart';
+import 'package:aquatechinn_quiz/design/app_assets.dart';
+import 'package:aquatechinn_quiz/l10n/app_localizations.dart';
+import 'package:aquatechinn_quiz/widgets/aqua_bottom_nav.dart';
+import 'package:aquatechinn_quiz/data/progress_service.dart';
+import 'package:aquatechinn_quiz/data/user_profile_service.dart';
+import 'package:aquatechinn_quiz/data/content_repository.dart';
+import 'package:aquatechinn_quiz/data/models.dart';
 import 'package:flutter/services.dart' show rootBundle;
-import 'package:quiz/data/achievements_service.dart';
-import 'package:quiz/core/app_locale.dart';
+import 'package:aquatechinn_quiz/data/achievements_service.dart';
+import 'package:aquatechinn_quiz/core/app_locale.dart';
 
 class OptionsScreen extends StatefulWidget {
   const OptionsScreen({super.key});

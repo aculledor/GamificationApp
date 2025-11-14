@@ -1,18 +1,18 @@
 // lib/screens/performance.dart
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:quiz/data/models.dart';
-import 'package:quiz/design/app_assets.dart';
-import 'package:quiz/design/app_colors.dart';
-import 'package:quiz/l10n/app_localizations.dart';
-import 'package:quiz/data/progress_service.dart';
-import 'package:quiz/data/achievements_service.dart';
-import 'package:quiz/screens/awards_gallery_screen.dart';
-import 'package:quiz/screens/award_detail_screen.dart';
-import 'package:quiz/widgets/aqua_bottom_nav.dart';
-import 'package:quiz/widgets/aqua_badge_grid.dart';
-import 'package:quiz/widgets/aqua_rounded_card.dart';
-import 'package:quiz/data/content_repository.dart';
+import 'package:aquatechinn_quiz/data/models.dart';
+import 'package:aquatechinn_quiz/design/app_assets.dart';
+import 'package:aquatechinn_quiz/design/app_colors.dart';
+import 'package:aquatechinn_quiz/l10n/app_localizations.dart';
+import 'package:aquatechinn_quiz/data/progress_service.dart';
+import 'package:aquatechinn_quiz/data/achievements_service.dart';
+import 'package:aquatechinn_quiz/screens/awards_gallery_screen.dart';
+import 'package:aquatechinn_quiz/screens/award_detail_screen.dart';
+import 'package:aquatechinn_quiz/widgets/aqua_bottom_nav.dart';
+import 'package:aquatechinn_quiz/widgets/aqua_badge_grid.dart';
+import 'package:aquatechinn_quiz/widgets/aqua_rounded_card.dart';
+import 'package:aquatechinn_quiz/data/content_repository.dart';
 
 class PerformanceScreen extends StatefulWidget {
   const PerformanceScreen({super.key});
