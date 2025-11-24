@@ -95,13 +95,16 @@ class _QuestionnaireState extends State<Questionnaire> {
     );
     final streak = await _progress.updateAndGetStreak(DateTime.now());
 
-    // 👇 Carga logros y badges reales
+    // Carga logros y badges reales
     final achService = AchievementsService();
     final badges = await achService.getBadgesCount();
     final achievements = await achService.getAchievementsCount();
 
+    // NUEVO: leemos si el modo desbloqueo está activado
+    final unlockAll = await _progress.isUnlockAllTopicsEnabled();
+
     return (
-      _VM(module, topics, strings, bestStars, totalStars, moduleIndexOneBased),
+      _VM(module, topics, strings, bestStars, totalStars, moduleIndexOneBased, unlockAll),
       streak,
       badges,
       achievements,
@@ -237,6 +240,7 @@ class _QuestionnaireState extends State<Questionnaire> {
                     bestStars: vm.bestStars[vm.topics[i].id] ?? 0,
                     totalStarsInModule: vm.totalStars,
                     progress: _progress,
+                    unlockAllTopics: vm.unlockAllTopics,
                     onReturn: () => setState(() {}),
                   ),
                   const SizedBox(height: 14),
@@ -386,7 +390,8 @@ class _VM {
   final ContentStrings strings;
   final Map<String, int> bestStars;
   final int totalStars;
-  final int moduleIndexOneBased; // 👈 NUEVO
+  final int moduleIndexOneBased; // NUEVO
+  final bool unlockAllTopics; // NUEVO
 
   _VM(
     this.module,
@@ -394,7 +399,8 @@ class _VM {
     this.strings,
     this.bestStars,
     this.totalStars,
-    this.moduleIndexOneBased, // 👈 NUEVO
+    this.moduleIndexOneBased, // NUEVO
+    this.unlockAllTopics, // NUEVO
   );
 }
 
@@ -406,6 +412,7 @@ class _TopicTile extends StatelessWidget {
   final ContentStrings strings;
   final int bestStars;
   final int totalStarsInModule;
+  final bool unlockAllTopics; // NUEVO
   final ProgressService progress;
   final VoidCallback? onReturn; // NEW
 
@@ -416,6 +423,7 @@ class _TopicTile extends StatelessWidget {
     required this.strings,
     required this.bestStars,
     required this.totalStarsInModule,
+    required this.unlockAllTopics, // NUEVO
     required this.progress,
     this.onReturn,
   });
@@ -423,7 +431,7 @@ class _TopicTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final requiredStars = progress.requiredStarsForIndex(topicIndexOneBased);
-    final unlocked = totalStarsInModule >= requiredStars;
+    final unlocked = unlockAllTopics || totalStarsInModule >= requiredStars;
 
     if (unlocked) {
       return _RoundedBorderCard(

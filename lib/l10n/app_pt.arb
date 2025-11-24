@@ -250,5 +250,8 @@
     "check": "Verificar",
     "successes": "Acertos",
     "continueLabel": "Continuar",
-    "freeTextHint": "Escreve aqui a tua resposta"
+    "freeTextHint": "Escreve aqui a tua resposta",
+    "unlockAllTopicsButton": "Desbloquear todos os tópicos",
+    "unlockAllTopicsEnabled": "Todos os tópicos foram desbloqueados.",
+    "unlockAllTopicsDisabled": "Os requisitos de estrelas foram restaurados."
 }

@@ -337,4 +337,15 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get freeTextHint => 'Escribe tu respuesta aquí';
+
+  @override
+  String get unlockAllTopicsButton => 'Desbloquear todos los temas';
+
+  @override
+  String get unlockAllTopicsEnabled =>
+      'Todos los temas están ahora desbloqueados.';
+
+  @override
+  String get unlockAllTopicsDisabled =>
+      'Se han restaurado los requisitos de estrellas.';
 }

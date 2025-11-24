@@ -10,6 +10,9 @@ class ProgressService {
   static const _kBestTotal = 'bestTotal';
   static const _kBestDateIso = 'bestDateIso';
 
+  // NUEVO: flag global de desbloqueo de temas
+  static const _kUnlockAllTopics = 'unlock_all_topics';
+
   String _topicKey(String moduleId, String topicId, String field) =>
       'mod:$moduleId|topic:$topicId|$field';
 
@@ -181,6 +184,9 @@ class ProgressService {
     // 2) Borra también racha y último login
     await sp.remove(_kLastLogin);
     await sp.remove(_kStreak);
+
+    // 3) Nuevo: desactiva el modo desbloqueo
+    await sp.remove(_kUnlockAllTopics);
   }
 
   // === NUEVO: obtener racha actual sin modificarla ===
@@ -209,5 +215,16 @@ class ProgressService {
     final correct = sp.getInt(_topicKey(moduleId, topicId, _kBestCorrect));
     final total = sp.getInt(_topicKey(moduleId, topicId, _kBestTotal));
     return (pct != null) || (correct != null && total != null);
+  }
+
+  // === NUEVO: modo "desbloquear todos los temas" ===
+  Future<void> setUnlockAllTopics(bool enabled) async {
+    final sp = await SharedPreferences.getInstance();
+    await sp.setBool(_kUnlockAllTopics, enabled);
+  }
+
+  Future<bool> isUnlockAllTopicsEnabled() async {
+    final sp = await SharedPreferences.getInstance();
+    return sp.getBool(_kUnlockAllTopics) ?? false;
   }
 }

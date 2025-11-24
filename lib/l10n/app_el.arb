@@ -203,5 +203,8 @@
     "check": "Έλεγχος",
     "successes": "Επιτυχίες",
     "continueLabel": "Συνέχεια",
-    "freeTextHint": "Πληκτρολογήστε την απάντησή σας εδώ"
+    "freeTextHint": "Πληκτρολογήστε την απάντησή σας εδώ",
+    "unlockAllTopicsButton": "Ξεκλείδωμα όλων των θεμάτων",
+    "unlockAllTopicsEnabled": "Όλα τα θέματα έχουν πλέον ξεκλειδωθεί.",
+    "unlockAllTopicsDisabled": "Οι απαιτήσεις αστεριών έχουν αποκατασταθεί."
 }

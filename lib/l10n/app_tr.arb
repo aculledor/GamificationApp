@@ -250,5 +250,8 @@
     "check": "Kontrol et",
     "successes": "Başarılar",
     "continueLabel": "Devam et",
-    "freeTextHint": "Cevabınızı buraya yazın"
+    "freeTextHint": "Cevabınızı buraya yazın",
+    "unlockAllTopicsButton": "Tüm konuları kilitsiz yap",
+    "unlockAllTopicsEnabled": "Tüm konular artık kilitsiz.",
+    "unlockAllTopicsDisabled": "Yıldız gereksinimleri geri yüklendi."
 }

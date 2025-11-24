@@ -193,6 +193,15 @@ class _OptionsScreenState extends State<OptionsScreen> {
             const SizedBox(height: 18),
 
             AquaPillButton(
+              label: t.unlockAllTopicsButton, // 🔤 nueva clave de i18n
+              onPressed: _toggleUnlockAllTopics,
+              backgroundColor: AppColors.green,
+              textColor: AppColors.darkBlue,
+              borderColor: const Color(0xFF5B3ECC),
+            ),
+            const SizedBox(height: 18),
+
+            AquaPillButton(
               label: t.resetProgress, // 🔤 traducible
               onPressed: _confirmReset,
               backgroundColor: const Color(0xFFFF6B6B),
@@ -219,6 +228,25 @@ class _OptionsScreenState extends State<OptionsScreen> {
     setState(() => _avatar = bytes);
     await _saveProfile();
   }
+
+    Future<void> _toggleUnlockAllTopics() async {
+    final current = await _progress.isUnlockAllTopicsEnabled();
+    await _progress.setUnlockAllTopics(!current);
+
+    if (!mounted) return;
+    final t = AppLocalizations.of(context)!;
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(
+          !current
+              ? t.unlockAllTopicsEnabled   // “Todos los temas están ahora desbloqueados.”
+              : t.unlockAllTopicsDisabled, // “Se han restaurado los requisitos de estrellas.”
+        ),
+      ),
+    );
+  }
+
 
   Future<void> _saveProfile() async {
     await _profileSvc.save(

@@ -266,5 +266,8 @@
     "check": "Verifica",
     "successes": "Successi",
     "continueLabel": "Continua",
-    "freeTextHint": "Scrivi qui la tua risposta"
+    "freeTextHint": "Scrivi qui la tua risposta",
+    "unlockAllTopicsButton": "Sblocca tutti gli argomenti",
+    "unlockAllTopicsEnabled": "Tutti gli argomenti sono ora sbloccati.",
+    "unlockAllTopicsDisabled": "I requisiti di stelle sono stati ripristinati."
 }

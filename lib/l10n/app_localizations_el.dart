@@ -339,4 +339,14 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get freeTextHint => 'Πληκτρολογήστε την απάντησή σας εδώ';
+
+  @override
+  String get unlockAllTopicsButton => 'Ξεκλείδωμα όλων των θεμάτων';
+
+  @override
+  String get unlockAllTopicsEnabled => 'Όλα τα θέματα έχουν πλέον ξεκλειδωθεί.';
+
+  @override
+  String get unlockAllTopicsDisabled =>
+      'Οι απαιτήσεις αστεριών έχουν αποκατασταθεί.';
 }

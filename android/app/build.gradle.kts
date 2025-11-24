@@ -1,12 +1,9 @@
 // android/app/build.gradle.kts
 
-import java.util.Properties
-import java.io.FileInputStream
-
 plugins {
     id("com.android.application")
     id("kotlin-android")
-    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    // El plugin de Flutter SIEMPRE después de los de Android/Kotlin
     id("dev.flutter.flutter-gradle-plugin")
 }
 
@@ -16,6 +13,7 @@ android {
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
+        // Java 11 (evita los warnings de source/target 8 obsoletos)
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
@@ -33,9 +31,9 @@ android {
     }
 
     signingConfigs {
-        // 🔐 Configuración de firma de RELEASE
+        // Configuración de firma para RELEASE
         create("release") {
-            // 👇 Como el keystore está en android/app, la ruta es solo el nombre
+            // Si el keystore está en android/app/, esta ruta es correcta
             storeFile = file("aquatechinn-release.keystore")
             storePassword = "Desarrollovrar2023"
             keyAlias = "aquatechinn"
@@ -55,7 +53,7 @@ android {
         }
 
         getByName("debug") {
-            // Debug usa su keystore por defecto, no hace falta tocar nada
+            // Debug usa el keystore por defecto
         }
     }
 }

@@ -266,5 +266,8 @@
     "check": "Check",
     "successes": "Successes",
     "continueLabel": "Continue",
-    "freeTextHint": "Type your answer here"
-}
+    "freeTextHint": "Type your answer here",
+    "unlockAllTopicsButton": "Unlock all topics",
+    "unlockAllTopicsEnabled": "All topics are now unlocked.",
+    "unlockAllTopicsDisabled": "Star requirements have been restored."
+    }

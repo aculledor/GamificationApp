@@ -337,4 +337,13 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get freeTextHint => 'Cevabınızı buraya yazın';
+
+  @override
+  String get unlockAllTopicsButton => 'Tüm konuları kilitsiz yap';
+
+  @override
+  String get unlockAllTopicsEnabled => 'Tüm konular artık kilitsiz.';
+
+  @override
+  String get unlockAllTopicsDisabled => 'Yıldız gereksinimleri geri yüklendi.';
 }

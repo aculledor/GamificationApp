@@ -641,6 +641,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Type your answer here'**
   String get freeTextHint;
+
+  /// No description provided for @unlockAllTopicsButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Unlock all topics'**
+  String get unlockAllTopicsButton;
+
+  /// No description provided for @unlockAllTopicsEnabled.
+  ///
+  /// In en, this message translates to:
+  /// **'All topics are now unlocked.'**
+  String get unlockAllTopicsEnabled;
+
+  /// No description provided for @unlockAllTopicsDisabled.
+  ///
+  /// In en, this message translates to:
+  /// **'Star requirements have been restored.'**
+  String get unlockAllTopicsDisabled;
 }
 
 class _AppLocalizationsDelegate
