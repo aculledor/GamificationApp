@@ -1,6 +1,6 @@
 {
-  "name": "AQUATECHInn 4.0 – Gamified Quiz",
-  "short_name": "AQUATECHInn Quiz",
+  "name": "AQUATECHinn 4.0 Quizzes",
+  "short_name": "AQUATECHinn 4.0 Quizzes",
   "description": "Educational gamification app on aquaculture sustainability developed within the AQUATECHInn 4.0 project.",
   "start_url": "/aquatechinn-quiz/",
   "display": "standalone",
