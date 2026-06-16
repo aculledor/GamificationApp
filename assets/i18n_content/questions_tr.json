@@ -1,5 +1,6 @@
 {
   "module.m2.title": "Sürdürülebilir Su Ürünleri Yetiştiriciliği Yönetimi",
+  "topic.m2.t1.title": "Kabuklu deniz ürünleri ve yüzgeçli balık yetiştiriciliği ile bağlantılı çevresel, sosyal ve ekonomik konular",
   "q.m2.t1.001": "Su yetiştiriciliği, sucul organizmaların yetiştirilmesini ifade eder. Aşağıdakilerden hangisi su yetiştiriciliğinin amaçlarından biri değildir?",
   "q.m2.t1.001.a": "Daha fazla oksijen üretmek için.",
   "q.m2.t1.001.b": "Hayvansal proteine sürdürülebilir erişim sağlamak.",
@@ -480,6 +481,11 @@
   "q.m2.t1.009.c": "Ekonomik kayıplara yol açabilecek patojenlerin belirlenmesi ve tedavilerinin belirlenmesi,",
   "q.m2.t1.009.d": "Alternatif türlerin su ürünleri yetiştiriciliği performanslarının belirlenmesi,",
   "q.m2.t1.009.e": "",
+  
+  
+  
+  
+  "topic.m2.t2.title": "Kabuklu deniz ürünleri ve yüzgeçli balık yetiştiriciliğinin sürdürülebilir yönetimi için iyi uygulamalar",
   "q.m2.t2.001": "İyi uygulama nedir?",
   "q.m2.t2.001.a": "İstenen sonuçlara, verimliliğe ve kaliteye güvenilir bir şekilde yol açtığı kanıtlanmış bir dizi yöntem veya teknik",
   "q.m2.t2.001.b": "Endüstride sürdürülebilirliği en üst düzeye çıkaran doğru davranışlar",
@@ -720,6 +726,14 @@
   "q.m2.t2.009.c": "Deniz rezervlerinde ekoturizm",
   "q.m2.t2.009.d": "Çevre pazarlarında karbon ticareti",
   "q.m2.t2.009.e": "",
+  
+  
+  
+  
+  
+  
+  
+  "topic.m2.t3.title": "Kabuklu deniz ürünleri yetiştiriciliğinde Entegre Çok-Trofikli Su Ürünleri Yetiştiriciliği tekniği",
   "q.m2.t3.001": "Kabuklu deniz ürünleri yetiştiriciliğinin başlıca ekolojik faydaları nelerdir?",
   "q.m2.t3.001.a": "Kıyı sularından azot ve fosfor emiliminin artması",
   "q.m2.t3.001.b": "Balık yemi tüketiminin artması",
@@ -858,6 +872,13 @@
   "q.m2.t3.009.c": "Geceleri kullanılan gelişmiş aydınlatma nedeniyle",
   "q.m2.t3.009.d": "Yırtıcı hayvanları uzak tutmak için elektrikli bariyerler kullanıldığı için",
   "q.m2.t3.009.e": "",
+  
+  
+  
+  
+  
+  
+  "topic.m2.t4.title": "Balık yetiştiriciliğinde Entegre Çok-Trofikli Su Ürünleri Yetiştiriciliği tekniği",
   "q.m2.t4.001": "AMTI ne anlama gelir?",
   "q.m2.t4.001.a": "Entegre çok trofikli su ürünleri yetiştiriciliği",
   "q.m2.t4.001.b": "Uluslararası Denizcilik Ticaret Derneği",
@@ -1158,6 +1179,13 @@
   "q.m2.t4.009.c": "Yem maliyetinin artması",
   "q.m2.t4.009.d": "Verimliliğin düşmesi",
   "q.m2.t4.009.e": "",
+  
+  
+  
+  
+  
+  
+  "topic.m2.t5.title": "Döngüsel ekonominin, yetiştirilen su ürünleri gıda biyoekonomisinin ve mavi biyoteknolojinin güçlendirilmesi",
   "q.m2.t5.001": "Hangi Sürdürülebilir Kalkınma Hedefi (SKH), açlığın sona erdirilmesi ve gıda güvenliğinde su ürünleri yetiştiriciliğinin rolünün iyileştirilmesi ile doğrudan bağlantılıdır?",
   "q.m2.t5.001.a": "SDG 7: Uygun Fiyatlı ve Temiz Enerji",
   "q.m2.t5.001.b": "SDG 9: Sanayi, İnovasyon ve Altyapı",
@@ -1416,6 +1444,13 @@
   "q.m2.t5.009.c": "Kıyı topluluklarının yerini alma",
   "q.m2.t5.009.d": "Ekonomik büyüme ve istihdam için okyanus kaynaklarının sürdürülebilir kullanımı",
   "q.m2.t5.009.e": "Deniz ürünleri ihracat yasağı",
+  
+  
+  
+  
+  
+  
+  "topic.m2.t6.title": "Yaşam Döngüsü Değerlendirmesi (LCA) yoluyla su ürünleri yetiştiriciliği faaliyetleri ve ürünlerinin çevresel ayak izleri",
   "q.m2.t6.001": "İyi uygulama nedir?",
   "q.m2.t6.001.a": "İstenen sonuçlara, verimliliğe ve kaliteye güvenilir bir şekilde yol açtığı kanıtlanmış bir dizi yöntem veya teknik",
   "q.m2.t6.001.b": "Endüstride sürdürülebilirliği en üst düzeye çıkaran doğru davranışlar",

@@ -1,5 +1,6 @@
 {
   "module.m2.title": "Gestione della sostenibilità nell'acquacoltura",
+  "topic.m2.t1.title": "Questioni ambientali, sociali ed economiche legate all’allevamento di molluschi e pesci",
   "q.m2.t1.001": "L'acquacoltura si riferisce alla coltivazione di organismi acquatici. Quale dei seguenti obiettivi non è quello dell'acquacoltura?",
   "q.m2.t1.001.a": "Produrre più ossigeno.",
   "q.m2.t1.001.b": "Fornire un accesso sostenibile alle proteine animali.",
@@ -480,6 +481,11 @@
   "q.m2.t1.009.c": "Determinare i patogeni che possono causare perdite economiche e determinarne i trattamenti,",
   "q.m2.t1.009.d": "Determinare le prestazioni dell'acquacoltura di specie alternative,",
   "q.m2.t1.009.e": "",
+  
+  
+  
+  
+  "topic.m2.t2.title": "Buone pratiche per una gestione sostenibile dell’allevamento di molluschi e pesci",
   "q.m2.t2.001": "Che cos'è una buona pratica?",
   "q.m2.t2.001.a": "Un insieme di metodi o tecniche che si sono dimostrati in grado di portare in modo affidabile ai risultati desiderati, all'efficienza e alla qualità",
   "q.m2.t2.001.b": "Comportamenti corretti che massimizzano la sostenibilità nel settore",
@@ -720,6 +726,13 @@
   "q.m2.t2.009.c": "Ecoturismo nelle riserve marine",
   "q.m2.t2.009.d": "Commercio di carbonio nei mercati ambientali",
   "q.m2.t2.009.e": "",
+  
+  
+  
+  
+  
+  
+  "topic.m2.t3.title": "Tecnica di Acquacoltura Multitrofica Integrata nell’allevamento di molluschi",
   "q.m2.t3.001": "Qual è uno dei principali vantaggi ecologici dell'allevamento dei molluschi?",
   "q.m2.t3.001.a": "Migliore assorbimento di azoto e fosforo dalle acque costiere",
   "q.m2.t3.001.b": "Aumento del consumo di mangimi per pesci",
@@ -858,6 +871,13 @@
   "q.m2.t3.009.c": "A causa della maggiore illuminazione utilizzata durante la notte",
   "q.m2.t3.009.d": "Perché utilizzano barriere elettriche per tenere lontani i predatori",
   "q.m2.t3.009.e": "",
+  
+  
+  
+  
+  
+  
+  "topic.m2.t4.title": "Tecnica di Acquacoltura Multitrofica Integrata nell’allevamento di pesci",
   "q.m2.t4.001": "Cosa significa AMTI?",
   "q.m2.t4.001.a": "Acquacoltura multitrofica integrata",
   "q.m2.t4.001.b": "Associazione internazionale del commercio marittimo",
@@ -1158,6 +1178,14 @@
   "q.m2.t4.009.c": "Aumento dei costi dei mangimi",
   "q.m2.t4.009.d": "Riduzione della produttività",
   "q.m2.t4.009.e": "",
+  
+  
+  
+  
+  
+  
+  
+  "topic.m2.t5.title": "Rafforzamento dell’economia circolare, della bioeconomia degli alimenti acquatici allevati e della biotecnologia blu",
   "q.m2.t5.001": "Quale obiettivo di sviluppo sostenibile (SDG) è direttamente collegato all'eliminazione della fame e al miglioramento del ruolo dell'acquacoltura nella sicurezza alimentare?",
   "q.m2.t5.001.a": "SDG 7: Energia pulita e accessibile",
   "q.m2.t5.001.b": "SDG 9: Industria, innovazione e infrastrutture",
@@ -1416,6 +1444,14 @@
   "q.m2.t5.009.c": "Sostituzione delle comunità costiere",
   "q.m2.t5.009.d": "Uso sostenibile delle risorse oceaniche per la crescita economica e l'occupazione",
   "q.m2.t5.009.e": "Divieti di esportazione dei prodotti ittici",
+  
+  
+  
+  
+  
+  
+  
+  "topic.m2.t6.title": "Impronte ambientali delle attività e dei prodotti dell’acquacoltura attraverso un’Analisi del Ciclo di Vita (LCA)",
   "q.m2.t6.001": "Che cos'è una buona pratica?",
   "q.m2.t6.001.a": "Un insieme di metodi o tecniche che si sono dimostrati in grado di portare in modo affidabile ai risultati desiderati, all'efficienza e alla qualità",
   "q.m2.t6.001.b": "Comportamenti corretti che massimizzano la sostenibilità nel settore",

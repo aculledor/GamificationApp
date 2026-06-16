@@ -1,5 +1,6 @@
 {
   "module.m2.title": "Gestão da Sustentabilidade na Aquicultura",
+  "topic.m2.t1.title": "Questões ambientais, sociais e económicas ligadas à aquicultura de moluscos e peixes",
   "q.m2.t1.001": "A aquicultura refere-se ao cultivo de organismos aquáticos. Qual dos seguintes não é um dos objetivos da aquacultura?",
   "q.m2.t1.001.a": "Para produzir mais oxigénio.",
   "q.m2.t1.001.b": "Proporcionar acesso sustentável à proteína animal.",
@@ -480,6 +481,11 @@
   "q.m2.t1.009.c": "Determinar os agentes patogénicos que podem causar perdas económicas e determinar os seus tratamentos,",
   "q.m2.t1.009.d": "Determinar o desempenho da aquicultura de espécies alternativas,",
   "q.m2.t1.009.e": "",
+  
+  
+  
+  
+  "topic.m2.t2.title": "Boas práticas para uma gestão sustentável da aquicultura de moluscos e peixes",
   "q.m2.t2.001": "O que é uma boa prática?",
   "q.m2.t2.001.a": "Um conjunto de métodos ou técnicas que comprovadamente levam a resultados desejados, eficiência e qualidade de forma confiável",
   "q.m2.t2.001.b": "Comportamentos corretos que maximizam a sustentabilidade na indústria",
@@ -720,6 +726,14 @@
   "q.m2.t2.009.c": "Ecoturismo em reservas marinhas",
   "q.m2.t2.009.d": "Comércio de carbono em mercados ambientais",
   "q.m2.t2.009.e": "",
+  
+  
+  
+  
+  
+  
+  
+  "topic.m2.t3.title": "Técnica de Aquacultura Multitrófica Integrada no cultivo de moluscos",
   "q.m2.t3.001": "Qual é um dos principais benefícios ecológicos da aquicultura de marisco?",
   "q.m2.t3.001.a": "Maior absorção de nitrogénio e fósforo das águas costeiras",
   "q.m2.t3.001.b": "Aumento do consumo de ração para peixes",
@@ -858,6 +872,14 @@
   "q.m2.t3.009.c": "Devido à iluminação reforçada utilizada à noite",
   "q.m2.t3.009.d": "Porque utilizam barreiras elétricas para manter afastados os predadores",
   "q.m2.t3.009.e": "",
+  
+  
+  
+  
+  
+  
+  
+  "topic.m2.t4.title": "Técnica de Aquacultura Multitrófica Integrada no cultivo de peixes",
   "q.m2.t4.001": "O que significa AMTI?",
   "q.m2.t4.001.a": "Aquicultura multitrófica integrada",
   "q.m2.t4.001.b": "Associação Internacional do Comércio Marítimo",
@@ -1158,6 +1180,13 @@
   "q.m2.t4.009.c": "Aumento do custo de ração",
   "q.m2.t4.009.d": "Redução da produtividade",
   "q.m2.t4.009.e": "",
+  
+  
+  
+  
+  
+  
+  "topic.m2.t5.title": "Reforço da economia circular, da bioeconomia dos alimentos aquáticos de cultivo e da biotecnologia azul",
   "q.m2.t5.001": "Qual Objetivo de Desenvolvimento Sustentável (ODS) está diretamente ligado ao fim da fome e à melhoria do papel da aquicultura na segurança alimentar?",
   "q.m2.t5.001.a": "ODS 7: Energia acessível e limpa",
   "q.m2.t5.001.b": "ODS 9: Indústria, inovação e infraestrutura",
@@ -1416,6 +1445,13 @@
   "q.m2.t5.009.c": "Substituição das comunidades costeiras",
   "q.m2.t5.009.d": "Uso sustentável dos recursos oceânicos para o crescimento económico e a criação de empregos",
   "q.m2.t5.009.e": "Proibições à exportação de produtos marinhos",
+  
+  
+  
+  
+  
+  
+  "topic.m2.t6.title": "Pegadas ambientais das atividades e produtos da aquicultura através de uma Avaliação do Ciclo de Vida (ACV)",
   "q.m2.t6.001": "O que é uma boa prática?",
   "q.m2.t6.001.a": "Um conjunto de métodos ou técnicas que comprovadamente levam a resultados desejados, eficiência e qualidade de forma confiável",
   "q.m2.t6.001.b": "Comportamentos corretos que maximizam a sustentabilidade na indústria",

@@ -1,5 +1,6 @@
 {
   "module.m2.title": "Gestion de la durabilité en aquaculture",
+  "topic.m2.t1.title": "Enjeux environnementaux, sociaux et économiques liés à l’élevage de mollusques et de poissons",
   "q.m2.t1.001": "L’aquaculture désigne la culture d’organismes aquatiques. Lequel des objectifs suivants n’est pas l’aquaculture ?",
   "q.m2.t1.001.a": "Pour produire plus d’oxygène.",
   "q.m2.t1.001.b": "Fournir un accès durable aux protéines animales.",
@@ -480,6 +481,11 @@
   "q.m2.t1.009.c": "la détermination des agents pathogènes qui peuvent causer des pertes économiques et la détermination de leurs traitements,",
   "q.m2.t1.009.d": "La détermination des performances aquacoles des espèces alternatives,",
   "q.m2.t1.009.e": "",
+  
+  
+  
+  
+  "topic.m2.t2.title": "Bonnes pratiques pour une gestion durable de l’élevage de mollusques et de poissons",
   "q.m2.t2.001": "Qu'est-ce qu'une bonne pratique ?",
   "q.m2.t2.001.a": "Un ensemble de méthodes ou de techniques qui se sont avérées conduire de manière fiable aux résultats souhaités, à l'efficacité et à la qualité",
   "q.m2.t2.001.b": "Comportements corrects qui maximisent la durabilité dans l'industrie",
@@ -720,6 +726,13 @@
   "q.m2.t2.009.c": "Écotourisme dans les réserves marines",
   "q.m2.t2.009.d": "Négociation de carbone sur les marchés environnementaux",
   "q.m2.t2.009.e": "",
+  
+  
+  
+  
+  
+  
+  "topic.m2.t3.title": "Technique d’Aquaculture Multitrophique Intégrée dans l’élevage de mollusques",
   "q.m2.t3.001": "Quel est l'un des principaux avantages écologiques de l'aquaculture des mollusques ?",
   "q.m2.t3.001.a": "Amélioration de l'absorption de l'azote et du phosphore dans les eaux côtières",
   "q.m2.t3.001.b": "Augmentation de la consommation d'aliments pour poissons",
@@ -858,6 +871,13 @@
   "q.m2.t3.009.c": "En raison de l'éclairage renforcé utilisé la nuit",
   "q.m2.t3.009.d": "Parce qu'elles utilisent des barrières électriques pour éloigner les prédateurs",
   "q.m2.t3.009.e": "",
+  
+  
+  
+  
+  
+  
+  "topic.m2.t4.title": "Technique d’Aquaculture Multitrophique Intégrée dans l’élevage de poissons",
   "q.m2.t4.001": "Que signifie AMTI ?",
   "q.m2.t4.001.a": "Aquaculture multitrophique intégrée",
   "q.m2.t4.001.b": "Association internationale du commerce maritime",
@@ -1158,6 +1178,13 @@
   "q.m2.t4.009.c": "L’augmentation des coûts d’aliments",
   "q.m2.t4.009.d": "La baisse de productivité",
   "q.m2.t4.009.e": "",
+  
+  
+  
+  
+  
+  
+  "topic.m2.t5.title": "Renforcement de l’économie circulaire, de la bioéconomie des aliments aquatiques d’élevage et de la biotechnologie bleue",
   "q.m2.t5.001": "Quel objectif de développement durable (ODD) est directement lié à l'éradication de la faim et à l'amélioration du rôle de l'aquaculture dans la sécurité alimentaire ?",
   "q.m2.t5.001.a": "ODD 7 : Énergie propre et abordable",
   "q.m2.t5.001.b": "ODD 9 : Industrie, innovation et infrastructure",
@@ -1416,6 +1443,14 @@
   "q.m2.t5.009.c": "Remplacement des communautés côtières",
   "q.m2.t5.009.d": "Utilisation durable des ressources océaniques pour la croissance économique et l'emploi",
   "q.m2.t5.009.e": "Interdiction d'exporter des produits de la mer",
+  
+  
+  
+  
+  
+  
+  
+  "topic.m2.t6.title": "Empreintes environnementales des activités et des produits de l’aquaculture à travers une Analyse du Cycle de Vie (ACV)",
   "q.m2.t6.001": "Qu'est-ce qu'une bonne pratique ?",
   "q.m2.t6.001.a": "Un ensemble de méthodes ou de techniques qui se sont avérées conduire de manière fiable aux résultats souhaités, à l'efficacité et à la qualité",
   "q.m2.t6.001.b": "Comportements corrects qui maximisent la durabilité dans l'industrie",

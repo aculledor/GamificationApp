@@ -1,5 +1,6 @@
 {
   "module.m2.title": "Gestión de la sostenibilidad en acuicultura",
+  "topic.m2.t1.title": "Problemas ambientales, sociales y económicos vinculados a la acuicultura de moluscos y peces",
   "q.m2.t1.001": "La acuicultura se refiere al cultivo de organismos acuáticos. ¿Cuál de los siguientes no es uno de los objetivos de la acuicultura?",
   "q.m2.t1.001.a": "Para producir más oxígeno.",
   "q.m2.t1.001.b": "Para proporcionar acceso sostenible a las proteínas animales.",
@@ -480,6 +481,13 @@
   "q.m2.t1.009.c": "Determinación de los patógenos que pueden causar pérdidas económicas y determinar sus tratamientos,",
   "q.m2.t1.009.d": "Determinación del rendimiento de la acuicultura de especies alternativas,",
   "q.m2.t1.009.e": "",
+  
+  
+  
+  
+  
+  
+  "topic.m2.t2.title": "Buenas prácticas para una gestión sostenible de la acuicultura de moluscos y peces",
   "q.m2.t2.001": "¿Qué es una buena práctica?",
   "q.m2.t2.001.a": "Un conjunto de métodos o técnicas que han demostrado conducir de manera confiable a los resultados deseados, la eficiencia y la calidad",
   "q.m2.t2.001.b": "Comportamientos correctos que maximizan la sostenibilidad en la industria",
@@ -720,6 +728,13 @@
   "q.m2.t2.009.c": "Ecoturismo en reservas marinas",
   "q.m2.t2.009.d": "Comercio de carbono en mercados ambientales",
   "q.m2.t2.009.e": "",
+  
+  
+  
+  
+  
+  
+  "topic.m2.t3.title": "Técnica de Acuicultura Multitrófica Integrada en el cultivo de moluscos",
   "q.m2.t3.001": "¿Cuál es uno de los principales beneficios ecológicos de la acuicultura de mariscos?",
   "q.m2.t3.001.a": "Mayor absorción de nitrógeno y fósforo de las aguas costeras",
   "q.m2.t3.001.b": "Aumento del consumo de piensos para peces",
@@ -858,6 +873,12 @@
   "q.m2.t3.009.c": "Debido a la mayor iluminación que se utiliza por la noche",
   "q.m2.t3.009.d": "Porque utilizan barreras eléctricas para mantener alejados a los depredadores",
   "q.m2.t3.009.e": "",
+  
+  
+  
+  
+  
+  "topic.m2.t4.title": "Técnica de Acuicultura Multitrófica Integrada en el cultivo de peces",
   "q.m2.t4.001": "¿Qué significa AMTI?",
   "q.m2.t4.001.a": "Acuicultura multitrófica integrada",
   "q.m2.t4.001.b": "Asociación internacional del comercio marítimo",
@@ -1158,6 +1179,13 @@
   "q.m2.t4.009.c": "El aumento de los costes de alimentación",
   "q.m2.t4.009.d": "La disminución de la productividad",
   "q.m2.t4.009.e": "",
+  
+  
+  
+  
+  
+  
+  "topic.m2.t5.title": "Impulso de la economía circular, la bioeconomía de los alimentos acuáticos de cultivo y la biotecnología azul",
   "q.m2.t5.001": "¿Qué Objetivo de Desarrollo Sostenible (ODS) está directamente relacionado con acabar con el hambre y mejorar el papel de la acuicultura en la seguridad alimentaria?",
   "q.m2.t5.001.a": "ODS 7: Energía asequible y no contaminante",
   "q.m2.t5.001.b": "ODS 9: Industria, innovación e infraestructura",
@@ -1416,6 +1444,14 @@
   "q.m2.t5.043.c": "Al conceder licencias de pesca",
   "q.m2.t5.043.d": "Mediante el establecimiento de normas comerciales mundiales que afectan a los mercados de productos del mar",
   "q.m2.t5.043.e": "Mediante la certificación de los criaderos",
+  
+  
+  
+  
+  
+  
+  
+  "topic.m2.t6.title": "Huellas ambientales de las actividades y productos de la acuicultura mediante un Análisis del Ciclo de Vida (ACV)",
   "q.m2.t6.001": "¿Qué es una buena práctica?",
   "q.m2.t6.001.a": "Un conjunto de métodos o técnicas que han demostrado conducir de manera confiable a los resultados deseados, la eficiencia y la calidad",
   "q.m2.t6.001.b": "Comportamientos correctos que maximizan la sostenibilidad en la industria",
