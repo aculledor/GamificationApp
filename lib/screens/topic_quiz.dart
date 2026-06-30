@@ -610,6 +610,7 @@ class _MultiAnswers extends StatelessWidget {
                 borderColor: correctId == a.id || selectedId == a.id
                     ? AppColors.darkBlue
                     : AppColors.darkBlue.withOpacity(0.5),
+                uppercase: false,
               ),
             ),
           )
