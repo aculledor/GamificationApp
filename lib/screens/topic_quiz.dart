@@ -13,6 +13,7 @@ import 'package:aquatechinn_quiz/widgets/aqua_pill_button.dart';
 
 // ===== Config =====
 const int kQuestionTimeSeconds = 60; // ⏱️ cambia aquí el tiempo por pregunta
+const int kMaxQuestionsPerAttempt = 20;
 
 // ====== QUIZ SCREEN ======
 class TopicQuizScreen extends StatefulWidget {
@@ -72,6 +73,7 @@ class _TopicQuizScreenState extends State<TopicQuizScreen> {
     _topic = bundle.topics.firstWhere((t) => t.id == widget.topicId);
     _questions = _topic.questionIds
         .map((id) => bundle.questions.firstWhere((q) => q.id == id))
+        .take(kMaxQuestionsPerAttempt)
         .toList();
 
     // 🔀 Shuffle the answers of multiple-choice questions
@@ -113,7 +115,7 @@ class _TopicQuizScreenState extends State<TopicQuizScreen> {
   }
 
   void _onTimeout() {
-    _showAnswerFeedback(false);
+    setState(() => _secondsLeft = 0);
   }
 
   @override
@@ -341,6 +343,7 @@ class _TopicQuizScreenState extends State<TopicQuizScreen> {
                         .map((a) => (id: a.id, label: _strings.t(a.textKey)))
                         .toList(),
                     selectedId: _selectedAnswerId,
+                    feedbackVisible: _showFeedback,
                     onSelect: (id) => setState(() => _selectedAnswerId = id),
                   )
                 else
@@ -485,7 +488,8 @@ class _TimeBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ratio = secondsLeft / kQuestionTimeSeconds;
+    final isExpired = secondsLeft <= 0;
+    final ratio = isExpired ? 1.0 : secondsLeft / kQuestionTimeSeconds;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -504,7 +508,11 @@ class _TimeBar extends StatelessWidget {
               child: Container(
                 height: 8,
                 decoration: BoxDecoration(
-                  color: ratio > 0.33 ? AppColors.green : Colors.red,
+                  color: isExpired
+                      ? Colors.orange
+                      : ratio > 0.33
+                          ? AppColors.green
+                          : Colors.red,
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),
@@ -513,7 +521,7 @@ class _TimeBar extends StatelessWidget {
         ),
         const SizedBox(height: 6),
         Text(
-          '${secondsLeft}s',
+          isExpired ? '!!!' : '${secondsLeft}s',
           style: const TextStyle(
             color: AppColors.darkBlue,
             fontWeight: FontWeight.w700,
@@ -527,11 +535,13 @@ class _TimeBar extends StatelessWidget {
 class _MultiAnswers extends StatelessWidget {
   final List<({String id, String label})> answers;
   final String? selectedId;
+  final bool feedbackVisible;
   final ValueChanged<String> onSelect;
 
   const _MultiAnswers({
     required this.answers,
     required this.selectedId,
+    required this.feedbackVisible,
     required this.onSelect,
   });
 
@@ -545,13 +555,16 @@ class _MultiAnswers extends StatelessWidget {
               child: AquaPillButton(
                 label: a.label,
                 onPressed: () => onSelect(a.id),
-                backgroundColor: selectedId == a.id
-                    ? AppColors.green.withOpacity(0.3)
-                    : Colors.white,
+                backgroundColor: feedbackVisible && selectedId == a.id
+                    ? Colors.red.withOpacity(0.25)
+                    : selectedId == a.id
+                        ? AppColors.green.withOpacity(0.3)
+                        : Colors.white,
                 textColor: AppColors.darkBlue,
                 borderColor: selectedId == a.id
                     ? AppColors.darkBlue
                     : AppColors.darkBlue.withOpacity(0.5),
+                uppercase: false,
               ),
             ),
           )
