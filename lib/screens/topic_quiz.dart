@@ -55,6 +55,8 @@ class _TopicQuizScreenState extends State<TopicQuizScreen> {
   // Feedback flotante ✔︎ / ✖︎
   bool _showFeedback = false;
   bool _isCorrect = false;
+  String? _highlightCorrectAnswerId;
+  String? _correctFreeTextLabel;
 
   @override
   void initState() {
@@ -150,11 +152,22 @@ class _TopicQuizScreenState extends State<TopicQuizScreen> {
     return s;
   }
 
+  String? _correctAnswerId() {
+    if (_q.type != QuestionType.multi) return null;
+    return _q.answers.where((a) => a.correct).map((a) => a.id).firstOrNull;
+  }
+
+  String? _firstCorrectFreeTextLabel() {
+    final first = _q.correctFreeText?.firstOrNull;
+    if (first == null) return null;
+    return _strings.t(first);
+  }
+
   void _checkAndNext() {
     if (_q.type == QuestionType.multi) {
       if (_selectedAnswerId == null) return; // nada seleccionado
       final ans = _q.answers.firstWhere((a) => a.id == _selectedAnswerId);
-      _showAnswerFeedback(ans.correct);
+      _showAnswerFeedback(ans.correct, correctAnswerId: _correctAnswerId());
     } else {
       // ===== Texto libre robusto =====
       final userRaw = _textCtrl.text;
@@ -172,20 +185,29 @@ class _TopicQuizScreenState extends State<TopicQuizScreen> {
           .toSet()
           .contains(user);
 
-      _showAnswerFeedback(valid);
+      _showAnswerFeedback(
+        valid,
+        correctFreeTextLabel: _firstCorrectFreeTextLabel(),
+      );
     }
   }
 
-  void _showAnswerFeedback(bool ok) async {
+  void _showAnswerFeedback(
+    bool ok, {
+    String? correctAnswerId,
+    String? correctFreeTextLabel,
+  }) async {
     _timer?.cancel();
     setState(() {
       _isCorrect = ok;
       _showFeedback = true;
+      _highlightCorrectAnswerId = ok ? null : correctAnswerId;
+      _correctFreeTextLabel = ok ? null : correctFreeTextLabel;
     });
 
     if (ok) _correct++;
 
-    await Future.delayed(const Duration(milliseconds: 900));
+    await Future.delayed(Duration(milliseconds: ok ? 900 : 1500));
     if (!mounted) return;
 
     // Siguiente o fin
@@ -195,6 +217,8 @@ class _TopicQuizScreenState extends State<TopicQuizScreen> {
         _selectedAnswerId = null;
         _textCtrl.clear();
         _showFeedback = false;
+        _highlightCorrectAnswerId = null;
+        _correctFreeTextLabel = null;
       });
       _startTimer();
     } else {
@@ -346,11 +370,29 @@ class _TopicQuizScreenState extends State<TopicQuizScreen> {
                     feedbackVisible: _showFeedback,
                     onSelect: (id) => setState(() => _selectedAnswerId = id),
                   )
-                else
+                else ...[
                   _FreeTextField(
                     controller: _textCtrl,
                     hint: t.freeTextHint, // i18n
                   ),
+                  if (_correctFreeTextLabel != null) ...[
+                    const SizedBox(height: 10),
+                    AquaRoundedCard(
+                      bgColor: AppColors.green.withOpacity(0.3),
+                      borderColor: AppColors.darkBlue,
+                      radius: 16,
+                      padding: const EdgeInsets.all(12),
+                      child: Text(
+                        _correctFreeTextLabel!,
+                        style: const TextStyle(
+                          color: AppColors.darkBlue,
+                          fontWeight: FontWeight.w800,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ),
+                  ],
+                ],
               ],
             ),
 
@@ -561,7 +603,7 @@ class _MultiAnswers extends StatelessWidget {
                         ? AppColors.green.withOpacity(0.3)
                         : Colors.white,
                 textColor: AppColors.darkBlue,
-                borderColor: selectedId == a.id
+                borderColor: correctId == a.id || selectedId == a.id
                     ? AppColors.darkBlue
                     : AppColors.darkBlue.withOpacity(0.5),
                 uppercase: false,
