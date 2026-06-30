@@ -117,11 +117,7 @@ class _TopicQuizScreenState extends State<TopicQuizScreen> {
   }
 
   void _onTimeout() {
-    _showAnswerFeedback(
-      false,
-      correctAnswerId: _correctAnswerId(),
-      correctFreeTextLabel: _firstCorrectFreeTextLabel(),
-    );
+    setState(() => _secondsLeft = 0);
   }
 
   @override
@@ -371,7 +367,6 @@ class _TopicQuizScreenState extends State<TopicQuizScreen> {
                         .map((a) => (id: a.id, label: _strings.t(a.textKey)))
                         .toList(),
                     selectedId: _selectedAnswerId,
-                    correctId: _highlightCorrectAnswerId,
                     feedbackVisible: _showFeedback,
                     onSelect: (id) => setState(() => _selectedAnswerId = id),
                   )
@@ -535,7 +530,8 @@ class _TimeBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ratio = secondsLeft / kQuestionTimeSeconds;
+    final isExpired = secondsLeft <= 0;
+    final ratio = isExpired ? 1.0 : secondsLeft / kQuestionTimeSeconds;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -554,7 +550,11 @@ class _TimeBar extends StatelessWidget {
               child: Container(
                 height: 8,
                 decoration: BoxDecoration(
-                  color: ratio > 0.33 ? AppColors.green : Colors.red,
+                  color: isExpired
+                      ? Colors.orange
+                      : ratio > 0.33
+                          ? AppColors.green
+                          : Colors.red,
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),
@@ -563,7 +563,7 @@ class _TimeBar extends StatelessWidget {
         ),
         const SizedBox(height: 6),
         Text(
-          '${secondsLeft}s',
+          isExpired ? '!!!' : '${secondsLeft}s',
           style: const TextStyle(
             color: AppColors.darkBlue,
             fontWeight: FontWeight.w700,
@@ -577,14 +577,12 @@ class _TimeBar extends StatelessWidget {
 class _MultiAnswers extends StatelessWidget {
   final List<({String id, String label})> answers;
   final String? selectedId;
-  final String? correctId;
   final bool feedbackVisible;
   final ValueChanged<String> onSelect;
 
   const _MultiAnswers({
     required this.answers,
     required this.selectedId,
-    required this.correctId,
     required this.feedbackVisible,
     required this.onSelect,
   });
@@ -599,13 +597,11 @@ class _MultiAnswers extends StatelessWidget {
               child: AquaPillButton(
                 label: a.label,
                 onPressed: () => onSelect(a.id),
-                backgroundColor: correctId == a.id
-                    ? AppColors.green.withOpacity(0.45)
-                    : feedbackVisible && selectedId == a.id
-                        ? Colors.red.withOpacity(0.25)
-                        : selectedId == a.id
-                            ? AppColors.green.withOpacity(0.3)
-                            : Colors.white,
+                backgroundColor: feedbackVisible && selectedId == a.id
+                    ? Colors.red.withOpacity(0.25)
+                    : selectedId == a.id
+                        ? AppColors.green.withOpacity(0.3)
+                        : Colors.white,
                 textColor: AppColors.darkBlue,
                 borderColor: correctId == a.id || selectedId == a.id
                     ? AppColors.darkBlue
